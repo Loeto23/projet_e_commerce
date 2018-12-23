@@ -1,3 +1,27 @@
+jeremy_reduction:
+    resource: "@JeremyReductionBundle/Resources/config/routing.yml"
+    prefix:   /reduction
+
+jeremy_newsletter:
+    resource: "@JeremyNewsletterBundle/Resources/config/routing.yml"
+    prefix:   /newsletter
+
+jeremy_commande:
+    resource: "@JeremyCommandeBundle/Resources/config/routing.yml"
+    prefix:   /commande
+
+jeremy_panier:
+    resource: "@JeremyPanierBundle/Resources/config/routing.yml"
+    prefix:   /panier
+
+jeremy_produit:
+    resource: "@JeremyProduitBundle/Resources/config/routing.yml"
+    prefix:   /produit
+
+jeremy_avis:
+    resource: "@JeremyAvisBundle/Resources/config/routing.yml"
+    prefix:   /avis
+
 jeremy_user:
     resource: "@JeremyUserBundle/Resources/config/routing.yml"
     prefix:   /

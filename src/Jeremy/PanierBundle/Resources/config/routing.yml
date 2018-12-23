@@ -1,0 +1,3 @@
+jeremy_panier_homepage:
+    path:     /
+    defaults: { _controller: JeremyPanierBundle:Default:index }

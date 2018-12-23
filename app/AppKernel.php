@@ -20,6 +20,12 @@ class AppKernel extends Kernel
             new Jeremy\FrontBundle\JeremyFrontBundle(),
             new Jeremy\UserBundle\JeremyUserBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new Jeremy\AvisBundle\JeremyAvisBundle(),
+            new Jeremy\ProduitBundle\JeremyProduitBundle(),
+            new Jeremy\PanierBundle\JeremyPanierBundle(),
+            new Jeremy\CommandeBundle\JeremyCommandeBundle(),
+            new Jeremy\NewsletterBundle\JeremyNewsletterBundle(),
+            new Jeremy\ReductionBundle\JeremyReductionBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

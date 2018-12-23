@@ -5,6 +5,12 @@ imports:
     - { resource: "@JeremyBackBundle/Resources/config/services.yml" }
     - { resource: "@JeremyFrontBundle/Resources/config/services.yml" }
     - { resource: "@JeremyUserBundle/Resources/config/services.yml" }
+    - { resource: "@JeremyAvisBundle/Resources/config/services.yml" }
+    - { resource: "@JeremyProduitBundle/Resources/config/services.yml" }
+    - { resource: "@JeremyPanierBundle/Resources/config/services.yml" }
+    - { resource: "@JeremyCommandeBundle/Resources/config/services.yml" }
+    - { resource: "@JeremyNewsletterBundle/Resources/config/services.yml" }
+    - { resource: "@JeremyReductionBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration

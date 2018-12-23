@@ -1,0 +1,3 @@
+jeremy_newsletter_homepage:
+    path:     /
+    defaults: { _controller: JeremyNewsletterBundle:Default:index }

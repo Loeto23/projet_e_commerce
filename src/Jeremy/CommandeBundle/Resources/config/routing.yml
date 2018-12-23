@@ -1,0 +1,3 @@
+jeremy_commande_homepage:
+    path:     /
+    defaults: { _controller: JeremyCommandeBundle:Default:index }

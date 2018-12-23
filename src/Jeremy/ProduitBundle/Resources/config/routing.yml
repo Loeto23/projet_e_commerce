@@ -1,0 +1,3 @@
+jeremy_produit_homepage:
+    path:     /
+    defaults: { _controller: JeremyProduitBundle:Default:index }
