@@ -1,0 +1,14 @@
+jeremy_user:
+    resource: "@JeremyUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+jeremy_front:
+    resource: "@JeremyFrontBundle/Resources/config/routing.yml"
+    prefix:   /front
+
+jeremy_back:
+    resource: "@JeremyBackBundle/Resources/config/routing.yml"
+    prefix:   /back
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

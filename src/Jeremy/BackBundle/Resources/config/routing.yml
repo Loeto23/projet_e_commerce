@@ -1,0 +1,13 @@
+jeremy_back_homepage:
+    path:     /
+    defaults: { _controller: JeremyBackBundle:Default:index }
+
+jeremy_back_ajout_membre:
+  path: /membre
+  defaults:
+    _controller: JeremyBackBundle:Membre:ajouterMembre
+
+jeremy_back_ajout_produit:
+  path: /produit
+  defaults:
+    _controller: JeremyBackBundle:Produit:ajouterProduit
