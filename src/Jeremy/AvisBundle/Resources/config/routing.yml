@@ -1,0 +1,3 @@
+jeremy_avis_homepage:
+    path:     /
+    defaults: { _controller: JeremyAvisBundle:Default:index }

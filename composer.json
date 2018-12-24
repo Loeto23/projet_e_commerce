@@ -6,7 +6,13 @@
         "psr-4": {
             "Jeremy\\BackBundle\\": "src/Jeremy/BackBundle",
             "Jeremy\\FrontBundle\\": "src/Jeremy/FrontBundle",
-            "Jeremy\\UserBundle\\": "src/Jeremy/UserBundle"
+            "Jeremy\\UserBundle\\": "src/Jeremy/UserBundle",
+            "Jeremy\\AvisBundle\\": "src/Jeremy/AvisBundle",
+            "Jeremy\\ProduitBundle\\": "src/Jeremy/ProduitBundle",
+            "Jeremy\\PanierBundle\\": "src/Jeremy/PanierBundle",
+            "Jeremy\\CommandeBundle\\": "src/Jeremy/CommandeBundle",
+            "Jeremy\\NewsletterBundle\\": "src/Jeremy/NewsletterBundle",
+            "Jeremy\\ReductionBundle\\": "src/Jeremy/ReductionBundle"
 
         },
         "classmap": [

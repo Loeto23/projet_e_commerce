@@ -63,8 +63,14 @@ class ComposerStaticInitf41f83bc24303c5b34b17b5953cf498a
         'J' => 
         array (
             'Jeremy\\UserBundle\\' => 18,
+            'Jeremy\\ReductionBundle\\' => 23,
+            'Jeremy\\ProduitBundle\\' => 21,
+            'Jeremy\\PanierBundle\\' => 20,
+            'Jeremy\\NewsletterBundle\\' => 24,
             'Jeremy\\FrontBundle\\' => 19,
+            'Jeremy\\CommandeBundle\\' => 22,
             'Jeremy\\BackBundle\\' => 18,
+            'Jeremy\\AvisBundle\\' => 18,
         ),
         'I' => 
         array (
@@ -207,13 +213,37 @@ class ComposerStaticInitf41f83bc24303c5b34b17b5953cf498a
         array (
             0 => __DIR__ . '/../..' . '/src/Jeremy/UserBundle',
         ),
+        'Jeremy\\ReductionBundle\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Jeremy/ReductionBundle',
+        ),
+        'Jeremy\\ProduitBundle\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Jeremy/ProduitBundle',
+        ),
+        'Jeremy\\PanierBundle\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Jeremy/PanierBundle',
+        ),
+        'Jeremy\\NewsletterBundle\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Jeremy/NewsletterBundle',
+        ),
         'Jeremy\\FrontBundle\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/Jeremy/FrontBundle',
         ),
+        'Jeremy\\CommandeBundle\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Jeremy/CommandeBundle',
+        ),
         'Jeremy\\BackBundle\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/Jeremy/BackBundle',
+        ),
+        'Jeremy\\AvisBundle\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Jeremy/AvisBundle',
         ),
         'Incenteev\\ParameterHandler\\' => 
         array (
