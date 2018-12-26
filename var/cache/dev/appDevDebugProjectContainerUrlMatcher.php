@@ -284,22 +284,35 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
             not_jeremy_panier_homepage:
 
-            // jeremy_produit_homepage
-            if ('/produit' === $trimmedPathinfo) {
-                $ret = array (  '_controller' => 'Jeremy\\ProduitBundle\\Controller\\DefaultController::indexAction',  '_route' => 'jeremy_produit_homepage',);
-                if ('/' === substr($pathinfo, -1)) {
-                    // no-op
-                } elseif ('GET' !== $canonicalMethod) {
-                    goto not_jeremy_produit_homepage;
-                } else {
-                    return array_replace($ret, $this->redirect($rawPathinfo.'/', 'jeremy_produit_homepage'));
+            if (0 === strpos($pathinfo, '/produit')) {
+                // jeremy_produit_homepage
+                if ('/produit' === $trimmedPathinfo) {
+                    $ret = array (  '_controller' => 'Jeremy\\ProduitBundle\\Controller\\DefaultController::indexAction',  '_route' => 'jeremy_produit_homepage',);
+                    if ('/' === substr($pathinfo, -1)) {
+                        // no-op
+                    } elseif ('GET' !== $canonicalMethod) {
+                        goto not_jeremy_produit_homepage;
+                    } else {
+                        return array_replace($ret, $this->redirect($rawPathinfo.'/', 'jeremy_produit_homepage'));
+                    }
+
+                    return $ret;
+                }
+                not_jeremy_produit_homepage:
+
+                // jeremy_produit_ajouter
+                if ('/produit/ajouter' === $pathinfo) {
+                    return array (  '_controller' => 'Jeremy\\ProduitBundle\\Controller\\DefaultController::ajouterAction',  '_route' => 'jeremy_produit_ajouter',);
                 }
 
-                return $ret;
-            }
-            not_jeremy_produit_homepage:
+                // jeremy_ifocop_default_modifier_auteur
+                if (0 === strpos($pathinfo, '/produit/modifier') && preg_match('#^/produit/modifier/(?P<id_du_produit>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'jeremy_ifocop_default_modifier_auteur')), array (  '_controller' => 'Jeremy\\ProduitBundle\\Controller\\DefaultController::modifierProduitAction',));
+                }
 
-            if (0 === strpos($pathinfo, '/profile')) {
+            }
+
+            elseif (0 === strpos($pathinfo, '/profile')) {
                 // fos_user_profile_show
                 if ('/profile' === $trimmedPathinfo) {
                     $ret = array (  '_controller' => 'fos_user.profile.controller:showAction',  '_route' => 'fos_user_profile_show',);

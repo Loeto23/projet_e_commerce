@@ -1,6 +1,6 @@
 <?php
 
-/* @FOSUser/Registration/confirmed.html.twig */
+/* @JeremyUser/Registration/confirmed.html.twig */
 class __TwigTemplate_5ff51519327e6b1239c47bbdde3a0c8ff2cd7ffb69b5f55e06f2e3c13d9eeca4 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_5ff51519327e6b1239c47bbdde3a0c8ff2cd7ffb69b5f55e06f2e3c13d9
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("@FOSUser/layout.html.twig", "@FOSUser/Registration/confirmed.html.twig", 1);
+        $this->parent = $this->loadTemplate("@FOSUser/layout.html.twig", "@JeremyUser/Registration/confirmed.html.twig", 1);
         $this->blocks = array(
             'fos_user_content' => array($this, 'block_fos_user_content'),
         );
@@ -22,10 +22,10 @@ class __TwigTemplate_5ff51519327e6b1239c47bbdde3a0c8ff2cd7ffb69b5f55e06f2e3c13d9
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Registration/confirmed.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@JeremyUser/Registration/confirmed.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Registration/confirmed.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@JeremyUser/Registration/confirmed.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -70,7 +70,7 @@ class __TwigTemplate_5ff51519327e6b1239c47bbdde3a0c8ff2cd7ffb69b5f55e06f2e3c13d9
 
     public function getTemplateName()
     {
-        return "@FOSUser/Registration/confirmed.html.twig";
+        return "@JeremyUser/Registration/confirmed.html.twig";
     }
 
     public function isTraitable()
@@ -103,6 +103,6 @@ class __TwigTemplate_5ff51519327e6b1239c47bbdde3a0c8ff2cd7ffb69b5f55e06f2e3c13d9
     <p><a href=\"{{ targetUrl }}\">{{ 'registration.back'|trans }}</a></p>
     {% endif %}
 {% endblock fos_user_content %}
-", "@FOSUser/Registration/confirmed.html.twig", "C:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\UserBundle\\Resources\\views\\Registration\\confirmed.html.twig");
+", "@JeremyUser/Registration/confirmed.html.twig", "C:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\UserBundle\\Resources\\views\\Registration\\confirmed.html.twig");
     }
 }

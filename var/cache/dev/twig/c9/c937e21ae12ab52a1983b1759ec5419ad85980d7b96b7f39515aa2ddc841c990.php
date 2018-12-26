@@ -28,7 +28,7 @@ class __TwigTemplate_34f07eef2c5161aca63202293f138b585fa635de033752c40ec2cdda22e
   <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
     <span class=\"navbar-toggler-icon\"></span>
   </button>
-  <ul class=\"nav navbar-nav\">
+  <ul class=\"nav navbar-nav space\">
     <li><a href=\"";
         // line 8
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_front_homepage");
@@ -36,6 +36,16 @@ class __TwigTemplate_34f07eef2c5161aca63202293f138b585fa635de033752c40ec2cdda22e
   </ul>
   <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
   </div>
+  <ul class=\"nav navbar-nav\">
+    <li><a href=\"";
+        // line 13
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_user_homepage");
+        echo "\">Connexion</a></li>
+  </ul>
+
+
+
+
   </div>
 </nav>
 ";
@@ -59,7 +69,7 @@ class __TwigTemplate_34f07eef2c5161aca63202293f138b585fa635de033752c40ec2cdda22e
 
     public function getDebugInfo()
     {
-        return array (  34 => 8,  25 => 1,);
+        return array (  42 => 13,  34 => 8,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -78,11 +88,18 @@ class __TwigTemplate_34f07eef2c5161aca63202293f138b585fa635de033752c40ec2cdda22e
   <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
     <span class=\"navbar-toggler-icon\"></span>
   </button>
-  <ul class=\"nav navbar-nav\">
+  <ul class=\"nav navbar-nav space\">
     <li><a href=\"{{ path('jeremy_front_homepage') }}\">Accueil</a></li>
   </ul>
   <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
   </div>
+  <ul class=\"nav navbar-nav\">
+    <li><a href=\"{{ path('jeremy_user_homepage') }}\">Connexion</a></li>
+  </ul>
+
+
+
+
   </div>
 </nav>
 ", "::nav.html.twig", "C:\\wamp64\\www\\projet_e_commerce\\app/Resources\\views/nav.html.twig");
