@@ -2,7 +2,6 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
-    - { resource: "@JeremyBackBundle/Resources/config/services.yml" }
     - { resource: "@JeremyFrontBundle/Resources/config/services.yml" }
     - { resource: "@JeremyUserBundle/Resources/config/services.yml" }
     - { resource: "@JeremyAvisBundle/Resources/config/services.yml" }
