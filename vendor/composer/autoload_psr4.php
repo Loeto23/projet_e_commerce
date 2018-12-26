@@ -41,7 +41,6 @@ return array(
     'Jeremy\\NewsletterBundle\\' => array($baseDir . '/src/Jeremy/NewsletterBundle'),
     'Jeremy\\FrontBundle\\' => array($baseDir . '/src/Jeremy/FrontBundle'),
     'Jeremy\\CommandeBundle\\' => array($baseDir . '/src/Jeremy/CommandeBundle'),
-    'Jeremy\\BackBundle\\' => array($baseDir . '/src/Jeremy/BackBundle'),
     'Jeremy\\AvisBundle\\' => array($baseDir . '/src/Jeremy/AvisBundle'),
     'Incenteev\\ParameterHandler\\' => array($vendorDir . '/incenteev/composer-parameter-handler'),
     'Fig\\Link\\' => array($vendorDir . '/fig/link-util/src'),

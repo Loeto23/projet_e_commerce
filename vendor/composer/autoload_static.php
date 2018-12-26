@@ -69,7 +69,6 @@ class ComposerStaticInitf41f83bc24303c5b34b17b5953cf498a
             'Jeremy\\NewsletterBundle\\' => 24,
             'Jeremy\\FrontBundle\\' => 19,
             'Jeremy\\CommandeBundle\\' => 22,
-            'Jeremy\\BackBundle\\' => 18,
             'Jeremy\\AvisBundle\\' => 18,
         ),
         'I' => 
@@ -236,10 +235,6 @@ class ComposerStaticInitf41f83bc24303c5b34b17b5953cf498a
         'Jeremy\\CommandeBundle\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/Jeremy/CommandeBundle',
-        ),
-        'Jeremy\\BackBundle\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src/Jeremy/BackBundle',
         ),
         'Jeremy\\AvisBundle\\' => 
         array (

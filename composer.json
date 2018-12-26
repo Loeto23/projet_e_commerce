@@ -4,7 +4,6 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Jeremy\\BackBundle\\": "src/Jeremy/BackBundle",
             "Jeremy\\FrontBundle\\": "src/Jeremy/FrontBundle",
             "Jeremy\\UserBundle\\": "src/Jeremy/UserBundle",
             "Jeremy\\AvisBundle\\": "src/Jeremy/AvisBundle",
