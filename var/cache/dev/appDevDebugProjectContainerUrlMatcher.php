@@ -393,35 +393,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
         not_jeremy_front_homepage:
 
-        if (0 === strpos($pathinfo, '/back')) {
-            // jeremy_back_homepage
-            if ('/back' === $trimmedPathinfo) {
-                $ret = array (  '_controller' => 'Jeremy\\BackBundle\\Controller\\DefaultController::indexAction',  '_route' => 'jeremy_back_homepage',);
-                if ('/' === substr($pathinfo, -1)) {
-                    // no-op
-                } elseif ('GET' !== $canonicalMethod) {
-                    goto not_jeremy_back_homepage;
-                } else {
-                    return array_replace($ret, $this->redirect($rawPathinfo.'/', 'jeremy_back_homepage'));
-                }
-
-                return $ret;
-            }
-            not_jeremy_back_homepage:
-
-            // jeremy_back_ajout_membre
-            if ('/back/membre' === $pathinfo) {
-                return array (  '_controller' => 'JeremyBackBundle:Membre:ajouterMembre',  '_route' => 'jeremy_back_ajout_membre',);
-            }
-
-            // jeremy_back_ajout_produit
-            if ('/back/produit' === $pathinfo) {
-                return array (  '_controller' => 'Jeremy\\BackBundle\\Controller\\ProduitController::ajouterProduitAction',  '_route' => 'jeremy_back_ajout_produit',);
-            }
-
-        }
-
-        elseif (0 === strpos($pathinfo, '/login')) {
+        if (0 === strpos($pathinfo, '/login')) {
             // fos_user_security_login
             if ('/login' === $pathinfo) {
                 $ret = array (  '_controller' => 'fos_user.security.controller:loginAction',  '_route' => 'fos_user_security_login',);

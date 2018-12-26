@@ -73,3 +73,15 @@ ee7f73,::1,GET,http://localhost/projet_e_commerce/web/app_dev.php/,1545646979,,2
 b9d7ad,::1,GET,http://localhost/projet_e_commerce/web/app_dev.php/register,1545647347,,301
 17b5e0,::1,GET,http://localhost/projet_e_commerce/web/app_dev.php/register/,1545647349,,200
 a779ed,::1,GET,http://localhost/projet_e_commerce/web/app_dev.php/register/,1545649820,,200
+b321c1,::1,GET,http://localhost/projet_e_commerce/web/app_dev.php/register/,1545821589,c30162,200
+c30162,::1,POST,http://localhost/projet_e_commerce/web/app_dev.php/register/,1545821589,,500
+bab900,::1,GET,http://localhost/projet_e_commerce/web/app_dev.php/login,1545821893,,200
+ae204c,::1,POST,http://localhost/projet_e_commerce/web/app_dev.php/login_check,1545821901,,302
+27d3b7,::1,GET,http://localhost/projet_e_commerce/web/app_dev.php/login,1545821901,,200
+821d9c,::1,GET,http://localhost/projet_e_commerce/web/app_dev.php/,1545821908,,200
+b91c35,::1,GET,http://localhost/projet_e_commerce/web/app_dev.php/register,1545821909,,301
+0bbb2f,::1,GET,http://localhost/projet_e_commerce/web/app_dev.php/register/,1545821910,,200
+2a0489,::1,GET,http://localhost/projet_e_commerce/web/app_dev.php/register/,1545821920,3d93a0,200
+3d93a0,::1,POST,http://localhost/projet_e_commerce/web/app_dev.php/register/,1545821920,,500
+c827fa,::1,POST,http://localhost/projet_e_commerce/web/app_dev.php/register/,1545822082,,302
+9f9515,::1,GET,http://localhost/projet_e_commerce/web/app_dev.php/register/confirmed,1545822084,,200
