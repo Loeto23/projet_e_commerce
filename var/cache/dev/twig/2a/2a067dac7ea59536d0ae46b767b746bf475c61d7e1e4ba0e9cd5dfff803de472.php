@@ -22,32 +22,59 @@ class __TwigTemplate_7a58133daf21d7930e984c413642eb3694b80ec08d7676fcef15501c317
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "nav.html.twig"));
 
         // line 1
-        echo "<nav class=\"navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top navbar-default\">
- <div class=\"container\">
-  <a class=\"navbar-brand\" href=\"#\">Ela</a>
-  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-    <span class=\"navbar-toggler-icon\"></span>
-  </button>
-  <ul class=\"nav navbar-nav space\">
-    <li><a href=\"";
-        // line 8
+        echo "
+<body>
+<!-- Navigation -->
+ <nav class=\"navbar-inverse\" role=\"navigation\">
+ <div class=\"container-fluid\">
+
+ <div class=\"navbar-header\">
+ <button type=\"button\" class=\"navbar-toggle collapsed\" datatoggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\">
+ <span class=\"sr-only\">Toggle navigation</span>
+ <span class=\"icon-bar\"></span>
+ <span class=\"icon-bar\"></span>
+ <span class=\"icon-bar\"></span>
+ </button>
+ <a class=\"navbar-brand\" href=\"";
+        // line 14
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_front_homepage");
-        echo "\">Accueil</a></li>
-  </ul>
-  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
-  </div>
-  <ul class=\"nav navbar-nav\">
-    <li><a href=\"";
-        // line 13
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_user_homepage");
-        echo "\">Connexion</a></li>
-  </ul>
+        echo "\">Ela | </a>
+ </div>
+
+ <div class=\"collapse navbar-collapse\" id=\"bs-example-navbarcollapse-1\">
+ </div>
+ </div>
+ </nav>
 
 
 
+<div class=\"collapse navbar-collapse\" id=\"bs-example-navbarcollapse-1\">
+<ul class=\"nav navbar-nav\">
+ <li class=\"dropdown\">
+ <a href=\"#\" class=\"active dropdown-toggle\" datatoggle=\"dropdown\">Categories <span class=\"caret\"></span></a>
+ <ul class=\"dropdown-menu\" role=\"menu\">
+ <li><a href=\"category.html\">Apparel &amp; Accessories</
+a></li>
+ <li><a href=\"category.html\">Baby Products</a></li>
+ <li><a href=\"category.html\">Beauty &amp; Health</a></
+li>
+ <li><a href=\"category.html\">Electronics</a></li>
+ <li><a href=\"category.html\">Furniture</a></li>
+ <li><a href=\"category.html\">Home &amp; Garden</a></li>
+ <li><a href=\"category.html\">Luggage &amp; Bags</a></li>
+ <li><a href=\"category.html\">Shoes</a></li>
+ <li><a href=\"category.html\">Sports &amp;
+Entertainment</a></li>
+ <li><a href=\"category.html\">Watches</a></li>
+ <li class=\"divider\"></li>
+ <li><a href=\"ecommerce.html\">All Categories</a></li>
+ </ul>
+ </li>
+ <li><a href=\"#\">Link</a></li>
+ <li><a href=\"#\">Link</a></li>
+ </ul>
 
-  </div>
-</nav>
+</body>
 ";
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -69,7 +96,7 @@ class __TwigTemplate_7a58133daf21d7930e984c413642eb3694b80ec08d7676fcef15501c317
 
     public function getDebugInfo()
     {
-        return array (  42 => 13,  34 => 8,  25 => 1,);
+        return array (  40 => 14,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -82,26 +109,56 @@ class __TwigTemplate_7a58133daf21d7930e984c413642eb3694b80ec08d7676fcef15501c317
 
     public function getSourceContext()
     {
-        return new Twig_Source("<nav class=\"navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top navbar-default\">
- <div class=\"container\">
-  <a class=\"navbar-brand\" href=\"#\">Ela</a>
-  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-    <span class=\"navbar-toggler-icon\"></span>
-  </button>
-  <ul class=\"nav navbar-nav space\">
-    <li><a href=\"{{ path('jeremy_front_homepage') }}\">Accueil</a></li>
-  </ul>
-  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
-  </div>
-  <ul class=\"nav navbar-nav\">
-    <li><a href=\"{{ path('jeremy_user_homepage') }}\">Connexion</a></li>
-  </ul>
+        return new Twig_Source("
+<body>
+<!-- Navigation -->
+ <nav class=\"navbar-inverse\" role=\"navigation\">
+ <div class=\"container-fluid\">
+
+ <div class=\"navbar-header\">
+ <button type=\"button\" class=\"navbar-toggle collapsed\" datatoggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\">
+ <span class=\"sr-only\">Toggle navigation</span>
+ <span class=\"icon-bar\"></span>
+ <span class=\"icon-bar\"></span>
+ <span class=\"icon-bar\"></span>
+ </button>
+ <a class=\"navbar-brand\" href=\"{{ path('jeremy_front_homepage') }}\">Ela | </a>
+ </div>
+
+ <div class=\"collapse navbar-collapse\" id=\"bs-example-navbarcollapse-1\">
+ </div>
+ </div>
+ </nav>
 
 
 
+<div class=\"collapse navbar-collapse\" id=\"bs-example-navbarcollapse-1\">
+<ul class=\"nav navbar-nav\">
+ <li class=\"dropdown\">
+ <a href=\"#\" class=\"active dropdown-toggle\" datatoggle=\"dropdown\">Categories <span class=\"caret\"></span></a>
+ <ul class=\"dropdown-menu\" role=\"menu\">
+ <li><a href=\"category.html\">Apparel &amp; Accessories</
+a></li>
+ <li><a href=\"category.html\">Baby Products</a></li>
+ <li><a href=\"category.html\">Beauty &amp; Health</a></
+li>
+ <li><a href=\"category.html\">Electronics</a></li>
+ <li><a href=\"category.html\">Furniture</a></li>
+ <li><a href=\"category.html\">Home &amp; Garden</a></li>
+ <li><a href=\"category.html\">Luggage &amp; Bags</a></li>
+ <li><a href=\"category.html\">Shoes</a></li>
+ <li><a href=\"category.html\">Sports &amp;
+Entertainment</a></li>
+ <li><a href=\"category.html\">Watches</a></li>
+ <li class=\"divider\"></li>
+ <li><a href=\"ecommerce.html\">All Categories</a></li>
+ </ul>
+ </li>
+ <li><a href=\"#\">Link</a></li>
+ <li><a href=\"#\">Link</a></li>
+ </ul>
 
-  </div>
-</nav>
+</body>
 ", "nav.html.twig", "C:\\wamp64\\www\\projet_e_commerce\\app\\Resources\\views\\nav.html.twig");
     }
 }

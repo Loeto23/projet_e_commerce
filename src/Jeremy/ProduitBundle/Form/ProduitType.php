@@ -59,13 +59,9 @@ class ProduitType extends AbstractType
       ),
     ));
 
-
-
-    $aFormBuilder->add('photo',\Symfony\Component\Form\Extension\Core\Type\FileType::class,
-    [
-      'label' => 'Photo',
-    ],
-    array('data_class' => null));
+    $aFormBuilder->add('photo',\Symfony\Component\Form\Extension\Core\Type\FileType::class, array(
+      'data_class' => null
+    ));
 
     $aFormBuilder->add('prix',\Symfony\Component\Form\Extension\Core\Type\NumberType::class,
     [

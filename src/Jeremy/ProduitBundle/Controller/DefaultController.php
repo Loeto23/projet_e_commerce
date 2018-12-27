@@ -8,7 +8,16 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('@JeremyProduit/Default/index.html.twig');
+      $doctrine = $this->getDoctrine();
+
+      $theEntityRepository = $doctrine->getRepository(\Jeremy\ProduitBundle\Entity\Produit::class);
+
+      $result = $theEntityRepository->findAll();
+
+        return $this->render('@JeremyProduit/Default/index.html.twig',
+      [
+       'myResults' => $result
+      ]);
     }
 
     public function ajouterAction()
@@ -72,11 +81,12 @@ class DefaultController extends Controller
 
         $theEntityManager = $doctrine->getManager();
 
-        $theEntityManager->persist($ajoutProduit);
+        $theEntityManager->persist($modifier_produit);
 
         $theEntityManager->flush();
 
         return $this->redirectToRoute('jeremy_produit_homepage');
+
 
       }
 
@@ -87,4 +97,29 @@ class DefaultController extends Controller
         'view' => $aFormView,
       ]);
     }
+
+
+    public function supprimerProduitAction($id_du_produit)
+    {
+      $doctrine = $this->getDoctrine();
+
+      $theEntityRepository = $doctrine->getRepository(\Jeremy\ProduitBundle\Entity\Produit::class);
+
+      $supprimer_produit = $theEntityRepository->find($id_du_produit);
+
+      if(empty($supprimer_produit))
+      {
+        return $this->redirectToRoute('jeremy_produit_homepage');
+      }
+
+      $theEntityManager = $doctrine->getManager();
+
+      $theEntityManager->remove($supprimer_produit);
+
+      $theEntityManager->flush();
+
+      return $this->render('@JeremyProduit/Default/supprimerProduit.html.twig');
+
+    }
+
 }
