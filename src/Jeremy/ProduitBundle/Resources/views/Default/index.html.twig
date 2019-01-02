@@ -1,1 +1,38 @@
-<h1>Produit</h1>
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+{{dump(myResults)}}
+
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Référence</th>
+      <th>Catégorie</th>
+      <th>Titre</th>
+      <th>Description</th>
+      <th>Couleur</th>
+      <th>Taille</th>
+      <th>Photo</th>
+      <th>Prix</th>
+      <th>Stock</th>
+    </tr>
+
+    {% for produit in myResults %}
+    <tr>
+      <td>{{ produit.id }}</td>
+      <td>{{ produit.reference }}</td>
+      <td>{{ produit.categorie }}</td>
+      <td>{{ produit.titre }}</td>
+      <td>{{ produit.description }}</td>
+      <td>{{ produit.couleur }}</td>
+      <td>{{ produit.taille }}</td>
+      <td>{{ produit.photo }}</td>
+      <td>{{ produit.prix }}</td>
+      <td>{{ produit.stock }}</td>
+    </tr>
+    {% endfor %}
+
+  </table>
+
+{% endblock %}

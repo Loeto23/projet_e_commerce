@@ -333,7 +333,7 @@ class Produit
     public function addPanier(\Jeremy\PanierBundle\Entity\Panier $panier)
     {
         $this->panier[] = $panier;
-    
+
         return $this;
     }
 

@@ -24,11 +24,11 @@ jeremy_avis:
 
 jeremy_user:
     resource: "@JeremyUserBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /log
 
 jeremy_front:
     resource: "@JeremyFrontBundle/Resources/config/routing.yml"
-    prefix:   /front
+    prefix:   /
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
