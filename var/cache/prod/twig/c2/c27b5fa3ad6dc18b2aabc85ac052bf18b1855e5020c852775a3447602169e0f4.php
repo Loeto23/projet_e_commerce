@@ -77,6 +77,6 @@ class __TwigTemplate_ecd76c88efab7bc9587256f84c23cab7027dc0044e6de741d0bf9fd5e24
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "TwigBundle:Exception:exception.xml.twig", "C:\\wamp64\\www\\projet_e_commerce\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle/Resources/views/Exception/exception.xml.twig");
+        return new Twig_Source("", "TwigBundle:Exception:exception.xml.twig", "E:\\wamp64\\www\\projet_e_commerce\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle/Resources/views/Exception/exception.xml.twig");
     }
 }

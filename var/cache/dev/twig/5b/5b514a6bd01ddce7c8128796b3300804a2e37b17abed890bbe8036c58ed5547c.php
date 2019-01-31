@@ -131,6 +131,6 @@ class __TwigTemplate_0a02f95e15afcf14786f3650da0229855b410ed4223d303a85cbf4e6ee2
 {% endautoescape %}
 {% endblock %}
 {% block body_html %}{% endblock %}
-", "JeremyUserBundle:Registration:email.txt.twig", "C:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\UserBundle/Resources/views/Registration/email.txt.twig");
+", "JeremyUserBundle:Registration:email.txt.twig", "E:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\UserBundle/Resources/views/Registration/email.txt.twig");
     }
 }

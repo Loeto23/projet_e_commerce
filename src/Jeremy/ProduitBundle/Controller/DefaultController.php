@@ -14,6 +14,11 @@ class DefaultController extends Controller
 
       $result = $theEntityRepository->findAll();
 
+      // foreach($result as $key=>$value)
+      // {
+      //   $value->setPhoto(base64_encode(stream_get_contents($value->getPhoto())));
+      // }
+
         return $this->render('@JeremyProduit/Default/index.html.twig',
       [
        'myResults' => $result
@@ -32,6 +37,17 @@ class DefaultController extends Controller
 
       if($aForm->isSubmitted() && ! $aForm->isEmpty())
       {
+
+        $photo = $ajoutProduit->getPhoto();
+
+        $photoName = md5 (uniqid()).'.'.$photo->guessExtension();
+
+        $photo->move(
+          $this->getParameter('upload_directory'),$photoName
+        );
+
+        $ajoutProduit->setPhoto($photoName);
+
         $doctrine = $this->getDoctrine();
 
         $theEntityManager = $doctrine->getManager();
@@ -40,7 +56,8 @@ class DefaultController extends Controller
 
         $theEntityManager->flush();
 
-        return $this->redirectToRoute('jeremy_produit_ajouter');
+        return $this->redirectToRoute('jeremy_produit_homepage');
+        // return $this->render('@JeremyProduit/Default/ajouterProduit.html.twig');
 
       }
 
@@ -77,6 +94,17 @@ class DefaultController extends Controller
 
       if($aForm->isSubmitted() && ! $aForm->isEmpty())
       {
+
+        $photo = $modifier_produit->getPhoto();
+
+        $photoName = md5 (uniqid()).'.'.$photo->guessExtension();
+
+        $photo->move(
+          $this->getParameter('upload_directory'),$photoName
+        );
+
+        $modifier_produit->setPhoto($photoName);
+
         $doctrine = $this->getDoctrine();
 
         $theEntityManager = $doctrine->getManager();
@@ -85,8 +113,7 @@ class DefaultController extends Controller
 
         $theEntityManager->flush();
 
-        return $this->redirectToRoute('jeremy_produit_homepage');
-
+        // return $this->redirectToRoute('jeremy_produit_homepage');
 
       }
 
@@ -119,6 +146,14 @@ class DefaultController extends Controller
       $theEntityManager->flush();
 
       return $this->render('@JeremyProduit/Default/supprimerProduit.html.twig');
+    }
+
+    public function selectionProduitAction($categorie_du_produit)
+    {
+      $doctrine = $this->getDoctrine();
+
+      $theEntityRepository = $doctrine->getRepository(\Jeremy\ProduitBundle\Entity\Produit::class);
+
 
     }
 

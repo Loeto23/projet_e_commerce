@@ -65,6 +65,6 @@ class __TwigTemplate_265f1e6e73f06f278fbaaaf20d00395dcf6f35517df7f239c3cb726c90c
         return new Twig_Source("<h1>Modifier un produit</h1>
 
 {{ form(view) }}
-", "@JeremyProduit/Default/modifierProduit.html.twig", "C:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\ProduitBundle\\Resources\\views\\Default\\modifierProduit.html.twig");
+", "@JeremyProduit/Default/modifierProduit.html.twig", "E:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\ProduitBundle\\Resources\\views\\Default\\modifierProduit.html.twig");
     }
 }

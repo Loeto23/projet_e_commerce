@@ -56,6 +56,6 @@ class __TwigTemplate_fa59f48e1ca41670b4d403e5e82da6a1274ce2aa52ef918f3181201be9a
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@JeremyUser/Group/new.html.twig", "C:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\UserBundle\\Resources\\views\\Group\\new.html.twig");
+        return new Twig_Source("", "@JeremyUser/Group/new.html.twig", "E:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\UserBundle\\Resources\\views\\Group\\new.html.twig");
     }
 }

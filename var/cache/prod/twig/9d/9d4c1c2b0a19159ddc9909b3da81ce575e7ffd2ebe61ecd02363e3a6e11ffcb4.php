@@ -69,6 +69,6 @@ class __TwigTemplate_8d4c8e56fec50e2e1f47fe5583452504667f0003cd1f676bfab07ec36bd
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@JeremyUser/Registration/confirmed.html.twig", "C:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\UserBundle\\Resources\\views\\Registration\\confirmed.html.twig");
+        return new Twig_Source("", "@JeremyUser/Registration/confirmed.html.twig", "E:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\UserBundle\\Resources\\views\\Registration\\confirmed.html.twig");
     }
 }

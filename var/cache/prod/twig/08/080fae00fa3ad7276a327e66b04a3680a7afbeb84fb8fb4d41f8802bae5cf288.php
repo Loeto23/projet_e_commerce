@@ -50,6 +50,6 @@ class __TwigTemplate_852e618a6e727a16782a6d5f5d5f2a19800b7f0717eb17e5dd6fe74e392
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "JeremyProduitBundle:Default:ajouterProduit.html.twig", "C:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\ProduitBundle/Resources/views/Default/ajouterProduit.html.twig");
+        return new Twig_Source("", "JeremyProduitBundle:Default:ajouterProduit.html.twig", "E:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\ProduitBundle/Resources/views/Default/ajouterProduit.html.twig");
     }
 }

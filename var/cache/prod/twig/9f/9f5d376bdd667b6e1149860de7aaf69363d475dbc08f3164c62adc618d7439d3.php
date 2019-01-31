@@ -62,6 +62,6 @@ class __TwigTemplate_b59d9f7e78cc62a0da0535aa1f6ff3f0d8904e48164bf38e4a97aa83dee
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "JeremyUserBundle:Resetting:check_email.html.twig", "C:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\UserBundle/Resources/views/Resetting/check_email.html.twig");
+        return new Twig_Source("", "JeremyUserBundle:Resetting:check_email.html.twig", "E:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\UserBundle/Resources/views/Resetting/check_email.html.twig");
     }
 }

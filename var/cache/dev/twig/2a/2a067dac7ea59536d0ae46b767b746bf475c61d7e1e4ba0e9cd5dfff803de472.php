@@ -22,8 +22,7 @@ class __TwigTemplate_7a58133daf21d7930e984c413642eb3694b80ec08d7676fcef15501c317
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "nav.html.twig"));
 
         // line 1
-        echo "
-<body>
+        echo "<body>
 <!-- Navigation -->
  <nav class=\"navbar-inverse\" role=\"navigation\">
  <div class=\"container-fluid\">
@@ -36,7 +35,7 @@ class __TwigTemplate_7a58133daf21d7930e984c413642eb3694b80ec08d7676fcef15501c317
  <span class=\"icon-bar\"></span>
  </button>
  <a class=\"navbar-brand\" href=\"";
-        // line 14
+        // line 13
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_front_homepage");
         echo "\">Ela | </a>
  </div>
@@ -44,7 +43,46 @@ class __TwigTemplate_7a58133daf21d7930e984c413642eb3694b80ec08d7676fcef15501c317
  <div class=\"collapse navbar-collapse\" id=\"bs-example-navbarcollapse-1\">
  </div>
  </div>
- </nav>
+ <ul class=\"nav\">
+  <li class=\"nav-item\">
+    <a class=\"nav-link active\" href=\"#\">Accueil</a>
+  </li>
+  <div class=\"dropdown-menu\">
+  <a class=\"dropdown-item\" href=\"#\">Service 1</a>
+  <a class=\"dropdown-item\" href=\"#\">Autre service</a>
+  <a class=\"dropdown-item\" href=\"#\">Dernier service</a>
+</div>
+  <li class=\"nav-item\">
+    <a class=\"nav-link\" href=\"#\">A propos</a>
+  </li>
+  <li class=\"nav-item\">
+    <a class=\"nav-link\" href=\"#\">Services</a>
+  </li>
+  <li class=\"nav-item\">
+    <a class=\"nav-link\" href=\"#\">Contact</a>
+  </li>
+<li class=\"nav-item\"><a class=\"nav-link\" href=\"";
+        // line 37
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_login");
+        echo "\">Se connecter </a></li>
+<li class=\"nav-item\"><a class=\"nav-link href=\"";
+        // line 38
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_registration_register");
+        echo "\">S'inscrire' </a></li>
+ </ul>
+
+ <div class=\"dropdown\">
+   <button class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Services</button>
+   <div class=\"dropdown-menu\">
+     <button class=\"dropdown-item\" href=\"#\">Service 1</button>
+     <button class=\"dropdown-item\" href=\"#\">Autre service</button>
+     <button class=\"dropdown-item\" href=\"#\">Dernier Service</button>
+   </div>
+ </div>
+
+</nav>
+
+
 
 
 
@@ -96,7 +134,7 @@ Entertainment</a></li>
 
     public function getDebugInfo()
     {
-        return array (  40 => 14,  25 => 1,);
+        return array (  70 => 38,  66 => 37,  39 => 13,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -109,8 +147,7 @@ Entertainment</a></li>
 
     public function getSourceContext()
     {
-        return new Twig_Source("
-<body>
+        return new Twig_Source("<body>
 <!-- Navigation -->
  <nav class=\"navbar-inverse\" role=\"navigation\">
  <div class=\"container-fluid\">
@@ -128,7 +165,40 @@ Entertainment</a></li>
  <div class=\"collapse navbar-collapse\" id=\"bs-example-navbarcollapse-1\">
  </div>
  </div>
- </nav>
+ <ul class=\"nav\">
+  <li class=\"nav-item\">
+    <a class=\"nav-link active\" href=\"#\">Accueil</a>
+  </li>
+  <div class=\"dropdown-menu\">
+  <a class=\"dropdown-item\" href=\"#\">Service 1</a>
+  <a class=\"dropdown-item\" href=\"#\">Autre service</a>
+  <a class=\"dropdown-item\" href=\"#\">Dernier service</a>
+</div>
+  <li class=\"nav-item\">
+    <a class=\"nav-link\" href=\"#\">A propos</a>
+  </li>
+  <li class=\"nav-item\">
+    <a class=\"nav-link\" href=\"#\">Services</a>
+  </li>
+  <li class=\"nav-item\">
+    <a class=\"nav-link\" href=\"#\">Contact</a>
+  </li>
+<li class=\"nav-item\"><a class=\"nav-link\" href=\"{{ path('fos_user_security_login') }}\">Se connecter </a></li>
+<li class=\"nav-item\"><a class=\"nav-link href=\"{{ path('fos_user_registration_register') }}\">S'inscrire' </a></li>
+ </ul>
+
+ <div class=\"dropdown\">
+   <button class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Services</button>
+   <div class=\"dropdown-menu\">
+     <button class=\"dropdown-item\" href=\"#\">Service 1</button>
+     <button class=\"dropdown-item\" href=\"#\">Autre service</button>
+     <button class=\"dropdown-item\" href=\"#\">Dernier Service</button>
+   </div>
+ </div>
+
+</nav>
+
+
 
 
 
@@ -159,6 +229,6 @@ Entertainment</a></li>
  </ul>
 
 </body>
-", "nav.html.twig", "C:\\wamp64\\www\\projet_e_commerce\\app\\Resources\\views\\nav.html.twig");
+", "nav.html.twig", "E:\\wamp64\\www\\projet_e_commerce\\app\\Resources\\views\\nav.html.twig");
     }
 }

@@ -268,50 +268,50 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
         not_jeremy_commande_homepage:
 
-        if (0 === strpos($pathinfo, '/p')) {
-            // jeremy_panier_homepage
-            if ('/panier' === $trimmedPathinfo) {
-                $ret = array (  '_controller' => 'Jeremy\\PanierBundle\\Controller\\DefaultController::indexAction',  '_route' => 'jeremy_panier_homepage',);
+        // jeremy_panier_homepage
+        if ('/panier' === $trimmedPathinfo) {
+            $ret = array (  '_controller' => 'Jeremy\\PanierBundle\\Controller\\DefaultController::indexAction',  '_route' => 'jeremy_panier_homepage',);
+            if ('/' === substr($pathinfo, -1)) {
+                // no-op
+            } elseif ('GET' !== $canonicalMethod) {
+                goto not_jeremy_panier_homepage;
+            } else {
+                return array_replace($ret, $this->redirect($rawPathinfo.'/', 'jeremy_panier_homepage'));
+            }
+
+            return $ret;
+        }
+        not_jeremy_panier_homepage:
+
+        if (0 === strpos($pathinfo, '/pro')) {
+            // jeremy_produit_homepage
+            if ('/produit' === $trimmedPathinfo) {
+                $ret = array (  '_controller' => 'Jeremy\\ProduitBundle\\Controller\\DefaultController::indexAction',  '_route' => 'jeremy_produit_homepage',);
                 if ('/' === substr($pathinfo, -1)) {
                     // no-op
                 } elseif ('GET' !== $canonicalMethod) {
-                    goto not_jeremy_panier_homepage;
+                    goto not_jeremy_produit_homepage;
                 } else {
-                    return array_replace($ret, $this->redirect($rawPathinfo.'/', 'jeremy_panier_homepage'));
+                    return array_replace($ret, $this->redirect($rawPathinfo.'/', 'jeremy_produit_homepage'));
                 }
 
                 return $ret;
             }
-            not_jeremy_panier_homepage:
+            not_jeremy_produit_homepage:
 
-            if (0 === strpos($pathinfo, '/produit')) {
-                // jeremy_produit_homepage
-                if ('/produit' === $trimmedPathinfo) {
-                    $ret = array (  '_controller' => 'Jeremy\\ProduitBundle\\Controller\\DefaultController::indexAction',  '_route' => 'jeremy_produit_homepage',);
-                    if ('/' === substr($pathinfo, -1)) {
-                        // no-op
-                    } elseif ('GET' !== $canonicalMethod) {
-                        goto not_jeremy_produit_homepage;
-                    } else {
-                        return array_replace($ret, $this->redirect($rawPathinfo.'/', 'jeremy_produit_homepage'));
-                    }
-
-                    return $ret;
-                }
-                not_jeremy_produit_homepage:
-
+            if (0 === strpos($pathinfo, '/produit/action=')) {
                 // jeremy_produit_ajouter
-                if ('/produit/ajouter' === $pathinfo) {
+                if ('/produit/action=ajouter' === $pathinfo) {
                     return array (  '_controller' => 'Jeremy\\ProduitBundle\\Controller\\DefaultController::ajouterAction',  '_route' => 'jeremy_produit_ajouter',);
                 }
 
                 // jeremy_produit_modifier
-                if (0 === strpos($pathinfo, '/produit/modifier') && preg_match('#^/produit/modifier/(?P<id_du_produit>[^/]++)$#sD', $pathinfo, $matches)) {
+                if (0 === strpos($pathinfo, '/produit/action=modif') && preg_match('#^/produit/action\\=modif(?P<id_du_produit>[^/]++)$#sD', $pathinfo, $matches)) {
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'jeremy_produit_modifier')), array (  '_controller' => 'Jeremy\\ProduitBundle\\Controller\\DefaultController::modifierProduitAction',));
                 }
 
                 // jeremy_produit_supprimer
-                if (0 === strpos($pathinfo, '/produit/supprimer') && preg_match('#^/produit/supprimer/(?P<id_du_produit>[^/]++)$#sD', $pathinfo, $matches)) {
+                if (0 === strpos($pathinfo, '/produit/action=suppr') && preg_match('#^/produit/action\\=suppr(?P<id_du_produit>[^/]++)$#sD', $pathinfo, $matches)) {
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'jeremy_produit_supprimer')), array (  '_controller' => 'Jeremy\\ProduitBundle\\Controller\\DefaultController::supprimerProduitAction',));
                 }
 

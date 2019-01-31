@@ -83,6 +83,6 @@ class __TwigTemplate_591844f3b4902bd950886246b73da9ad9bf1b02a9ab88c70209df8d106b
         <input type=\"submit\" value=\"{{ 'registration.submit'|trans }}\" />
     </div>
 {{ form_end(form) }}
-", "JeremyUserBundle:Registration:register_content.html.twig", "C:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\UserBundle/Resources/views/Registration/register_content.html.twig");
+", "JeremyUserBundle:Registration:register_content.html.twig", "E:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\UserBundle/Resources/views/Registration/register_content.html.twig");
     }
 }

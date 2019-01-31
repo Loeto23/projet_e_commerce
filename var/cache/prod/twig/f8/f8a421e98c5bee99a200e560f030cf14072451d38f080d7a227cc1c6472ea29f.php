@@ -575,6 +575,6 @@ class __TwigTemplate_c3629ffa120f5e829abd0474044b4deb81325e43454c0eedd9461f08574
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "SwiftmailerBundle:Collector:swiftmailer.html.twig", "C:\\wamp64\\www\\projet_e_commerce\\vendor\\symfony\\swiftmailer-bundle/Resources/views/Collector/swiftmailer.html.twig");
+        return new Twig_Source("", "SwiftmailerBundle:Collector:swiftmailer.html.twig", "E:\\wamp64\\www\\projet_e_commerce\\vendor\\symfony\\swiftmailer-bundle/Resources/views/Collector/swiftmailer.html.twig");
     }
 }

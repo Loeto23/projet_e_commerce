@@ -23,6 +23,10 @@ class __TwigTemplate_8b16cbefc16120cbf7678611667b077277b0e661fc6f8451a9001d10dbd
 
         // line 1
         echo "<h1>Supprimer un produit</h1>
+
+Le produit a bien été supprimé.
+
+<a href=\"\">Revenir à la liste des produits</a>
 ";
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -53,6 +57,10 @@ class __TwigTemplate_8b16cbefc16120cbf7678611667b077277b0e661fc6f8451a9001d10dbd
     public function getSourceContext()
     {
         return new Twig_Source("<h1>Supprimer un produit</h1>
-", "JeremyProduitBundle:Default:supprimerProduit.html.twig", "C:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\ProduitBundle/Resources/views/Default/supprimerProduit.html.twig");
+
+Le produit a bien été supprimé.
+
+<a href=\"\">Revenir à la liste des produits</a>
+", "JeremyProduitBundle:Default:supprimerProduit.html.twig", "E:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\ProduitBundle/Resources/views/Default/supprimerProduit.html.twig");
     }
 }

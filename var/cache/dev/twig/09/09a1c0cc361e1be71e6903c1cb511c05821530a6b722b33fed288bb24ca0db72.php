@@ -65,6 +65,6 @@ class __TwigTemplate_13e8721764b8c99344b7b131709e8f0fedde545b70b0053955bc6ba7306
         return new Twig_Source("<h1>Ajouter un produit</h1>
 
 {{ form(view) }}
-", "JeremyProduitBundle:Default:ajouterProduit.html.twig", "C:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\ProduitBundle/Resources/views/Default/ajouterProduit.html.twig");
+", "JeremyProduitBundle:Default:ajouterProduit.html.twig", "E:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\ProduitBundle/Resources/views/Default/ajouterProduit.html.twig");
     }
 }

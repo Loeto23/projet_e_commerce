@@ -228,6 +228,6 @@ class __TwigTemplate_1126ae0b697926eac5fdacdaefe5b07947a103000938a05ab3176f82d3a
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Twig/base_js.html.twig", "C:\\wamp64\\www\\projet_e_commerce\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\base_js.html.twig");
+        return new Twig_Source("", "@Twig/base_js.html.twig", "E:\\wamp64\\www\\projet_e_commerce\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\base_js.html.twig");
     }
 }

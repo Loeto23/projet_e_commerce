@@ -40,6 +40,6 @@ class __TwigTemplate_e5b5ad745b4d8fe9ce2251cdaeb22f619f7e3cba533653b3da2aab31c2a
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Twig/images/favicon.png.base64", "C:\\wamp64\\www\\projet_e_commerce\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\images\\favicon.png.base64");
+        return new Twig_Source("", "@Twig/images/favicon.png.base64", "E:\\wamp64\\www\\projet_e_commerce\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\images\\favicon.png.base64");
     }
 }

@@ -315,4 +315,45 @@ class Produit
     {
         return $this->stock;
     }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->panier = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add panier
+     *
+     * @param \Jeremy\PanierBundle\Entity\Panier $panier
+     *
+     * @return Produit
+     */
+    public function addPanier(\Jeremy\PanierBundle\Entity\Panier $panier)
+    {
+        $this->panier[] = $panier;
+
+        return $this;
+    }
+
+    /**
+     * Remove panier
+     *
+     * @param \Jeremy\PanierBundle\Entity\Panier $panier
+     */
+    public function removePanier(\Jeremy\PanierBundle\Entity\Panier $panier)
+    {
+        $this->panier->removeElement($panier);
+    }
+
+    /**
+     * Get panier
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getPanier()
+    {
+        return $this->panier;
+    }
 }

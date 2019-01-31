@@ -103,6 +103,6 @@ class __TwigTemplate_ee223256ddc63f301626c964d1630ba1aae8ceabaf9817358ca4e975321
     <p><a href=\"{{ targetUrl }}\">{{ 'registration.back'|trans }}</a></p>
     {% endif %}
 {% endblock fos_user_content %}
-", "JeremyUserBundle:Registration:confirmed.html.twig", "C:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\UserBundle/Resources/views/Registration/confirmed.html.twig");
+", "JeremyUserBundle:Registration:confirmed.html.twig", "E:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\UserBundle/Resources/views/Registration/confirmed.html.twig");
     }
 }

@@ -54,6 +54,6 @@ class __TwigTemplate_b08e16dd5a4745ab4e8965d9a958d9de943cc20b48e9507854827742dd0
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Twig/Exception/error.xml.twig", "C:\\wamp64\\www\\projet_e_commerce\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\error.xml.twig");
+        return new Twig_Source("", "@Twig/Exception/error.xml.twig", "E:\\wamp64\\www\\projet_e_commerce\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\error.xml.twig");
     }
 }

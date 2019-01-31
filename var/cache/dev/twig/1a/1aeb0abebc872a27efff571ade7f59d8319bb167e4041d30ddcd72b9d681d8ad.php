@@ -85,6 +85,6 @@ class __TwigTemplate_5f0abd8731f0c12513e4cd38eab43075367513ba5264e74bb16aeae2b6f
 {% block fos_user_content %}
 {% include \"@FOSUser/Group/new_content.html.twig\" %}
 {% endblock fos_user_content %}
-", "@JeremyUser/Group/new.html.twig", "C:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\UserBundle\\Resources\\views\\Group\\new.html.twig");
+", "@JeremyUser/Group/new.html.twig", "E:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\UserBundle\\Resources\\views\\Group\\new.html.twig");
     }
 }

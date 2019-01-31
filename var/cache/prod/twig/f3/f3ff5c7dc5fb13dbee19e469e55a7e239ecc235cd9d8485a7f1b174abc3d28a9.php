@@ -40,6 +40,6 @@ class __TwigTemplate_19901d7286d3988524992224520135f4f99c95c30b0093e11b8acc440d1
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@JeremyReduction/Default/index.html.twig", "C:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\ReductionBundle\\Resources\\views\\Default\\index.html.twig");
+        return new Twig_Source("", "@JeremyReduction/Default/index.html.twig", "E:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\ReductionBundle\\Resources\\views\\Default\\index.html.twig");
     }
 }

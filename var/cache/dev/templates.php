@@ -145,8 +145,10 @@
   'JeremyProduitBundle:Default:ajouterProduit.html.twig' => __DIR__.'/../../../src/Jeremy/ProduitBundle/Resources/views/Default/ajouterProduit.html.twig',
   'JeremyProduitBundle:Default:index.html.twig' => __DIR__.'/../../../src/Jeremy/ProduitBundle/Resources/views/Default/index.html.twig',
   'JeremyProduitBundle:Default:modifierProduit.html.twig' => __DIR__.'/../../../src/Jeremy/ProduitBundle/Resources/views/Default/modifierProduit.html.twig',
+  'JeremyProduitBundle:Default:supprimerProduit.html.twig' => __DIR__.'/../../../src/Jeremy/ProduitBundle/Resources/views/Default/supprimerProduit.html.twig',
   'JeremyPanierBundle:Default:index.html.twig' => __DIR__.'/../../../src/Jeremy/PanierBundle/Resources/views/Default/index.html.twig',
   'JeremyCommandeBundle:Default:index.html.twig' => __DIR__.'/../../../src/Jeremy/CommandeBundle/Resources/views/Default/index.html.twig',
+  'JeremyNewsletterBundle:Default:contact.html.twig' => __DIR__.'/../../../src/Jeremy/NewsletterBundle/Resources/views/Default/contact.html.twig',
   'JeremyNewsletterBundle:Default:index.html.twig' => __DIR__.'/../../../src/Jeremy/NewsletterBundle/Resources/views/Default/index.html.twig',
   'JeremyReductionBundle:Default:index.html.twig' => __DIR__.'/../../../src/Jeremy/ReductionBundle/Resources/views/Default/index.html.twig',
   'DebugBundle:Profiler:dump.html.twig' => __DIR__.'/../../../vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views/Profiler/dump.html.twig',
@@ -187,4 +189,6 @@
   '::base.html.twig' => __DIR__.'/../../../app/Resources/views/base.html.twig',
   ':default:index.html.twig' => __DIR__.'/../../../app/Resources/views/default/index.html.twig',
   '::nav.html.twig' => __DIR__.'/../../../app/Resources/views/nav.html.twig',
+  '::nav2.html.twig' => __DIR__.'/../../../app/Resources/views/nav2.html.twig',
+  '::top.html.twig' => __DIR__.'/../../../app/Resources/views/top.html.twig',
 );

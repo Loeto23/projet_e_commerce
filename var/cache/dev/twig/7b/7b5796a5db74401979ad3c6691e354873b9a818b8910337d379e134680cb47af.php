@@ -90,6 +90,6 @@ class __TwigTemplate_ad31b343b64b2d7d2f4c329c8f501cc573afb7fba67c62559d99d48d969
 {% block fos_user_content %}
     <p>{{ 'registration.check_email'|trans({'%email%': user.email}) }}</p>
 {% endblock fos_user_content %}
-", "JeremyUserBundle:Registration:check_email.html.twig", "C:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\UserBundle/Resources/views/Registration/check_email.html.twig");
+", "JeremyUserBundle:Registration:check_email.html.twig", "E:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\UserBundle/Resources/views/Registration/check_email.html.twig");
     }
 }

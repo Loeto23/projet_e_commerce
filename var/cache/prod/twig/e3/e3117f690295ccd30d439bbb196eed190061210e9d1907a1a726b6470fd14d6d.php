@@ -70,6 +70,6 @@ class __TwigTemplate_8df7d565350f9f63b1d4a89498982cd3053024fd908940755748a6233e9
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@JeremyUser/Registration/email.txt.twig", "C:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\UserBundle\\Resources\\views\\Registration\\email.txt.twig");
+        return new Twig_Source("", "@JeremyUser/Registration/email.txt.twig", "E:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\UserBundle\\Resources\\views\\Registration\\email.txt.twig");
     }
 }

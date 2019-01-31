@@ -3,18 +3,18 @@ jeremy_produit_homepage:
     defaults: { _controller: JeremyProduitBundle:Default:index }
 
 jeremy_produit_ajouter:
-    path: /ajouter
+    path: /action=ajouter
     defaults: { _controller: JeremyProduitBundle:Default:ajouter }
 
 jeremy_produit_modifier:
-  path: /modifier/{id_du_produit}
+  path: /action=modif{id_du_produit}
   defaults:
     _controller: JeremyProduitBundle:Default:modifierProduit
   requirements:
     id_de_auteur: '\d+' # d = 0-9 / d+ = 0 à l'infini
 
 jeremy_produit_supprimer:
-  path: /supprimer/{id_du_produit}
+  path: /action=suppr{id_du_produit}
   defaults:
     _controller: JeremyProduitBundle:Default:supprimerProduit
   requirements:

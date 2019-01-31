@@ -53,6 +53,6 @@ class __TwigTemplate_eda616583739ea607a1df30926fad3c70a92cbed947133b0b7a7913a7f8
     public function getSourceContext()
     {
         return new Twig_Source("<h1>Newsletter</h1>
-", "@JeremyNewsletter/Default/index.html.twig", "C:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\NewsletterBundle\\Resources\\views\\Default\\index.html.twig");
+", "@JeremyNewsletter/Default/index.html.twig", "E:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\NewsletterBundle\\Resources\\views\\Default\\index.html.twig");
     }
 }

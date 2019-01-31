@@ -70,6 +70,6 @@ class __TwigTemplate_b72e5901b8db14aa4c747ed5fe0e51523c623aa2e81eccf685d5f216a2c
 <div class=\"fos_user_group_show\">
     <p>{{ 'group.show.name'|trans }}: {{ group.getName() }}</p>
 </div>
-", "JeremyUserBundle:Group:show_content.html.twig", "C:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\UserBundle/Resources/views/Group/show_content.html.twig");
+", "JeremyUserBundle:Group:show_content.html.twig", "E:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\UserBundle/Resources/views/Group/show_content.html.twig");
     }
 }

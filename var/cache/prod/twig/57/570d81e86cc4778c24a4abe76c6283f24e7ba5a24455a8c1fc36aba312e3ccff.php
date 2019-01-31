@@ -40,6 +40,6 @@ class __TwigTemplate_e4eb1e157b3d0511cad6f51cb3f554f4d69c01bbef2593f1369411b739b
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@JeremyPanier/Default/index.html.twig", "C:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\PanierBundle\\Resources\\views\\Default\\index.html.twig");
+        return new Twig_Source("", "@JeremyPanier/Default/index.html.twig", "E:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\PanierBundle\\Resources\\views\\Default\\index.html.twig");
     }
 }

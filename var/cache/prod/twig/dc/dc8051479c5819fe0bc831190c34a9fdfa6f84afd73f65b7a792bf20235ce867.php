@@ -40,6 +40,6 @@ class __TwigTemplate_f5198afd954285c2251e55d5732de95bffe4169a5d02934608825067e64
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Twig/images/icon-minus-square-o.svg", "C:\\wamp64\\www\\projet_e_commerce\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\images\\icon-minus-square-o.svg");
+        return new Twig_Source("", "@Twig/images/icon-minus-square-o.svg", "E:\\wamp64\\www\\projet_e_commerce\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\images\\icon-minus-square-o.svg");
     }
 }

@@ -72,6 +72,6 @@ class __TwigTemplate_e71162332cd80796937edc6fac5512973539a874f57f5367b164723bef0
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Twig/Exception/traces.txt.twig", "C:\\wamp64\\www\\projet_e_commerce\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\traces.txt.twig");
+        return new Twig_Source("", "@Twig/Exception/traces.txt.twig", "E:\\wamp64\\www\\projet_e_commerce\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\traces.txt.twig");
     }
 }

@@ -1,8 +1,12 @@
 {% extends 'base.html.twig' %}
 
-
 {% block body %}
-{{dump(myResults)}}
+
+<h1>Liste des Produits</h1>
+
+<a href="action=ajouter">Ajouter un produit</a>
+
+
 
   <table>
     <tr>
@@ -27,9 +31,15 @@
       <td>{{ produit.description }}</td>
       <td>{{ produit.couleur }}</td>
       <td>{{ produit.taille }}</td>
-      <td>{{ produit.photo }}</td>
+      <td>
+
+      <img src="{{ asset('uploads/photos/' ~ produit.photo ) }}" width="100" height="100">
+
+      </td>
       <td>{{ produit.prix }}</td>
       <td>{{ produit.stock }}</td>
+      <td><a href="action=modif{{ produit.id }}">Modifier</a></td>
+      <td><a href="action=suppr{{ produit.id }}">Supprimer</a></td>
     </tr>
     {% endfor %}
 

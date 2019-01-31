@@ -142,6 +142,6 @@ class __TwigTemplate_5c362cdf38076c153d58b070e10d130d161c949a760560b7eaf8cd31ae8
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "default/index.html.twig", "C:\\wamp64\\www\\projet_e_commerce\\app\\Resources\\views\\default\\index.html.twig");
+        return new Twig_Source("", "default/index.html.twig", "E:\\wamp64\\www\\projet_e_commerce\\app\\Resources\\views\\default\\index.html.twig");
     }
 }

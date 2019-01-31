@@ -42,6 +42,6 @@ class __TwigTemplate_a975db9dd7cc7889400f09fdf953f7eeb08ffbcbfe1f7d0cb8878022f33
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Swiftmailer/Collector/icon.svg", "C:\\wamp64\\www\\projet_e_commerce\\vendor\\symfony\\swiftmailer-bundle\\Resources\\views\\Collector\\icon.svg");
+        return new Twig_Source("", "@Swiftmailer/Collector/icon.svg", "E:\\wamp64\\www\\projet_e_commerce\\vendor\\symfony\\swiftmailer-bundle\\Resources\\views\\Collector\\icon.svg");
     }
 }
