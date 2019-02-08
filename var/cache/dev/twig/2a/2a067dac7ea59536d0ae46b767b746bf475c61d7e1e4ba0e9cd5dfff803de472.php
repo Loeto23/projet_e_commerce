@@ -10,6 +10,7 @@ class __TwigTemplate_7a58133daf21d7930e984c413642eb3694b80ec08d7676fcef15501c317
         $this->parent = false;
 
         $this->blocks = array(
+            'nav' => array($this, 'block_nav'),
         );
     }
 
@@ -22,98 +23,7 @@ class __TwigTemplate_7a58133daf21d7930e984c413642eb3694b80ec08d7676fcef15501c317
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "nav.html.twig"));
 
         // line 1
-        echo "<body>
-<!-- Navigation -->
- <nav class=\"navbar-inverse\" role=\"navigation\">
- <div class=\"container-fluid\">
-
- <div class=\"navbar-header\">
- <button type=\"button\" class=\"navbar-toggle collapsed\" datatoggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\">
- <span class=\"sr-only\">Toggle navigation</span>
- <span class=\"icon-bar\"></span>
- <span class=\"icon-bar\"></span>
- <span class=\"icon-bar\"></span>
- </button>
- <a class=\"navbar-brand\" href=\"";
-        // line 13
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_front_homepage");
-        echo "\">Ela | </a>
- </div>
-
- <div class=\"collapse navbar-collapse\" id=\"bs-example-navbarcollapse-1\">
- </div>
- </div>
- <ul class=\"nav\">
-  <li class=\"nav-item\">
-    <a class=\"nav-link active\" href=\"#\">Accueil</a>
-  </li>
-  <div class=\"dropdown-menu\">
-  <a class=\"dropdown-item\" href=\"#\">Service 1</a>
-  <a class=\"dropdown-item\" href=\"#\">Autre service</a>
-  <a class=\"dropdown-item\" href=\"#\">Dernier service</a>
-</div>
-  <li class=\"nav-item\">
-    <a class=\"nav-link\" href=\"#\">A propos</a>
-  </li>
-  <li class=\"nav-item\">
-    <a class=\"nav-link\" href=\"#\">Services</a>
-  </li>
-  <li class=\"nav-item\">
-    <a class=\"nav-link\" href=\"#\">Contact</a>
-  </li>
-<li class=\"nav-item\"><a class=\"nav-link\" href=\"";
-        // line 37
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_login");
-        echo "\">Se connecter </a></li>
-<li class=\"nav-item\"><a class=\"nav-link href=\"";
-        // line 38
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_registration_register");
-        echo "\">S'inscrire' </a></li>
- </ul>
-
- <div class=\"dropdown\">
-   <button class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Services</button>
-   <div class=\"dropdown-menu\">
-     <button class=\"dropdown-item\" href=\"#\">Service 1</button>
-     <button class=\"dropdown-item\" href=\"#\">Autre service</button>
-     <button class=\"dropdown-item\" href=\"#\">Dernier Service</button>
-   </div>
- </div>
-
-</nav>
-
-
-
-
-
-<div class=\"collapse navbar-collapse\" id=\"bs-example-navbarcollapse-1\">
-<ul class=\"nav navbar-nav\">
- <li class=\"dropdown\">
- <a href=\"#\" class=\"active dropdown-toggle\" datatoggle=\"dropdown\">Categories <span class=\"caret\"></span></a>
- <ul class=\"dropdown-menu\" role=\"menu\">
- <li><a href=\"category.html\">Apparel &amp; Accessories</
-a></li>
- <li><a href=\"category.html\">Baby Products</a></li>
- <li><a href=\"category.html\">Beauty &amp; Health</a></
-li>
- <li><a href=\"category.html\">Electronics</a></li>
- <li><a href=\"category.html\">Furniture</a></li>
- <li><a href=\"category.html\">Home &amp; Garden</a></li>
- <li><a href=\"category.html\">Luggage &amp; Bags</a></li>
- <li><a href=\"category.html\">Shoes</a></li>
- <li><a href=\"category.html\">Sports &amp;
-Entertainment</a></li>
- <li><a href=\"category.html\">Watches</a></li>
- <li class=\"divider\"></li>
- <li><a href=\"ecommerce.html\">All Categories</a></li>
- </ul>
- </li>
- <li><a href=\"#\">Link</a></li>
- <li><a href=\"#\">Link</a></li>
- </ul>
-
-</body>
-";
+        $this->displayBlock('nav', $context, $blocks);
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -122,19 +32,125 @@ Entertainment</a></li>
 
     }
 
+    public function block_nav($context, array $blocks = array())
+    {
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "nav"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "nav"));
+
+        // line 2
+        echo "
+<nav class=\"navbar navbar-expand-lg\">
+  <div class=\"container\"><a href=\"";
+        // line 4
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php"), "html", null, true);
+        echo "\" class=\"navbar-brand home\"><img src=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendor/img/ela.png"), "html", null, true);
+        echo "\" alt=\"Ela logo\" class=\"d-none d-md-inline-block\"><img src=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendor/img/ela-small.png"), "html", null, true);
+        echo "\" alt=\"Ela logo\" class=\"d-inline-block d-md-none\"><span class=\"sr-only\">Ela - go to homepage</span></a>
+    <div class=\"navbar-buttons\">
+      <button type=\"button\" data-toggle=\"collapse\" data-target=\"#navigation\" class=\"btn btn-outline-secondary navbar-toggler\"><span class=\"sr-only\">Toggle navigation</span><i class=\"fa fa-align-justify\"></i></button>
+      <button type=\"button\" data-toggle=\"collapse\" data-target=\"#search\" class=\"btn btn-outline-secondary navbar-toggler\"><span class=\"sr-only\">Toggle search</span><i class=\"fa fa-search\"></i></button><a href=\"basket.html\" class=\"btn btn-outline-secondary navbar-toggler\"><i class=\"fa fa-shopping-cart\"></i></a>
+    </div>
+    <div id=\"navigation\" class=\"collapse navbar-collapse\" style=\"color:blue;\">
+      <ul class=\"navbar-nav mr-auto\">
+        <li class=\"nav-item dropdown menu-large\"><a href=\"#\" data-toggle=\"dropdown\" data-hover=\"dropdown\" data-delay=\"200\" class=\"dropdown-toggle nav-link\">Vêtements<b class=\"caret\"\"></b></a>
+          <ul class=\"dropdown-menu megamenuVet megamenu\">
+            <li>
+              <div class=\"row\">
+                <div class=\"col-md-6 col-lg-3\">
+                  <ul class=\"list-unstyled mb-2\">
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Tops</a></li>
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Robes</a></li>
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Pantalons</a></li>
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Jupes</a></li>
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Vestes/Manteaux</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class=\"nav-item dropdown menu-large\"><a href=\"#\" data-toggle=\"dropdown\" data-hover=\"dropdown\" data-delay=\"200\" class=\"dropdown-toggle nav-link\">Chaussures<b class=\"caret\"></b></a>
+          <ul class=\"dropdown-menu megamenu megamenuChau\">
+            <li>
+              <div class=\"row\">
+                <div class=\"col-md-6 col-lg-3\">
+                  <ul class=\"list-unstyled mb-3\">
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Bottes</a></li>
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Sandales</a></li>
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Baskets</a></li>
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Escarpins</a></li>
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Chaussons</a></li>
+                  </ul>
+                </div>
+            </li>
+          </ul>
+        </li>
+        <li class=\"nav-item dropdown menu-large\"><a href=\"#\" data-toggle=\"dropdown\" data-hover=\"dropdown\" data-delay=\"200\" class=\"dropdown-toggle nav-link\">Accessoires<b class=\"caret\"></b></a>
+          <ul class=\"dropdown-menu megamenu megamenuAcces\">
+            <li>
+              <div class=\"row\">
+                <div class=\"col-md-6 col-lg-3\">
+                  <ul class=\"list-unstyled mb-3\">
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Sacs</a></li>
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Foulards/Echarpes</a></li>
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Ceintures</a></li>
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Couvre-chef</a></li>
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Bijoux</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class=\"navbar-buttons d-flex justify-content-end w120 pR10\">
+        <form role=\"search\" class=\"ml-auto mR20\">
+          <div class=\"input-group w140\">
+            <input type=\"text\" placeholder=\"Search\" class=\"form-control\">
+            <div class=\"input-group-append\">
+              <button type=\"button\" class=\"btn btn-primary\"><i class=\"fa fa-search\"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class=\"panier\">
+        <div id=\"basket-overview\" class=\"navbar-collapse collapse d-none d-lg-block\"><a href=\"\" class=\"btn btn-primary navbar-btn\"><i class=\"fa fa-shopping-cart\"></i><span>Panier vide</span></a></div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
     public function getTemplateName()
     {
         return "nav.html.twig";
     }
 
-    public function isTraitable()
-    {
-        return false;
-    }
-
     public function getDebugInfo()
     {
-        return array (  70 => 38,  66 => 37,  39 => 13,  25 => 1,);
+        return array (  48 => 4,  44 => 2,  26 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -147,88 +163,94 @@ Entertainment</a></li>
 
     public function getSourceContext()
     {
-        return new Twig_Source("<body>
-<!-- Navigation -->
- <nav class=\"navbar-inverse\" role=\"navigation\">
- <div class=\"container-fluid\">
+        return new Twig_Source("{% block nav %}
 
- <div class=\"navbar-header\">
- <button type=\"button\" class=\"navbar-toggle collapsed\" datatoggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\">
- <span class=\"sr-only\">Toggle navigation</span>
- <span class=\"icon-bar\"></span>
- <span class=\"icon-bar\"></span>
- <span class=\"icon-bar\"></span>
- </button>
- <a class=\"navbar-brand\" href=\"{{ path('jeremy_front_homepage') }}\">Ela | </a>
- </div>
+<nav class=\"navbar navbar-expand-lg\">
+  <div class=\"container\"><a href=\"{{ asset('app_dev.php')}}\" class=\"navbar-brand home\"><img src=\"{{ asset('../vendor/img/ela.png') }}\" alt=\"Ela logo\" class=\"d-none d-md-inline-block\"><img src=\"{{ asset('../vendor/img/ela-small.png') }}\" alt=\"Ela logo\" class=\"d-inline-block d-md-none\"><span class=\"sr-only\">Ela - go to homepage</span></a>
+    <div class=\"navbar-buttons\">
+      <button type=\"button\" data-toggle=\"collapse\" data-target=\"#navigation\" class=\"btn btn-outline-secondary navbar-toggler\"><span class=\"sr-only\">Toggle navigation</span><i class=\"fa fa-align-justify\"></i></button>
+      <button type=\"button\" data-toggle=\"collapse\" data-target=\"#search\" class=\"btn btn-outline-secondary navbar-toggler\"><span class=\"sr-only\">Toggle search</span><i class=\"fa fa-search\"></i></button><a href=\"basket.html\" class=\"btn btn-outline-secondary navbar-toggler\"><i class=\"fa fa-shopping-cart\"></i></a>
+    </div>
+    <div id=\"navigation\" class=\"collapse navbar-collapse\" style=\"color:blue;\">
+      <ul class=\"navbar-nav mr-auto\">
+        <li class=\"nav-item dropdown menu-large\"><a href=\"#\" data-toggle=\"dropdown\" data-hover=\"dropdown\" data-delay=\"200\" class=\"dropdown-toggle nav-link\">Vêtements<b class=\"caret\"\"></b></a>
+          <ul class=\"dropdown-menu megamenuVet megamenu\">
+            <li>
+              <div class=\"row\">
+                <div class=\"col-md-6 col-lg-3\">
+                  <ul class=\"list-unstyled mb-2\">
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Tops</a></li>
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Robes</a></li>
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Pantalons</a></li>
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Jupes</a></li>
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Vestes/Manteaux</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class=\"nav-item dropdown menu-large\"><a href=\"#\" data-toggle=\"dropdown\" data-hover=\"dropdown\" data-delay=\"200\" class=\"dropdown-toggle nav-link\">Chaussures<b class=\"caret\"></b></a>
+          <ul class=\"dropdown-menu megamenu megamenuChau\">
+            <li>
+              <div class=\"row\">
+                <div class=\"col-md-6 col-lg-3\">
+                  <ul class=\"list-unstyled mb-3\">
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Bottes</a></li>
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Sandales</a></li>
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Baskets</a></li>
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Escarpins</a></li>
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Chaussons</a></li>
+                  </ul>
+                </div>
+            </li>
+          </ul>
+        </li>
+        <li class=\"nav-item dropdown menu-large\"><a href=\"#\" data-toggle=\"dropdown\" data-hover=\"dropdown\" data-delay=\"200\" class=\"dropdown-toggle nav-link\">Accessoires<b class=\"caret\"></b></a>
+          <ul class=\"dropdown-menu megamenu megamenuAcces\">
+            <li>
+              <div class=\"row\">
+                <div class=\"col-md-6 col-lg-3\">
+                  <ul class=\"list-unstyled mb-3\">
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Sacs</a></li>
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Foulards/Echarpes</a></li>
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Ceintures</a></li>
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Couvre-chef</a></li>
+                    <li class=\"nav-item\"><a href=\"\" class=\"nav-link\">Bijoux</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
 
- <div class=\"collapse navbar-collapse\" id=\"bs-example-navbarcollapse-1\">
- </div>
- </div>
- <ul class=\"nav\">
-  <li class=\"nav-item\">
-    <a class=\"nav-link active\" href=\"#\">Accueil</a>
-  </li>
-  <div class=\"dropdown-menu\">
-  <a class=\"dropdown-item\" href=\"#\">Service 1</a>
-  <a class=\"dropdown-item\" href=\"#\">Autre service</a>
-  <a class=\"dropdown-item\" href=\"#\">Dernier service</a>
-</div>
-  <li class=\"nav-item\">
-    <a class=\"nav-link\" href=\"#\">A propos</a>
-  </li>
-  <li class=\"nav-item\">
-    <a class=\"nav-link\" href=\"#\">Services</a>
-  </li>
-  <li class=\"nav-item\">
-    <a class=\"nav-link\" href=\"#\">Contact</a>
-  </li>
-<li class=\"nav-item\"><a class=\"nav-link\" href=\"{{ path('fos_user_security_login') }}\">Se connecter </a></li>
-<li class=\"nav-item\"><a class=\"nav-link href=\"{{ path('fos_user_registration_register') }}\">S'inscrire' </a></li>
- </ul>
+      <div class=\"navbar-buttons d-flex justify-content-end w120 pR10\">
+        <form role=\"search\" class=\"ml-auto mR20\">
+          <div class=\"input-group w140\">
+            <input type=\"text\" placeholder=\"Search\" class=\"form-control\">
+            <div class=\"input-group-append\">
+              <button type=\"button\" class=\"btn btn-primary\"><i class=\"fa fa-search\"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
 
- <div class=\"dropdown\">
-   <button class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Services</button>
-   <div class=\"dropdown-menu\">
-     <button class=\"dropdown-item\" href=\"#\">Service 1</button>
-     <button class=\"dropdown-item\" href=\"#\">Autre service</button>
-     <button class=\"dropdown-item\" href=\"#\">Dernier Service</button>
-   </div>
- </div>
-
+      <div class=\"panier\">
+        <div id=\"basket-overview\" class=\"navbar-collapse collapse d-none d-lg-block\"><a href=\"\" class=\"btn btn-primary navbar-btn\"><i class=\"fa fa-shopping-cart\"></i><span>Panier vide</span></a></div>
+      </div>
+    </div>
+  </div>
 </nav>
 
 
 
 
 
-<div class=\"collapse navbar-collapse\" id=\"bs-example-navbarcollapse-1\">
-<ul class=\"nav navbar-nav\">
- <li class=\"dropdown\">
- <a href=\"#\" class=\"active dropdown-toggle\" datatoggle=\"dropdown\">Categories <span class=\"caret\"></span></a>
- <ul class=\"dropdown-menu\" role=\"menu\">
- <li><a href=\"category.html\">Apparel &amp; Accessories</
-a></li>
- <li><a href=\"category.html\">Baby Products</a></li>
- <li><a href=\"category.html\">Beauty &amp; Health</a></
-li>
- <li><a href=\"category.html\">Electronics</a></li>
- <li><a href=\"category.html\">Furniture</a></li>
- <li><a href=\"category.html\">Home &amp; Garden</a></li>
- <li><a href=\"category.html\">Luggage &amp; Bags</a></li>
- <li><a href=\"category.html\">Shoes</a></li>
- <li><a href=\"category.html\">Sports &amp;
-Entertainment</a></li>
- <li><a href=\"category.html\">Watches</a></li>
- <li class=\"divider\"></li>
- <li><a href=\"ecommerce.html\">All Categories</a></li>
- </ul>
- </li>
- <li><a href=\"#\">Link</a></li>
- <li><a href=\"#\">Link</a></li>
- </ul>
 
-</body>
+
+
+{% endblock %}
 ", "nav.html.twig", "E:\\wamp64\\www\\projet_e_commerce\\app\\Resources\\views\\nav.html.twig");
     }
 }

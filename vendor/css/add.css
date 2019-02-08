@@ -1,0 +1,68 @@
+li {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+td {
+  border: 1px solid;
+}
+
+h1 {
+  /* color: blue; */
+}
+table {
+  text-align: center;
+}
+
+.blue {
+  transition: all 0.3 !important;
+  outline: none !important;
+  color: rgb(0, 32, 115) !important;
+}
+
+.blue:hover {
+  color: rgb(0, 117, 255) !important;
+}
+
+.tdecoNone {
+  text-decoration: none !important;
+}
+
+.mR10 {
+  margin-right: 10%;
+}
+
+.mR20 {
+  margin-right: 20%;
+}
+
+.mR50 {
+  margin-right: 50%;
+}
+
+.w120 {
+  width: 120%;
+}
+
+.w140 {
+  width: 140%;
+}
+
+.w150 {
+  width: 150%;
+}
+
+.pR10 {
+  padding-right: 10%;
+}
+
+.pR20 {
+  padding-right: 20%;
+}
+
+.input-group {
+  width: 140% !important;
+}

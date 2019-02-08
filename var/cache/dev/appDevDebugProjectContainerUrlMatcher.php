@@ -107,6 +107,19 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+        elseif (0 === strpos($pathinfo, '/backoffice')) {
+            // jeremy_user_homepage
+            if ('/backoffice=membre' === $pathinfo) {
+                return array (  '_controller' => 'Jeremy\\UserBundle\\Controller\\DefaultController::indexAction',  '_route' => 'jeremy_user_homepage',);
+            }
+
+            // jeremy_front_backoffice
+            if ('/backoffice' === $pathinfo) {
+                return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\DefaultController::backofficeAction',  '_route' => 'jeremy_front_backoffice',);
+            }
+
+        }
+
         elseif (0 === strpos($pathinfo, '/re')) {
             // jeremy_reduction_homepage
             if ('/reduction' === $trimmedPathinfo) {
@@ -268,6 +281,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
         not_jeremy_commande_homepage:
 
+        // jeremy_front_contact
+        if ('/contact' === $pathinfo) {
+            return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\DefaultController::contactAction',  '_route' => 'jeremy_front_contact',);
+        }
+
         // jeremy_panier_homepage
         if ('/panier' === $trimmedPathinfo) {
             $ret = array (  '_controller' => 'Jeremy\\PanierBundle\\Controller\\DefaultController::indexAction',  '_route' => 'jeremy_panier_homepage',);
@@ -381,63 +399,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
         not_jeremy_avis_homepage:
 
-        if (0 === strpos($pathinfo, '/log')) {
-            // jeremy_user_homepage
-            if ('/log' === $trimmedPathinfo) {
-                $ret = array (  '_controller' => 'Jeremy\\UserBundle\\Controller\\DefaultController::indexAction',  '_route' => 'jeremy_user_homepage',);
-                if ('/' === substr($pathinfo, -1)) {
-                    // no-op
-                } elseif ('GET' !== $canonicalMethod) {
-                    goto not_jeremy_user_homepage;
-                } else {
-                    return array_replace($ret, $this->redirect($rawPathinfo.'/', 'jeremy_user_homepage'));
-                }
-
-                return $ret;
-            }
-            not_jeremy_user_homepage:
-
-            if (0 === strpos($pathinfo, '/login')) {
-                // fos_user_security_login
-                if ('/login' === $pathinfo) {
-                    $ret = array (  '_controller' => 'fos_user.security.controller:loginAction',  '_route' => 'fos_user_security_login',);
-                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                        $allow = array_merge($allow, array('GET', 'POST'));
-                        goto not_fos_user_security_login;
-                    }
-
-                    return $ret;
-                }
-                not_fos_user_security_login:
-
-                // fos_user_security_check
-                if ('/login_check' === $pathinfo) {
-                    $ret = array (  '_controller' => 'fos_user.security.controller:checkAction',  '_route' => 'fos_user_security_check',);
-                    if (!in_array($requestMethod, array('POST'))) {
-                        $allow = array_merge($allow, array('POST'));
-                        goto not_fos_user_security_check;
-                    }
-
-                    return $ret;
-                }
-                not_fos_user_security_check:
-
-            }
-
-            // fos_user_security_logout
-            if ('/logout' === $pathinfo) {
-                $ret = array (  '_controller' => 'fos_user.security.controller:logoutAction',  '_route' => 'fos_user_security_logout',);
-                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                    $allow = array_merge($allow, array('GET', 'POST'));
-                    goto not_fos_user_security_logout;
-                }
-
-                return $ret;
-            }
-            not_fos_user_security_logout:
-
-        }
-
         // jeremy_front_homepage
         if ('' === $trimmedPathinfo) {
             $ret = array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\DefaultController::indexAction',  '_route' => 'jeremy_front_homepage',);
@@ -452,6 +413,45 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return $ret;
         }
         not_jeremy_front_homepage:
+
+        if (0 === strpos($pathinfo, '/login')) {
+            // fos_user_security_login
+            if ('/login' === $pathinfo) {
+                $ret = array (  '_controller' => 'fos_user.security.controller:loginAction',  '_route' => 'fos_user_security_login',);
+                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                    $allow = array_merge($allow, array('GET', 'POST'));
+                    goto not_fos_user_security_login;
+                }
+
+                return $ret;
+            }
+            not_fos_user_security_login:
+
+            // fos_user_security_check
+            if ('/login_check' === $pathinfo) {
+                $ret = array (  '_controller' => 'fos_user.security.controller:checkAction',  '_route' => 'fos_user_security_check',);
+                if (!in_array($requestMethod, array('POST'))) {
+                    $allow = array_merge($allow, array('POST'));
+                    goto not_fos_user_security_check;
+                }
+
+                return $ret;
+            }
+            not_fos_user_security_check:
+
+        }
+
+        // fos_user_security_logout
+        if ('/logout' === $pathinfo) {
+            $ret = array (  '_controller' => 'fos_user.security.controller:logoutAction',  '_route' => 'fos_user_security_logout',);
+            if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                $allow = array_merge($allow, array('GET', 'POST'));
+                goto not_fos_user_security_logout;
+            }
+
+            return $ret;
+        }
+        not_fos_user_security_logout:
 
         if ('/' === $pathinfo && !$allow) {
             throw new Symfony\Component\Routing\Exception\NoConfigurationException();

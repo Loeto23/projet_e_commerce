@@ -17,14 +17,14 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Jeremy\FrontBundle\JeremyFrontBundle(),
-            new Jeremy\UserBundle\JeremyUserBundle(),
-            new FOS\UserBundle\FOSUserBundle(),
             new Jeremy\AvisBundle\JeremyAvisBundle(),
             new Jeremy\ProduitBundle\JeremyProduitBundle(),
             new Jeremy\PanierBundle\JeremyPanierBundle(),
             new Jeremy\CommandeBundle\JeremyCommandeBundle(),
             new Jeremy\NewsletterBundle\JeremyNewsletterBundle(),
             new Jeremy\ReductionBundle\JeremyReductionBundle(),
+            new Jeremy\UserBundle\JeremyUserBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

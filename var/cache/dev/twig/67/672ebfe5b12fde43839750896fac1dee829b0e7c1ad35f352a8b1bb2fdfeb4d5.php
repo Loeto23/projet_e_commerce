@@ -7,10 +7,16 @@ class __TwigTemplate_265f1e6e73f06f278fbaaaf20d00395dcf6f35517df7f239c3cb726c90c
     {
         parent::__construct($env);
 
-        $this->parent = false;
-
+        // line 1
+        $this->parent = $this->loadTemplate("base.html.twig", "@JeremyProduit/Default/modifierProduit.html.twig", 1);
         $this->blocks = array(
+            'section' => array($this, 'block_section'),
         );
+    }
+
+    protected function doGetParent(array $context)
+    {
+        return "base.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -21,19 +27,41 @@ class __TwigTemplate_265f1e6e73f06f278fbaaaf20d00395dcf6f35517df7f239c3cb726c90c
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@JeremyProduit/Default/modifierProduit.html.twig"));
 
-        // line 1
-        echo "<h1>Modifier un produit</h1>
-
-";
-        // line 3
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock(($context["view"] ?? $this->getContext($context, "view")), 'form');
-        echo "
-";
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+    }
+
+    // line 3
+    public function block_section($context, array $blocks = array())
+    {
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "section"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "section"));
+
+        // line 4
+        echo "
+<div class=\"container\">
+
+<h1>Modifier un produit</h1>
+
+";
+        // line 9
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock(($context["view"] ?? $this->getContext($context, "view")), 'form');
+        echo "
+
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
     }
 
@@ -49,7 +77,7 @@ class __TwigTemplate_265f1e6e73f06f278fbaaaf20d00395dcf6f35517df7f239c3cb726c90c
 
     public function getDebugInfo()
     {
-        return array (  29 => 3,  25 => 1,);
+        return array (  56 => 9,  49 => 4,  40 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -62,9 +90,17 @@ class __TwigTemplate_265f1e6e73f06f278fbaaaf20d00395dcf6f35517df7f239c3cb726c90c
 
     public function getSourceContext()
     {
-        return new Twig_Source("<h1>Modifier un produit</h1>
+        return new Twig_Source("{% extends 'base.html.twig' %}
+
+{% block section %}
+
+<div class=\"container\">
+
+<h1>Modifier un produit</h1>
 
 {{ form(view) }}
+
+{% endblock %}
 ", "@JeremyProduit/Default/modifierProduit.html.twig", "E:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\ProduitBundle\\Resources\\views\\Default\\modifierProduit.html.twig");
     }
 }

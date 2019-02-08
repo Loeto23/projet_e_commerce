@@ -5,12 +5,23 @@
 <div id="top">
   <div class="container">
     <div class="row">
-      <div class="col-lg-6 offer mb-3 mb-lg-0 "><a href="#" class="btn btn-success btn-sm">Offre du jour</a><a href="" class="ml-1">10% de réduction dés 50€ d'achat</a></div>
+      <div class="col-lg-6 offer mb-3 mb-lg-0 "><a href="{{ asset('app_dev.php')}}" class="btn btn-success btn-sm">Offre du jour</a><a href="{{ asset('app_dev.php')}}" class="ml-1">10% de réduction dés 50€ d'achat</a></div>
       <div class="col-lg-6 text-center text-lg-right">
         <ul class="menu list-inline mb-0">
-          <li class="list-inline-item"><a href="login" data-toggle="modal" data-target="#login-modal">Login</a></li>
-          <li class="list-inline-item"><a href="register">Register</a></li>
-          <li class="list-inline-item"><a href="contact.html">Contact</a></li>
+
+          {% if is_granted('ROLE_ADMIN') %}
+            <li class="list-inline-item"><a href="{{ asset('app_dev.php/profile')}}">Voir mon profil</a></li>
+            <li class="list-inline-item"><a href="{{ asset('app_dev.php/logout')}}">Se déconnecter</a></li>
+            <li class="list-inline-item"><a href="{{ asset('app_dev.php/backoffice')}}">Backoffice</a></li>
+          {% elseif is_granted('ROLE_USER') %}
+            <li class="list-inline-item"><a href="{{ asset('app_dev.php/profile')}}">Profil</a></li>
+            <li class="list-inline-item"><a href="{{ asset('app_dev.php/logout')}}">Se déconnecter</a></li>
+          {% else %}
+            <li class="list-inline-item"><a href="{{ asset('app_dev.php/login')}}" data-toggle="modal" data-target="#login-modal">Se connecter</a></li>
+            <li class="list-inline-item"><a href="{{ asset('app_dev.php/register')}}">S'inscrire</a></li>
+            <li class="list-inline-item"><a href="{{ asset('app_dev.php/contact')}}">Nous contacter</a></li>
+          {% endif %}
+
         </ul>
       </div>
     </div>
@@ -40,5 +51,6 @@
       </div>
     </div>
   </div>
+</div>
 
 {% endblock %}

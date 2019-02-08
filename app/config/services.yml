@@ -13,6 +13,17 @@ services:
         # this means you cannot fetch services directly from the container via $container->get()
         # if you need to do this, you can override this setting on individual services
         public: false
+    # jeremy_user.registration_listener:
+    #   class : Jeremy\UserBundle\EventListener\RegistrationListener
+    #   arguments: []
+    #   tags:
+    #     - { name: kernel.event_subscriber }
+    #
+    jeremy.form.registration:
+        class: Jeremy\UserBundle\Form\RegistrationType
+        tags:
+            - { name: form.type, alias: jeremy_user_registration }
+
 
     # makes classes in src/AppBundle available to be used as services
     # this creates a service per class whose id is the fully-qualified class name

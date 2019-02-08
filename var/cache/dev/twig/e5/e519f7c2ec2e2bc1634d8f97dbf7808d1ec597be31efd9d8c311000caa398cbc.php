@@ -47,12 +47,58 @@ class __TwigTemplate_b05c3ebc4f5eb6f496d7f734dce74ec2b98d908207b11aa5445e4cf60c1
 <div id=\"top\">
   <div class=\"container\">
     <div class=\"row\">
-      <div class=\"col-lg-6 offer mb-3 mb-lg-0 \"><a href=\"#\" class=\"btn btn-success btn-sm\">Offre du jour</a><a href=\"\" class=\"ml-1\">10% de réduction dés 50€ d'achat</a></div>
+      <div class=\"col-lg-6 offer mb-3 mb-lg-0 \"><a href=\"";
+        // line 8
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php"), "html", null, true);
+        echo "\" class=\"btn btn-success btn-sm\">Offre du jour</a><a href=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php"), "html", null, true);
+        echo "\" class=\"ml-1\">10% de réduction dés 50€ d'achat</a></div>
       <div class=\"col-lg-6 text-center text-lg-right\">
         <ul class=\"menu list-inline mb-0\">
-          <li class=\"list-inline-item\"><a href=\"login\" data-toggle=\"modal\" data-target=\"#login-modal\">Login</a></li>
-          <li class=\"list-inline-item\"><a href=\"register\">Register</a></li>
-          <li class=\"list-inline-item\"><a href=\"contact.html\">Contact</a></li>
+
+          ";
+        // line 12
+        if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_ADMIN")) {
+            // line 13
+            echo "            <li class=\"list-inline-item\"><a href=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php/profile"), "html", null, true);
+            echo "\">Voir mon profil</a></li>
+            <li class=\"list-inline-item\"><a href=\"";
+            // line 14
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php/logout"), "html", null, true);
+            echo "\">Se déconnecter</a></li>
+            <li class=\"list-inline-item\"><a href=\"";
+            // line 15
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php/backoffice"), "html", null, true);
+            echo "\">Backoffice</a></li>
+          ";
+        } elseif ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_USER")) {
+            // line 17
+            echo "            <li class=\"list-inline-item\"><a href=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php/profile"), "html", null, true);
+            echo "\">Profil</a></li>
+            <li class=\"list-inline-item\"><a href=\"";
+            // line 18
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php/logout"), "html", null, true);
+            echo "\">Se déconnecter</a></li>
+          ";
+        } else {
+            // line 20
+            echo "            <li class=\"list-inline-item\"><a href=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php/login"), "html", null, true);
+            echo "\" data-toggle=\"modal\" data-target=\"#login-modal\">Se connecter</a></li>
+            <li class=\"list-inline-item\"><a href=\"";
+            // line 21
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php/register"), "html", null, true);
+            echo "\">S'inscrire</a></li>
+            <li class=\"list-inline-item\"><a href=\"";
+            // line 22
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php/contact"), "html", null, true);
+            echo "\">Nous contacter</a></li>
+          ";
+        }
+        // line 24
+        echo "
         </ul>
       </div>
     </div>
@@ -82,6 +128,7 @@ class __TwigTemplate_b05c3ebc4f5eb6f496d7f734dce74ec2b98d908207b11aa5445e4cf60c1
       </div>
     </div>
   </div>
+</div>
 
 ";
         
@@ -99,7 +146,7 @@ class __TwigTemplate_b05c3ebc4f5eb6f496d7f734dce74ec2b98d908207b11aa5445e4cf60c1
 
     public function getDebugInfo()
     {
-        return array (  44 => 2,  26 => 1,);
+        return array (  101 => 24,  96 => 22,  92 => 21,  87 => 20,  82 => 18,  77 => 17,  72 => 15,  68 => 14,  63 => 13,  61 => 12,  52 => 8,  44 => 2,  26 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -119,12 +166,23 @@ class __TwigTemplate_b05c3ebc4f5eb6f496d7f734dce74ec2b98d908207b11aa5445e4cf60c1
 <div id=\"top\">
   <div class=\"container\">
     <div class=\"row\">
-      <div class=\"col-lg-6 offer mb-3 mb-lg-0 \"><a href=\"#\" class=\"btn btn-success btn-sm\">Offre du jour</a><a href=\"\" class=\"ml-1\">10% de réduction dés 50€ d'achat</a></div>
+      <div class=\"col-lg-6 offer mb-3 mb-lg-0 \"><a href=\"{{ asset('app_dev.php')}}\" class=\"btn btn-success btn-sm\">Offre du jour</a><a href=\"{{ asset('app_dev.php')}}\" class=\"ml-1\">10% de réduction dés 50€ d'achat</a></div>
       <div class=\"col-lg-6 text-center text-lg-right\">
         <ul class=\"menu list-inline mb-0\">
-          <li class=\"list-inline-item\"><a href=\"login\" data-toggle=\"modal\" data-target=\"#login-modal\">Login</a></li>
-          <li class=\"list-inline-item\"><a href=\"register\">Register</a></li>
-          <li class=\"list-inline-item\"><a href=\"contact.html\">Contact</a></li>
+
+          {% if is_granted('ROLE_ADMIN') %}
+            <li class=\"list-inline-item\"><a href=\"{{ asset('app_dev.php/profile')}}\">Voir mon profil</a></li>
+            <li class=\"list-inline-item\"><a href=\"{{ asset('app_dev.php/logout')}}\">Se déconnecter</a></li>
+            <li class=\"list-inline-item\"><a href=\"{{ asset('app_dev.php/backoffice')}}\">Backoffice</a></li>
+          {% elseif is_granted('ROLE_USER') %}
+            <li class=\"list-inline-item\"><a href=\"{{ asset('app_dev.php/profile')}}\">Profil</a></li>
+            <li class=\"list-inline-item\"><a href=\"{{ asset('app_dev.php/logout')}}\">Se déconnecter</a></li>
+          {% else %}
+            <li class=\"list-inline-item\"><a href=\"{{ asset('app_dev.php/login')}}\" data-toggle=\"modal\" data-target=\"#login-modal\">Se connecter</a></li>
+            <li class=\"list-inline-item\"><a href=\"{{ asset('app_dev.php/register')}}\">S'inscrire</a></li>
+            <li class=\"list-inline-item\"><a href=\"{{ asset('app_dev.php/contact')}}\">Nous contacter</a></li>
+          {% endif %}
+
         </ul>
       </div>
     </div>
@@ -154,6 +212,7 @@ class __TwigTemplate_b05c3ebc4f5eb6f496d7f734dce74ec2b98d908207b11aa5445e4cf60c1
       </div>
     </div>
   </div>
+</div>
 
 {% endblock %}
 ", "top.html.twig", "E:\\wamp64\\www\\projet_e_commerce\\app\\Resources\\views\\top.html.twig");

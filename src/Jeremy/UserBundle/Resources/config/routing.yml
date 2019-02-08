@@ -1,3 +1,3 @@
 jeremy_user_homepage:
-    path:     /
+    path:     /backoffice=membre
     defaults: { _controller: JeremyUserBundle:Default:index }

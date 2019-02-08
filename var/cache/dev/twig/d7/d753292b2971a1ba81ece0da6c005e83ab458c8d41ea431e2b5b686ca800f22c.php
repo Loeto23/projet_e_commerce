@@ -11,7 +11,6 @@ class __TwigTemplate_8bc93b096a4758782b954486df7741c6be0348192a80c3a72a379236f7f
         $this->parent = $this->loadTemplate("base.html.twig", "@JeremyFront/Default/index.html.twig", 1);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
-            'body' => array($this, 'block_body'),
         );
     }
 
@@ -37,7 +36,7 @@ class __TwigTemplate_8bc93b096a4758782b954486df7741c6be0348192a80c3a72a379236f7f
 
     }
 
-    // line 2
+    // line 3
     public function block_title($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -46,26 +45,8 @@ class __TwigTemplate_8bc93b096a4758782b954486df7741c6be0348192a80c3a72a379236f7f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Accueil";
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-        
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
-
-    }
-
-    // line 6
-    public function block_body($context, array $blocks = array())
-    {
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
-
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
-
-        // line 7
-        echo "<h1>Front</h1>
+        // line 4
+        echo "Accueil
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -87,7 +68,7 @@ class __TwigTemplate_8bc93b096a4758782b954486df7741c6be0348192a80c3a72a379236f7f
 
     public function getDebugInfo()
     {
-        return array (  68 => 7,  59 => 6,  41 => 2,  11 => 1,);
+        return array (  49 => 4,  40 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -101,12 +82,9 @@ class __TwigTemplate_8bc93b096a4758782b954486df7741c6be0348192a80c3a72a379236f7f
     public function getSourceContext()
     {
         return new Twig_Source("{% extends 'base.html.twig' %}
-{% block title %}Accueil{% endblock %}
 
-
-
-{% block body%}
-<h1>Front</h1>
+{% block title %}
+Accueil
 {% endblock %}
 ", "@JeremyFront/Default/index.html.twig", "E:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\FrontBundle\\Resources\\views\\Default\\index.html.twig");
     }

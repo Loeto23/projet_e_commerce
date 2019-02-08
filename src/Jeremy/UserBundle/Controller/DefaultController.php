@@ -8,6 +8,12 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('@JeremyUser/layout.html.twig');
+        return $this->render('@JeremyUser/Default/index.html.twig');
     }
+
+    public function showProfilAction()
+    {
+
+    }
+
 }

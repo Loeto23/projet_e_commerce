@@ -1,5 +1,15 @@
-{% extends "@FOSUser/layout.html.twig" %}
+{% extends 'base.html.twig' %}
 
-{% block fos_user_content %}
+{% block title %}
+S'inscrire
+{% endblock %}
+
+{% block section %}
+
+<div class="container">
+
 {% include "@FOSUser/Registration/register_content.html.twig" %}
-{% endblock fos_user_content %}
+
+</div>
+
+{% endblock %}

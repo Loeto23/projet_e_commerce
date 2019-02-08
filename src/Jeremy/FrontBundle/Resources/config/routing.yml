@@ -1,3 +1,11 @@
 jeremy_front_homepage:
     path:     /
     defaults: { _controller: JeremyFrontBundle:Default:index }
+
+jeremy_front_contact:
+  path: /contact
+  defaults: { _controller: JeremyFrontBundle:Default:contact }
+
+jeremy_front_backoffice:
+  path: /backoffice
+  defaults: { _controller: JeremyFrontBundle:Default:backoffice }  
