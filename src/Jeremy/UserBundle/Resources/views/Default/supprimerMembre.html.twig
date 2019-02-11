@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block section %}
+
+<div class="container">
+
+<h1>Supprimer un membre</h1>
+
+{% for membre in myResults %}
+
+Le membre {{ membre.username }} a bien été supprimé.
+
+{% endfor %}
+
+<br>
+
+<a href="">Revenir à la liste des membres</a>
+
+</div>
+
+{% endblock %}

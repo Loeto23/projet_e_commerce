@@ -107,20 +107,61 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        elseif (0 === strpos($pathinfo, '/backoffice')) {
-            // jeremy_user_homepage
-            if ('/backoffice=membre' === $pathinfo) {
-                return array (  '_controller' => 'Jeremy\\UserBundle\\Controller\\DefaultController::indexAction',  '_route' => 'jeremy_user_homepage',);
+        elseif (0 === strpos($pathinfo, '/backoffice=')) {
+            if (0 === strpos($pathinfo, '/backoffice=membre')) {
+                // jeremy_user_homepage
+                if ('/backoffice=membre' === $pathinfo) {
+                    return array (  '_controller' => 'Jeremy\\UserBundle\\Controller\\DefaultController::indexAction',  '_route' => 'jeremy_user_homepage',);
+                }
+
+                // jeremy_user_supprimer
+                if (0 === strpos($pathinfo, '/backoffice=membre/action=suppr') && preg_match('#^/backoffice\\=membre/action\\=suppr(?P<id_du_membre>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'jeremy_user_supprimer')), array (  '_controller' => 'Jeremy\\UserBundle\\Controller\\DefaultController::supprimerMembreAction',));
+                }
+
+                // jeremy_user_modifier
+                if (0 === strpos($pathinfo, '/backoffice=membre/action=modif') && preg_match('#^/backoffice\\=membre/action\\=modif(?P<id_du_membre>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'jeremy_user_modifier')), array (  '_controller' => 'Jeremy\\UserBundle\\Controller\\DefaultController::modifierMembreAction',));
+                }
+
             }
 
-            // jeremy_front_backoffice
-            if ('/backoffice' === $pathinfo) {
-                return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\DefaultController::backofficeAction',  '_route' => 'jeremy_front_backoffice',);
+            // jeremy_produit_homepage
+            if ('/backoffice=produit' === $pathinfo) {
+                return array (  '_controller' => 'Jeremy\\ProduitBundle\\Controller\\DefaultController::indexAction',  '_route' => 'jeremy_produit_homepage',);
+            }
+
+            if (0 === strpos($pathinfo, '/backoffice=produit/action=')) {
+                // jeremy_produit_ajouter
+                if ('/backoffice=produit/action=ajouter' === $pathinfo) {
+                    return array (  '_controller' => 'Jeremy\\ProduitBundle\\Controller\\DefaultController::ajouterAction',  '_route' => 'jeremy_produit_ajouter',);
+                }
+
+                // jeremy_produit_modifier
+                if (0 === strpos($pathinfo, '/backoffice=produit/action=modif') && preg_match('#^/backoffice\\=produit/action\\=modif(?P<id_du_produit>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'jeremy_produit_modifier')), array (  '_controller' => 'Jeremy\\ProduitBundle\\Controller\\DefaultController::modifierProduitAction',));
+                }
+
+                // jeremy_produit_supprimer
+                if (0 === strpos($pathinfo, '/backoffice=produit/action=suppr') && preg_match('#^/backoffice\\=produit/action\\=suppr(?P<id_du_produit>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'jeremy_produit_supprimer')), array (  '_controller' => 'Jeremy\\ProduitBundle\\Controller\\DefaultController::supprimerProduitAction',));
+                }
+
+            }
+
+            // jeremy_avis_homepage
+            if ('/backoffice=avis' === $pathinfo) {
+                return array (  '_controller' => 'Jeremy\\AvisBundle\\Controller\\DefaultController::indexAction',  '_route' => 'jeremy_avis_homepage',);
             }
 
         }
 
-        elseif (0 === strpos($pathinfo, '/re')) {
+        // jeremy_front_backoffice
+        if ('/backoffice' === $pathinfo) {
+            return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\DefaultController::backofficeAction',  '_route' => 'jeremy_front_backoffice',);
+        }
+
+        if (0 === strpos($pathinfo, '/re')) {
             // jeremy_reduction_homepage
             if ('/reduction' === $trimmedPathinfo) {
                 $ret = array (  '_controller' => 'Jeremy\\ReductionBundle\\Controller\\DefaultController::indexAction',  '_route' => 'jeremy_reduction_homepage',);
@@ -301,103 +342,52 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
         not_jeremy_panier_homepage:
 
-        if (0 === strpos($pathinfo, '/pro')) {
-            // jeremy_produit_homepage
-            if ('/produit' === $trimmedPathinfo) {
-                $ret = array (  '_controller' => 'Jeremy\\ProduitBundle\\Controller\\DefaultController::indexAction',  '_route' => 'jeremy_produit_homepage',);
+        if (0 === strpos($pathinfo, '/profile')) {
+            // fos_user_profile_show
+            if ('/profile' === $trimmedPathinfo) {
+                $ret = array (  '_controller' => 'fos_user.profile.controller:showAction',  '_route' => 'fos_user_profile_show',);
                 if ('/' === substr($pathinfo, -1)) {
                     // no-op
                 } elseif ('GET' !== $canonicalMethod) {
-                    goto not_jeremy_produit_homepage;
+                    goto not_fos_user_profile_show;
                 } else {
-                    return array_replace($ret, $this->redirect($rawPathinfo.'/', 'jeremy_produit_homepage'));
+                    return array_replace($ret, $this->redirect($rawPathinfo.'/', 'fos_user_profile_show'));
+                }
+
+                if (!in_array($canonicalMethod, array('GET'))) {
+                    $allow = array_merge($allow, array('GET'));
+                    goto not_fos_user_profile_show;
                 }
 
                 return $ret;
             }
-            not_jeremy_produit_homepage:
+            not_fos_user_profile_show:
 
-            if (0 === strpos($pathinfo, '/produit/action=')) {
-                // jeremy_produit_ajouter
-                if ('/produit/action=ajouter' === $pathinfo) {
-                    return array (  '_controller' => 'Jeremy\\ProduitBundle\\Controller\\DefaultController::ajouterAction',  '_route' => 'jeremy_produit_ajouter',);
+            // fos_user_profile_edit
+            if ('/profile/edit' === $pathinfo) {
+                $ret = array (  '_controller' => 'fos_user.profile.controller:editAction',  '_route' => 'fos_user_profile_edit',);
+                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                    $allow = array_merge($allow, array('GET', 'POST'));
+                    goto not_fos_user_profile_edit;
                 }
 
-                // jeremy_produit_modifier
-                if (0 === strpos($pathinfo, '/produit/action=modif') && preg_match('#^/produit/action\\=modif(?P<id_du_produit>[^/]++)$#sD', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'jeremy_produit_modifier')), array (  '_controller' => 'Jeremy\\ProduitBundle\\Controller\\DefaultController::modifierProduitAction',));
-                }
-
-                // jeremy_produit_supprimer
-                if (0 === strpos($pathinfo, '/produit/action=suppr') && preg_match('#^/produit/action\\=suppr(?P<id_du_produit>[^/]++)$#sD', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'jeremy_produit_supprimer')), array (  '_controller' => 'Jeremy\\ProduitBundle\\Controller\\DefaultController::supprimerProduitAction',));
-                }
-
+                return $ret;
             }
+            not_fos_user_profile_edit:
 
-            elseif (0 === strpos($pathinfo, '/profile')) {
-                // fos_user_profile_show
-                if ('/profile' === $trimmedPathinfo) {
-                    $ret = array (  '_controller' => 'fos_user.profile.controller:showAction',  '_route' => 'fos_user_profile_show',);
-                    if ('/' === substr($pathinfo, -1)) {
-                        // no-op
-                    } elseif ('GET' !== $canonicalMethod) {
-                        goto not_fos_user_profile_show;
-                    } else {
-                        return array_replace($ret, $this->redirect($rawPathinfo.'/', 'fos_user_profile_show'));
-                    }
-
-                    if (!in_array($canonicalMethod, array('GET'))) {
-                        $allow = array_merge($allow, array('GET'));
-                        goto not_fos_user_profile_show;
-                    }
-
-                    return $ret;
+            // fos_user_change_password
+            if ('/profile/change-password' === $pathinfo) {
+                $ret = array (  '_controller' => 'fos_user.change_password.controller:changePasswordAction',  '_route' => 'fos_user_change_password',);
+                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                    $allow = array_merge($allow, array('GET', 'POST'));
+                    goto not_fos_user_change_password;
                 }
-                not_fos_user_profile_show:
 
-                // fos_user_profile_edit
-                if ('/profile/edit' === $pathinfo) {
-                    $ret = array (  '_controller' => 'fos_user.profile.controller:editAction',  '_route' => 'fos_user_profile_edit',);
-                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                        $allow = array_merge($allow, array('GET', 'POST'));
-                        goto not_fos_user_profile_edit;
-                    }
-
-                    return $ret;
-                }
-                not_fos_user_profile_edit:
-
-                // fos_user_change_password
-                if ('/profile/change-password' === $pathinfo) {
-                    $ret = array (  '_controller' => 'fos_user.change_password.controller:changePasswordAction',  '_route' => 'fos_user_change_password',);
-                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                        $allow = array_merge($allow, array('GET', 'POST'));
-                        goto not_fos_user_change_password;
-                    }
-
-                    return $ret;
-                }
-                not_fos_user_change_password:
-
+                return $ret;
             }
+            not_fos_user_change_password:
 
         }
-
-        // jeremy_avis_homepage
-        if ('/avis' === $trimmedPathinfo) {
-            $ret = array (  '_controller' => 'Jeremy\\AvisBundle\\Controller\\DefaultController::indexAction',  '_route' => 'jeremy_avis_homepage',);
-            if ('/' === substr($pathinfo, -1)) {
-                // no-op
-            } elseif ('GET' !== $canonicalMethod) {
-                goto not_jeremy_avis_homepage;
-            } else {
-                return array_replace($ret, $this->redirect($rawPathinfo.'/', 'jeremy_avis_homepage'));
-            }
-
-            return $ret;
-        }
-        not_jeremy_avis_homepage:
 
         // jeremy_front_homepage
         if ('' === $trimmedPathinfo) {

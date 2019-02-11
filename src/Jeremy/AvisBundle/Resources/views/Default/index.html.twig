@@ -1,1 +1,45 @@
-<h1>Les Avis</h1>
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Backoffice Avis
+{% endblock %}
+
+{% block section %}
+
+<div class="container">
+
+  <h1>Bienvenue dans le Back Office Avis</h1>
+
+  <a href="{{ asset('app_dev.php/backoffice=produit') }}" class="tdecoNone blue">Voir la liste des produits |</a>
+  <a href="{{ asset('app_dev.php/backoffice=membre') }}" class="tdecoNone blue">Voir la liste des membres |</a>
+  <a href="{{ asset('app_dev.php/backoffice=commande') }}" class="tdecoNone blue">Voir la liste des commandes |</a>
+  <a href="{{ asset('app_dev.php/backoffice=avis') }}" class="tdecoNone blue">Voir la liste des avis |</a>
+
+<br>
+
+<table>
+
+  <tr>
+    <th>Utilisateur</th>
+    <th>Produit</th>
+    <th>Photo</th>
+    <th>Commentaire</th>
+    <th>Note</th>
+  </tr>
+
+  {% for avis in myResults %}
+  <tr>
+    <td>{{ avis.username }}</td>
+    <td>{{ avis.titre }}</td>
+    <td><img src="{{ asset('uploads/photos/' ~ avis.photo ) }}" width="100" height="100"></td>
+    <td>{{ avis.commentaire }}</td>
+    <td>{{ avis.note }}</td>
+  </tr>
+  {% endfor %}
+
+
+</table>
+
+</div>
+
+{% endblock %}

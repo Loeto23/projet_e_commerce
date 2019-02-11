@@ -10,6 +10,7 @@ class __TwigTemplate_801bfbff00d4fff77c0c26340cb915df79a499d2e33f85417b881e7dd95
         // line 1
         $this->parent = $this->loadTemplate("base.html.twig", "@JeremyProduit/Default/ajouterProduit.html.twig", 1);
         $this->blocks = array(
+            'title' => array($this, 'block_title'),
             'section' => array($this, 'block_section'),
         );
     }
@@ -37,6 +38,26 @@ class __TwigTemplate_801bfbff00d4fff77c0c26340cb915df79a499d2e33f85417b881e7dd95
     }
 
     // line 3
+    public function block_title($context, array $blocks = array())
+    {
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+
+        // line 4
+        echo "Backoffice Produit
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 7
     public function block_section($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -45,14 +66,14 @@ class __TwigTemplate_801bfbff00d4fff77c0c26340cb915df79a499d2e33f85417b881e7dd95
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "section"));
 
-        // line 4
+        // line 8
         echo "
 <div class=\"container\">
 
 <h1>Ajouter un produit</h1>
 
 ";
-        // line 9
+        // line 13
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock(($context["view"] ?? $this->getContext($context, "view")), 'form');
         echo "
 
@@ -77,7 +98,7 @@ class __TwigTemplate_801bfbff00d4fff77c0c26340cb915df79a499d2e33f85417b881e7dd95
 
     public function getDebugInfo()
     {
-        return array (  56 => 9,  49 => 4,  40 => 3,  11 => 1,);
+        return array (  77 => 13,  70 => 8,  61 => 7,  50 => 4,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -91,6 +112,10 @@ class __TwigTemplate_801bfbff00d4fff77c0c26340cb915df79a499d2e33f85417b881e7dd95
     public function getSourceContext()
     {
         return new Twig_Source("{% extends 'base.html.twig' %}
+
+{% block title %}
+Backoffice Produit
+{% endblock %}
 
 {% block section %}
 

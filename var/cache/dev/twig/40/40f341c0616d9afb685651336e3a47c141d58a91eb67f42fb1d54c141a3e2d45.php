@@ -74,7 +74,7 @@ class __TwigTemplate_d8761d58ddefe11474b0a82e8393f9d1d90e7c8bd2bfb6733acef3faa4e
 
 <a href=\"";
         // line 13
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php/produit"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php/backoffice=produit"), "html", null, true);
         echo "\" class=\"tdecoNone blue\">Voir la liste des produits |</a>
 <a href=\"";
         // line 14
@@ -82,8 +82,8 @@ class __TwigTemplate_d8761d58ddefe11474b0a82e8393f9d1d90e7c8bd2bfb6733acef3faa4e
         echo "\" class=\"tdecoNone blue\">Voir la liste des membres |</a>
 <a href=\"";
         // line 15
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php/produit"), "html", null, true);
-        echo "\" class=\"tdecoNone blue\">Voir la liste des produits |</a>
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php/backoffice=username"), "html", null, true);
+        echo "\" class=\"tdecoNone blue\">Voir la liste des utilisateurs |</a>
 <a href=\"";
         // line 16
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php/produit"), "html", null, true);
@@ -136,9 +136,9 @@ Backoffice
 
 <h1>Bienvenue dans le Back Office</h1>
 
-<a href=\"{{ asset('app_dev.php/produit') }}\" class=\"tdecoNone blue\">Voir la liste des produits |</a>
+<a href=\"{{ asset('app_dev.php/backoffice=produit') }}\" class=\"tdecoNone blue\">Voir la liste des produits |</a>
 <a href=\"{{ asset('app_dev.php/backoffice=membre') }}\" class=\"tdecoNone blue\">Voir la liste des membres |</a>
-<a href=\"{{ asset('app_dev.php/produit') }}\" class=\"tdecoNone blue\">Voir la liste des produits |</a>
+<a href=\"{{ asset('app_dev.php/backoffice=username') }}\" class=\"tdecoNone blue\">Voir la liste des utilisateurs |</a>
 <a href=\"{{ asset('app_dev.php/produit') }}\" class=\"tdecoNone blue\">Voir la liste des produits |</a>
 
 

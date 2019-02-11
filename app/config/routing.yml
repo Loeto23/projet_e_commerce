@@ -12,7 +12,7 @@ jeremy_newsletter:
 
 jeremy_commande:
     resource: "@JeremyCommandeBundle/Resources/config/routing.yml"
-    prefix:   /commande
+    prefix:   /
 
 jeremy_panier:
     resource: "@JeremyPanierBundle/Resources/config/routing.yml"
@@ -20,11 +20,11 @@ jeremy_panier:
 
 jeremy_produit:
     resource: "@JeremyProduitBundle/Resources/config/routing.yml"
-    prefix:   /produit
+    prefix:   /
 
 jeremy_avis:
     resource: "@JeremyAvisBundle/Resources/config/routing.yml"
-    prefix:   /avis
+    prefix:   /
 
 jeremy_front:
     resource: "@JeremyFrontBundle/Resources/config/routing.yml"

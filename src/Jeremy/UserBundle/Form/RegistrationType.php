@@ -12,6 +12,11 @@ class RegistrationType extends AbstractType
         $builder->add('nom')
                 ->add('prenom')
         ;
+
+        $builder->add('save', \Symfony\Component\Form\Extension\Core\Type\SubmitType::class,
+        [
+          'label' => 'Enregistrer',
+        ]);
     }
 
     public function getParent()

@@ -1,20 +1,20 @@
 jeremy_produit_homepage:
-    path:     /
+    path:     /backoffice=produit
     defaults: { _controller: JeremyProduitBundle:Default:index }
 
 jeremy_produit_ajouter:
-    path: /action=ajouter
+    path: /backoffice=produit/action=ajouter
     defaults: { _controller: JeremyProduitBundle:Default:ajouter }
 
 jeremy_produit_modifier:
-  path: /action=modif{id_du_produit}
+  path: /backoffice=produit/action=modif{id_du_produit}
   defaults:
     _controller: JeremyProduitBundle:Default:modifierProduit
   requirements:
     id_de_auteur: '\d+' # d = 0-9 / d+ = 0 à l'infini
 
 jeremy_produit_supprimer:
-  path: /action=suppr{id_du_produit}
+  path: /backoffice=produit/action=suppr{id_du_produit}
   defaults:
     _controller: JeremyProduitBundle:Default:supprimerProduit
   requirements:

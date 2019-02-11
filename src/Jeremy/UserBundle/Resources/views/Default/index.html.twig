@@ -10,11 +10,63 @@ Backoffice Membre
 
   <h1>Bienvenue dans le Back Office Membre</h1>
 
-  <a href="{{ asset('app_dev.php/produit') }}" class="tdecoNone blue">Voir la liste des produits |</a>
+  <a href="{{ asset('app_dev.php/backoffice=produit') }}" class="tdecoNone blue">Voir la liste des produits |</a>
   <a href="{{ asset('app_dev.php/backoffice=membre') }}" class="tdecoNone blue">Voir la liste des membres |</a>
   <a href="{{ asset('app_dev.php/produit') }}" class="tdecoNone blue">Voir la liste des produits |</a>
-  <a href="{{ asset('app_dev.php/produit') }}" class="tdecoNone blue">Voir la liste des produits |</a>
+  <a href="{{ asset('app_dev.php/backoffice=avis') }}" class="tdecoNone blue">Voir la liste des avis |</a>
 
-</div>  
+<br>
+
+
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Nom d'utilisateur</th>
+    <th>Email</th>
+    <th>Status</th>
+    <th>Nom</th>
+    <th>Prénom</th>
+    <th>Dernière connexion</th>
+
+  </tr>
+
+  {% for membre in myResults %}
+  <tr>
+    <td>{{ membre.id }}</td>
+    <td>{{ membre.username }}</td>
+    <td>{{ membre.email }}</td>
+
+    <td>
+
+    {% for status in membre.roles %}
+
+      {% if status == 'ROLE_SUPER_ADMIN' %}
+      | SUPER ADMIN |
+
+      {% elseif status == 'ROLE_ADMIN' %}
+      | ADMIN |
+
+      {% elseif status == 'ROLE_USER' %}
+      | MEMBRE |
+
+      {% endif %}
+
+    {% endfor %}
+
+    </td>
+
+    <td>{{ membre.nom }}</td>
+    <td>{{ membre.prenom }}</td>
+    <td>{{ membre.lastLogin|date('Y-m-d') }}</td>
+    <td><a href="backoffice=membre/action=suppr{{ membre.id }}">Supprimer</a></td>
+    <td><a href="backoffice=membre/action=modif{{ membre.id }}">Modifier</a></td>
+  </tr>
+  {% endfor %}
+
+</table>
+
+
+</div>
 
 {% endblock %}
