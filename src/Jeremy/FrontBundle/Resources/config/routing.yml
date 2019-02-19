@@ -8,4 +8,4 @@ jeremy_front_contact:
 
 jeremy_front_backoffice:
   path: /backoffice
-  defaults: { _controller: JeremyFrontBundle:Default:backoffice }  
+  defaults: { _controller: JeremyFrontBundle:Default:backoffice }   

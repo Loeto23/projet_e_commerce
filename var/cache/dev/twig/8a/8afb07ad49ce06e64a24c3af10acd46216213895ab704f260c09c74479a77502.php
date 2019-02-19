@@ -31,14 +31,9 @@ class __TwigTemplate_64caa42ccdb8f323a414ca827cdc65b7e34d715dbbbe98cad82a5f51ba1
         // line 4
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(($context["form"] ?? $this->getContext($context, "form")), 'widget');
         echo "
-    <div>
-        <input type=\"submit\" value=\"";
-        // line 6
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("registration.submit", array(), "FOSUserBundle"), "html", null, true);
-        echo "\" />
-    </div>
+
 ";
-        // line 8
+        // line 6
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_end');
         echo "
 ";
@@ -62,7 +57,7 @@ class __TwigTemplate_64caa42ccdb8f323a414ca827cdc65b7e34d715dbbbe98cad82a5f51ba1
 
     public function getDebugInfo()
     {
-        return array (  42 => 8,  37 => 6,  32 => 4,  28 => 3,  25 => 2,);
+        return array (  37 => 6,  32 => 4,  28 => 3,  25 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -79,9 +74,7 @@ class __TwigTemplate_64caa42ccdb8f323a414ca827cdc65b7e34d715dbbbe98cad82a5f51ba1
 
 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
     {{ form_widget(form) }}
-    <div>
-        <input type=\"submit\" value=\"{{ 'registration.submit'|trans }}\" />
-    </div>
+
 {{ form_end(form) }}
 ", "@FOSUser/Registration/register_content.html.twig", "E:\\wamp64\\www\\projet_e_commerce\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Registration\\register_content.html.twig");
     }

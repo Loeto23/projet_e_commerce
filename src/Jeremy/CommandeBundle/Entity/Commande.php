@@ -41,6 +41,12 @@ class Commande
      */
     private $user;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Jeremy\ProduitBundle\Entity\Produit", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $produit;
+
 
     /**
      * Get id
@@ -110,7 +116,7 @@ class Commande
     public function setUser(\Jeremy\UserBundle\Entity\User $user)
     {
         $this->user = $user;
-    
+
         return $this;
     }
 
@@ -122,5 +128,29 @@ class Commande
     public function getUser()
     {
         return $this->user;
+    }
+
+    /**
+     * Set produit
+     *
+     * @param \Jeremy\ProduitBundle\Entity\Produit $produit
+     *
+     * @return Commande
+     */
+    public function setProduit(\Jeremy\ProduitBundle\Entity\Produit $produit)
+    {
+        $this->produit = $produit;
+    
+        return $this;
+    }
+
+    /**
+     * Get produit
+     *
+     * @return \Jeremy\ProduitBundle\Entity\Produit
+     */
+    public function getProduit()
+    {
+        return $this->produit;
     }
 }

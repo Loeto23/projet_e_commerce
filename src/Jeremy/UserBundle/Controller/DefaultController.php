@@ -44,9 +44,7 @@ class DefaultController extends Controller
         WHERE u.id = :id
         '
         )->setParameter('id', $id_du_membre);
-        $result = $query->execute();
-
-      ;
+        $result = $query->execute();    
 
       if(empty($supprimer_membre))
       {

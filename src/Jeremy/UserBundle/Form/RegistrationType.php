@@ -17,6 +17,7 @@ class RegistrationType extends AbstractType
         [
           'label' => 'Enregistrer',
         ]);
+
     }
 
     public function getParent()

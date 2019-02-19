@@ -41,6 +41,12 @@ class Commande
      */
     private $user;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Jeremy\ProduitBundle\Entity\Produit", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $produit;
+
 
     /**
      * Get id
@@ -98,5 +104,29 @@ class Commande
     public function getPrixTotal()
     {
         return $this->prixTotal;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \Jeremy\UserBundle\Entity\User $user
+     *
+     * @return Commande
+     */
+    public function setUser(\Jeremy\UserBundle\Entity\User $user)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \Jeremy\UserBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 }

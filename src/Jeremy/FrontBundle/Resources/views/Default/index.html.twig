@@ -3,3 +3,102 @@
 {% block title %}
 Accueil
 {% endblock %}
+
+{% block vetement %}
+
+  <div class="container">
+
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <a href="#"><img class="d-block w-100" src="{{ asset('../vendor/img/overwatch.jpg') }}" alt="First slide"></a>
+        <div class="carousel-caption d-none d-md-block">
+      <h5>Image d'Overwatch xD</h5>
+      <p>Fond d'écran tkt</p>
+    </div>
+      </div>
+      <div class="carousel-item">
+        <a href="#"><img class="d-block w-100" src="{{ asset('../vendor/img/zed.jpg') }}" alt="Second slide"></a>
+        <div class="carousel-caption d-none d-md-block">
+        <h5>Perso LOL mid</h5>
+        <p>Zed assassin</p>
+      </div>
+      </div>
+      <div class="carousel-item">
+        <a href="#"><img class="d-block w-100" src="{{ asset('../vendor/img/salle.jpg') }}" alt="Third slide"></a>
+        <div class="carousel-caption d-none d-md-block">
+      <h5>Lol perso Jungle</h5>
+      <p>Rengar assassin xD</p>
+    </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+  </div>
+
+
+  <div class="container" style="border:1px solid;">
+    <a href="{{ path('jeremy_front_backoffice') }}"><img src="{{ asset('../vendor/img/overwatch.jpg') }}" width="80%" height="80%" style="margin-left: 10%;"></a>
+  </div>
+
+  <div class="container" style="border:1px solid; margin-top:20px;">
+    <img src="{{ asset('../vendor/img/zed.jpg') }}" width="80%" height="80%" style="margin-left: 10%;">
+  </div>
+
+{% endblock %}

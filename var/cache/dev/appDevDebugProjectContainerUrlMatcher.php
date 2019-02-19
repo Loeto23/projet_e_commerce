@@ -115,13 +115,31 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 }
 
                 // jeremy_user_supprimer
-                if (0 === strpos($pathinfo, '/backoffice=membre/action=suppr') && preg_match('#^/backoffice\\=membre/action\\=suppr(?P<id_du_membre>[^/]++)$#sD', $pathinfo, $matches)) {
+                if (0 === strpos($pathinfo, '/backoffice=membre/action=suppr') && preg_match('#^/backoffice\\=membre/action\\=suppr(?P<id_du_membre>\\d+)$#sD', $pathinfo, $matches)) {
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'jeremy_user_supprimer')), array (  '_controller' => 'Jeremy\\UserBundle\\Controller\\DefaultController::supprimerMembreAction',));
                 }
 
                 // jeremy_user_modifier
-                if (0 === strpos($pathinfo, '/backoffice=membre/action=modif') && preg_match('#^/backoffice\\=membre/action\\=modif(?P<id_du_membre>[^/]++)$#sD', $pathinfo, $matches)) {
+                if (0 === strpos($pathinfo, '/backoffice=membre/action=modif') && preg_match('#^/backoffice\\=membre/action\\=modif(?P<id_du_membre>\\d+)$#sD', $pathinfo, $matches)) {
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'jeremy_user_modifier')), array (  '_controller' => 'Jeremy\\UserBundle\\Controller\\DefaultController::modifierMembreAction',));
+                }
+
+            }
+
+            elseif (0 === strpos($pathinfo, '/backoffice=commande')) {
+                // jeremy_commande_homepage
+                if ('/backoffice=commande' === $pathinfo) {
+                    return array (  '_controller' => 'Jeremy\\CommandeBundle\\Controller\\DefaultController::indexAction',  '_route' => 'jeremy_commande_homepage',);
+                }
+
+                // jeremy_commande_supprimer
+                if (0 === strpos($pathinfo, '/backoffice=commande/action=suppr') && preg_match('#^/backoffice\\=commande/action\\=suppr(?P<id_commande>\\d+)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'jeremy_commande_supprimer')), array (  '_controller' => 'Jeremy\\CommandeBundle\\Controller\\DefaultController::supprimerCommandeAction',));
+                }
+
+                // jeremy_commande_modifier
+                if (0 === strpos($pathinfo, '/backoffice=commande/action=modif') && preg_match('#^/backoffice\\=commande/action\\=modif(?P<id_commande>\\d+)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'jeremy_commande_modifier')), array (  '_controller' => 'Jeremy\\CommandeBundle\\Controller\\DefaultController::modifierCommandeAction',));
                 }
 
             }
@@ -138,12 +156,12 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 }
 
                 // jeremy_produit_modifier
-                if (0 === strpos($pathinfo, '/backoffice=produit/action=modif') && preg_match('#^/backoffice\\=produit/action\\=modif(?P<id_du_produit>[^/]++)$#sD', $pathinfo, $matches)) {
+                if (0 === strpos($pathinfo, '/backoffice=produit/action=modif') && preg_match('#^/backoffice\\=produit/action\\=modif(?P<id_du_produit>\\d+)$#sD', $pathinfo, $matches)) {
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'jeremy_produit_modifier')), array (  '_controller' => 'Jeremy\\ProduitBundle\\Controller\\DefaultController::modifierProduitAction',));
                 }
 
                 // jeremy_produit_supprimer
-                if (0 === strpos($pathinfo, '/backoffice=produit/action=suppr') && preg_match('#^/backoffice\\=produit/action\\=suppr(?P<id_du_produit>[^/]++)$#sD', $pathinfo, $matches)) {
+                if (0 === strpos($pathinfo, '/backoffice=produit/action=suppr') && preg_match('#^/backoffice\\=produit/action\\=suppr(?P<id_du_produit>\\d+)$#sD', $pathinfo, $matches)) {
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'jeremy_produit_supprimer')), array (  '_controller' => 'Jeremy\\ProduitBundle\\Controller\\DefaultController::supprimerProduitAction',));
                 }
 
@@ -307,26 +325,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
         not_jeremy_newsletter_homepage:
 
-        // jeremy_commande_homepage
-        if ('/commande' === $trimmedPathinfo) {
-            $ret = array (  '_controller' => 'Jeremy\\CommandeBundle\\Controller\\DefaultController::indexAction',  '_route' => 'jeremy_commande_homepage',);
-            if ('/' === substr($pathinfo, -1)) {
-                // no-op
-            } elseif ('GET' !== $canonicalMethod) {
-                goto not_jeremy_commande_homepage;
-            } else {
-                return array_replace($ret, $this->redirect($rawPathinfo.'/', 'jeremy_commande_homepage'));
-            }
-
-            return $ret;
-        }
-        not_jeremy_commande_homepage:
-
-        // jeremy_front_contact
-        if ('/contact' === $pathinfo) {
-            return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\DefaultController::contactAction',  '_route' => 'jeremy_front_contact',);
-        }
-
         // jeremy_panier_homepage
         if ('/panier' === $trimmedPathinfo) {
             $ret = array (  '_controller' => 'Jeremy\\PanierBundle\\Controller\\DefaultController::indexAction',  '_route' => 'jeremy_panier_homepage',);
@@ -403,6 +401,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return $ret;
         }
         not_jeremy_front_homepage:
+
+        // jeremy_front_contact
+        if ('/contact' === $pathinfo) {
+            return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\DefaultController::contactAction',  '_route' => 'jeremy_front_contact',);
+        }
 
         if (0 === strpos($pathinfo, '/login')) {
             // fos_user_security_login

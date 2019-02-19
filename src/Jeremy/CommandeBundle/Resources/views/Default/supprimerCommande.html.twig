@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Suppression Commande
+{% endblock %}
+
+{% block section %}
+
+<div class="container">
+
+<h1>Supprimer une Commande</h1>
+
+{% for commande in myResults %}
+
+La commande n°{{ commande.id }} de l'utilisateur {{ commande.username }} a bien été supprimé.
+
+{% endfor %}
+
+<br>
+
+<a href="">Revenir à la liste des commandes</a>
+
+</div>
+
+{% endblock %}

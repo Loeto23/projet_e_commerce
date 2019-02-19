@@ -32,4 +32,5 @@ class DefaultController extends Controller
     {
       return $this->render('@JeremyFront/Default/backoffice.html.twig');
     }
+
 }

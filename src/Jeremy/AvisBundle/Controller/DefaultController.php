@@ -27,7 +27,7 @@ class DefaultController extends Controller
 
         $em = $this->getDoctrine()->getManager();
 
-          $theEntityRepository = $em->getRepository(\Jeremy\AvisBundle\Entity\Avis::class);
+        $theEntityRepository = $em->getRepository(\Jeremy\AvisBundle\Entity\Avis::class);
 
         $query = $em->createQuery(
           '
@@ -46,7 +46,7 @@ class DefaultController extends Controller
           '
           ) ;
           $result = $query->execute();
-        ;
+        
 
 
         return $this->render('@JeremyAvis/Default/index.html.twig',

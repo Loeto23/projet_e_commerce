@@ -10,10 +10,10 @@ Backoffice
 
 <h1>Bienvenue dans le Back Office</h1>
 
-<a href="{{ asset('app_dev.php/backoffice=produit') }}" class="tdecoNone blue">Voir la liste des produits |</a>
-<a href="{{ asset('app_dev.php/backoffice=membre') }}" class="tdecoNone blue">Voir la liste des membres |</a>
-<a href="{{ asset('app_dev.php/backoffice=username') }}" class="tdecoNone blue">Voir la liste des utilisateurs |</a>
-<a href="{{ asset('app_dev.php/produit') }}" class="tdecoNone blue">Voir la liste des produits |</a>
+<a href="{{ path('jeremy_produit_homepage') }}" class="tdecoNone blue">Voir la liste des produits |</a>
+<a href="{{ path('jeremy_user_homepage') }}" class="tdecoNone blue">Voir la liste des membres |</a>
+<a href="{{ path('jeremy_commande_homepage') }}" class="tdecoNone blue">Voir la liste des commandes |</a>
+<a href="{{ path('jeremy_avis_homepage') }}" class="tdecoNone blue">Voir la liste des avis</a>
 
 
 {% endblock %}

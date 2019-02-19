@@ -11,11 +11,11 @@ jeremy_produit_modifier:
   defaults:
     _controller: JeremyProduitBundle:Default:modifierProduit
   requirements:
-    id_de_auteur: '\d+' # d = 0-9 / d+ = 0 à l'infini
+    id_du_produit: '\d+' # d = 0-9 / d+ = 0 à l'infini
 
 jeremy_produit_supprimer:
   path: /backoffice=produit/action=suppr{id_du_produit}
   defaults:
     _controller: JeremyProduitBundle:Default:supprimerProduit
   requirements:
-    id_de_auteur: '\d+' # d = 0-9 / d+ = 0 à l'infini
+    id_du_produit: '\d+' # d = 0-9 / d+ = 0 à l'infini

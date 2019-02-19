@@ -7,11 +7,11 @@ jeremy_user_supprimer:
   defaults:
     _controller: JeremyUserBundle:Default:supprimerMembre
   requirements:
-    id_de_auteur: '\d+' # d = 0-9 / d+ = 0 à l'infini
+    id_du_membre: '\d+' # d = 0-9 / d+ = 0 à l'infini
 
 jeremy_user_modifier:
   path: /backoffice=membre/action=modif{id_du_membre}
   defaults:
     _controller: JeremyUserBundle:Default:modifierMembre
   requirements:
-    id_de_auteur: '\d+' # d = 0-9 / d+ = 0 à l'infini
+    id_du_membre: '\d+' # d = 0-9 / d+ = 0 à l'infini

@@ -1,1 +1,57 @@
-<h1>Commande</h1>
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Backoffice Commande
+{% endblock %}
+
+{% block section %}
+
+<div class="container">
+
+<h1>Bienvenue dans le Back Office Commande</h1>
+
+<a href="{{ path('jeremy_produit_homepage') }}" class="tdecoNone blue">Voir la liste des produits |</a>
+<a href="{{ path('jeremy_user_homepage') }}" class="tdecoNone blue">Voir la liste des membres |</a>
+<a href="{{ path('jeremy_commande_homepage') }}" class="tdecoNone blue">Voir la liste des commandes |</a>
+<a href="{{ path('jeremy_avis_homepage') }}" class="tdecoNone blue">Voir la liste des avis</a>
+
+<br><br>
+
+<table border="1">
+
+  <tr>
+    <th>Numéro de commande</th>
+    <th>Utilisateur</th>
+    <th>Produit</th>
+    <th>Photo</th>
+    <th>Prix total</th>
+    <th>Date de commande</th>
+    <th>Modification</th>
+    <th>Suppression</th>
+  </tr>
+
+  {% for commande in myResults %}
+
+    <tr>
+      <td>{{ commande.id }}</td>
+      <td>{{ commande.username }}</td>
+      <td>{{ commande.titre }}</td>
+      <td><img src="{{ asset('uploads/photos/' ~ commande.photo ) }}" width="100" height="100"></td>
+      <td>{{ commande.prixTotal }}</td>
+      <td>{{ commande.dateEnregistrement|date('Y-m-d') }}</td>
+      <td><a href="backoffice=commande/action=modif{{ commande.id }}">Modifier</a></td>
+      <td><a href="backoffice=commande/action=suppr{{ commande.id }}">Supprimer</a></td>
+    </tr>
+
+  {% endfor %}
+
+</table>
+
+
+
+
+
+
+</div>
+
+{% endblock %}
