@@ -17,6 +17,26 @@ table {
   text-align: center;
 }
 
+.delBord {
+  border:0;
+}
+
+.textAlign {
+  text-align: center !important;
+}
+
+.mTop35 {
+  margin-top: 35px;
+}
+
+.mLeft50 {
+  margin-left: 50%;
+}
+
+.mTop30 {
+  margin-top: 30px;
+}
+
 .blue {
   transition: all 0.3 !important;
   outline: none !important;
@@ -72,3 +92,32 @@ table {
   width: 70%;
   margin: auto;
 }
+
+
+
+@media (max-width:1200px)
+{
+  #map {display:none;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */

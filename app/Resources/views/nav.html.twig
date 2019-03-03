@@ -14,11 +14,11 @@
               <div class="row">
                 <div class="col-md-6 col-lg-3">
                   <ul class="list-unstyled mb-2">
-                    <li class="nav-item"><a href="" class="nav-link">Tops</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Robes</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Pantalons</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Jupes</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Vestes/Manteaux</a></li>
+                    <li class="nav-item"><a href="{{ path('jeremy_front_tops') }}" class="nav-link">Tops</a></li>
+                    <li class="nav-item"><a href="{{ path('jeremy_front_robe') }}" class="nav-link">Robes</a></li>
+                    <li class="nav-item"><a href="{{ path('jeremy_front_pantalon') }}" class="nav-link">Pantalons</a></li>
+                    <li class="nav-item"><a href="{{ path('jeremy_front_jupe') }}" class="nav-link">Jupes</a></li>
+                    <li class="nav-item"><a href="{{ path('jeremy_front_veste') }}" class="nav-link">Vestes/Manteaux</a></li>
                   </ul>
                 </div>
               </div>
@@ -31,11 +31,11 @@
               <div class="row">
                 <div class="col-md-6 col-lg-3">
                   <ul class="list-unstyled mb-3">
-                    <li class="nav-item"><a href="" class="nav-link">Bottes</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Sandales</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Baskets</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Escarpins</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Chaussons</a></li>
+                    <li class="nav-item"><a href="{{ path('jeremy_front_botte') }}" class="nav-link">Bottes</a></li>
+                    <li class="nav-item"><a href="{{ path('jeremy_front_sandale') }}" class="nav-link">Sandales</a></li>
+                    <li class="nav-item"><a href="{{ path('jeremy_front_basket') }}" class="nav-link">Baskets</a></li>
+                    <li class="nav-item"><a href="{{ path('jeremy_front_escarpin') }}" class="nav-link">Escarpins</a></li>
+                    <li class="nav-item"><a href="{{ path('jeremy_front_chausson') }}" class="nav-link">Chaussons</a></li>
                   </ul>
                 </div>
             </li>
@@ -47,11 +47,11 @@
               <div class="row">
                 <div class="col-md-6 col-lg-3">
                   <ul class="list-unstyled mb-3">
-                    <li class="nav-item"><a href="" class="nav-link">Sacs</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Foulards/Echarpes</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Ceintures</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Couvre-chef</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Bijoux</a></li>
+                    <li class="nav-item"><a href="{{ path('jeremy_front_sac') }}" class="nav-link">Sacs</a></li>
+                    <li class="nav-item"><a href="{{ path('jeremy_front_echarpe') }}" class="nav-link">Foulards/Echarpes</a></li>
+                    <li class="nav-item"><a href="{{ path('jeremy_front_ceinture') }}" class="nav-link">Ceintures</a></li>
+                    <li class="nav-item"><a href="{{ path('jeremy_front_chapeau') }}" class="nav-link">Couvre/chef</a></li>
+                    <li class="nav-item"><a href="{{ path('jeremy_front_bijou') }}" class="nav-link">Bijoux</a></li>
                   </ul>
                 </div>
               </div>
@@ -60,11 +60,11 @@
         </li>
       </ul>
 
-      <div class="navbar-buttons d-flex justify-content-end w120 pR10">
-        <form role="search" class="ml-auto mR20">
+      <div class="navbar-buttons d-flex justify-content-end w120 pR10" style="display:none;">
+        <form role="search" class="ml-auto mR20" style="display:none;>
           <div class="input-group w140">
             <input type="text" placeholder="Search" class="form-control">
-            <div class="input-group-append">
+            <div class="input-group-append" style="display:none;">
               <button type="button" class="btn btn-primary"><i class="fa fa-search"></i></button>
             </div>
           </div>

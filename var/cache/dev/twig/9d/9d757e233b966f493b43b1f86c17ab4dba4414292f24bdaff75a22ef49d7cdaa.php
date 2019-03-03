@@ -113,57 +113,58 @@ class __TwigTemplate_5d28038a28357fed2c03dbe467cb04494e25f724d67c3e36948bc39a10f
         $context['_seq'] = twig_ensure_traversable(($context["myResults"] ?? $this->getContext($context, "myResults")));
         foreach ($context['_seq'] as $context["_key"] => $context["produit"]) {
             // line 37
-            echo "    <tr>
+            echo "
+    <tr>
       <td>";
-            // line 38
+            // line 39
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "id", array()), "html", null, true);
             echo "</td>
       <td>";
-            // line 39
+            // line 40
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "reference", array()), "html", null, true);
             echo "</td>
       <td>";
-            // line 40
+            // line 41
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "categorie", array()), "html", null, true);
             echo "</td>
       <td>";
-            // line 41
+            // line 42
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "titre", array()), "html", null, true);
             echo "</td>
       <td>";
-            // line 42
+            // line 43
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "description", array()), "html", null, true);
             echo "</td>
       <td>";
-            // line 43
+            // line 44
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "couleur", array()), "html", null, true);
             echo "</td>
       <td>";
-            // line 44
+            // line 45
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "taille", array()), "html", null, true);
             echo "</td>
       <td>
 
       <img src=\"";
-            // line 47
+            // line 48
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl(("uploads/photos/" . $this->getAttribute($context["produit"], "photo", array()))), "html", null, true);
             echo "\" width=\"100\" height=\"100\">
 
       </td>
       <td>";
-            // line 50
+            // line 51
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "prix", array()), "html", null, true);
             echo "</td>
       <td>";
-            // line 51
+            // line 52
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "stock", array()), "html", null, true);
             echo "</td>
-      <td><a href=\"action=modif";
-            // line 52
+      <td><a href=\"backoffice=produit/action=modif";
+            // line 53
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "id", array()), "html", null, true);
             echo "\">Modifier</a></td>
-      <td><a href=\"action=suppr";
-            // line 53
+      <td><a href=\"backoffice=produit/action=suppr";
+            // line 54
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "id", array()), "html", null, true);
             echo "\">Supprimer</a></td>
     </tr>
@@ -172,7 +173,7 @@ class __TwigTemplate_5d28038a28357fed2c03dbe467cb04494e25f724d67c3e36948bc39a10f
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 56
+        // line 57
         echo "
   </table>
 
@@ -199,7 +200,7 @@ class __TwigTemplate_5d28038a28357fed2c03dbe467cb04494e25f724d67c3e36948bc39a10f
 
     public function getDebugInfo()
     {
-        return array (  176 => 56,  167 => 53,  163 => 52,  159 => 51,  155 => 50,  149 => 47,  143 => 44,  139 => 43,  135 => 42,  131 => 41,  127 => 40,  123 => 39,  119 => 38,  116 => 37,  112 => 36,  89 => 16,  85 => 15,  81 => 14,  77 => 13,  70 => 8,  61 => 7,  50 => 4,  41 => 3,  11 => 1,);
+        return array (  177 => 57,  168 => 54,  164 => 53,  160 => 52,  156 => 51,  150 => 48,  144 => 45,  140 => 44,  136 => 43,  132 => 42,  128 => 41,  124 => 40,  120 => 39,  116 => 37,  112 => 36,  89 => 16,  85 => 15,  81 => 14,  77 => 13,  70 => 8,  61 => 7,  50 => 4,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -248,6 +249,7 @@ Backoffice Produit
     </tr>
 
     {% for produit in myResults %}
+
     <tr>
       <td>{{ produit.id }}</td>
       <td>{{ produit.reference }}</td>
@@ -263,8 +265,8 @@ Backoffice Produit
       </td>
       <td>{{ produit.prix }}</td>
       <td>{{ produit.stock }}</td>
-      <td><a href=\"action=modif{{ produit.id }}\">Modifier</a></td>
-      <td><a href=\"action=suppr{{ produit.id }}\">Supprimer</a></td>
+      <td><a href=\"backoffice=produit/action=modif{{ produit.id }}\">Modifier</a></td>
+      <td><a href=\"backoffice=produit/action=suppr{{ produit.id }}\">Supprimer</a></td>
     </tr>
     {% endfor %}
 

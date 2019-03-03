@@ -16,7 +16,7 @@ jeremy_commande:
 
 jeremy_panier:
     resource: "@JeremyPanierBundle/Resources/config/routing.yml"
-    prefix:   /panier
+    prefix:   /
 
 jeremy_produit:
     resource: "@JeremyProduitBundle/Resources/config/routing.yml"

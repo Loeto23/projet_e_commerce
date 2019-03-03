@@ -77,38 +77,43 @@ class __TwigTemplate_8bc93b096a4758782b954486df7741c6be0348192a80c3a72a379236f7f
       <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"1\"></li>
       <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"2\"></li>
     </ol>
+
     <div class=\"carousel-inner\">
       <div class=\"carousel-item active\">
         <a href=\"#\"><img class=\"d-block w-100\" src=\"";
-        // line 20
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendor/img/overwatch.jpg"), "html", null, true);
+        // line 21
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendor/img/soleil1.jpg"), "html", null, true);
         echo "\" alt=\"First slide\"></a>
         <div class=\"carousel-caption d-none d-md-block\">
-      <h5>Image d'Overwatch xD</h5>
-      <p>Fond d'écran tkt</p>
-    </div>
+      <h5>Paradisiaque</h5>
+      <p>Je veux me baigner !</p>
+        </div>
       </div>
+
       <div class=\"carousel-item\">
         <a href=\"#\"><img class=\"d-block w-100\" src=\"";
-        // line 27
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendor/img/zed.jpg"), "html", null, true);
+        // line 29
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendor/img/chat1.jpg"), "html", null, true);
         echo "\" alt=\"Second slide\"></a>
         <div class=\"carousel-caption d-none d-md-block\">
-        <h5>Perso LOL mid</h5>
-        <p>Zed assassin</p>
+          <h5>C'est un chat</h5>
+          <p>Un très beau chat</p>
+        </div>
       </div>
-      </div>
+
       <div class=\"carousel-item\">
         <a href=\"#\"><img class=\"d-block w-100\" src=\"";
-        // line 34
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendor/img/salle.jpg"), "html", null, true);
+        // line 37
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendor/img/chien1.jpg"), "html", null, true);
         echo "\" alt=\"Third slide\"></a>
         <div class=\"carousel-caption d-none d-md-block\">
-      <h5>Lol perso Jungle</h5>
-      <p>Rengar assassin xD</p>
-    </div>
+          <h5>C'est un chien</h5>
+          <p>Un très beau chien</p>
+        </div>
       </div>
+
     </div>
+
     <a class=\"carousel-control-prev\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"prev\">
       <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>
       <span class=\"sr-only\">Previous</span>
@@ -122,62 +127,34 @@ class __TwigTemplate_8bc93b096a4758782b954486df7741c6be0348192a80c3a72a379236f7f
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 
   </div>
 
 
-  <div class=\"container\" style=\"border:1px solid;\">
+  <div class=\"container mTop30\">
     <a href=\"";
-        // line 97
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_front_backoffice");
+        // line 65
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_front_tops");
+        echo "\"><img src=\"https://picsum.photos/1600/900/?random\" width=\"80%\" height=\"80%\" style=\"margin-left: 10%;\"></a>
+  </div>
+
+  <div class=\"container mTop30\">
+    <a href=\"";
+        // line 69
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_front_botte");
         echo "\"><img src=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendor/img/overwatch.jpg"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendor/img/chat1.jpg"), "html", null, true);
         echo "\" width=\"80%\" height=\"80%\" style=\"margin-left: 10%;\"></a>
   </div>
 
-  <div class=\"container\" style=\"border:1px solid; margin-top:20px;\">
-    <img src=\"";
-        // line 101
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendor/img/zed.jpg"), "html", null, true);
-        echo "\" width=\"80%\" height=\"80%\" style=\"margin-left: 10%;\">
+  <div class=\"container mTop30\">
+    <a href=\"";
+        // line 73
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_front_accessoire");
+        echo "\"><img src=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendor/img/chien1.jpg"), "html", null, true);
+        echo "\" width=\"80%\" height=\"80%\" style=\"margin-left: 10%;\"></a>
   </div>
 
 ";
@@ -201,7 +178,7 @@ class __TwigTemplate_8bc93b096a4758782b954486df7741c6be0348192a80c3a72a379236f7f
 
     public function getDebugInfo()
     {
-        return array (  179 => 101,  170 => 97,  104 => 34,  94 => 27,  84 => 20,  70 => 8,  61 => 7,  50 => 4,  41 => 3,  11 => 1,);
+        return array (  154 => 73,  145 => 69,  138 => 65,  107 => 37,  96 => 29,  85 => 21,  70 => 8,  61 => 7,  50 => 4,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -231,29 +208,34 @@ Accueil
       <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"1\"></li>
       <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"2\"></li>
     </ol>
+
     <div class=\"carousel-inner\">
       <div class=\"carousel-item active\">
-        <a href=\"#\"><img class=\"d-block w-100\" src=\"{{ asset('../vendor/img/overwatch.jpg') }}\" alt=\"First slide\"></a>
+        <a href=\"#\"><img class=\"d-block w-100\" src=\"{{ asset('../vendor/img/soleil1.jpg') }}\" alt=\"First slide\"></a>
         <div class=\"carousel-caption d-none d-md-block\">
-      <h5>Image d'Overwatch xD</h5>
-      <p>Fond d'écran tkt</p>
-    </div>
+      <h5>Paradisiaque</h5>
+      <p>Je veux me baigner !</p>
+        </div>
       </div>
+
       <div class=\"carousel-item\">
-        <a href=\"#\"><img class=\"d-block w-100\" src=\"{{ asset('../vendor/img/zed.jpg') }}\" alt=\"Second slide\"></a>
+        <a href=\"#\"><img class=\"d-block w-100\" src=\"{{ asset('../vendor/img/chat1.jpg') }}\" alt=\"Second slide\"></a>
         <div class=\"carousel-caption d-none d-md-block\">
-        <h5>Perso LOL mid</h5>
-        <p>Zed assassin</p>
+          <h5>C'est un chat</h5>
+          <p>Un très beau chat</p>
+        </div>
       </div>
-      </div>
+
       <div class=\"carousel-item\">
-        <a href=\"#\"><img class=\"d-block w-100\" src=\"{{ asset('../vendor/img/salle.jpg') }}\" alt=\"Third slide\"></a>
+        <a href=\"#\"><img class=\"d-block w-100\" src=\"{{ asset('../vendor/img/chien1.jpg') }}\" alt=\"Third slide\"></a>
         <div class=\"carousel-caption d-none d-md-block\">
-      <h5>Lol perso Jungle</h5>
-      <p>Rengar assassin xD</p>
-    </div>
+          <h5>C'est un chien</h5>
+          <p>Un très beau chien</p>
+        </div>
       </div>
+
     </div>
+
     <a class=\"carousel-control-prev\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"prev\">
       <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>
       <span class=\"sr-only\">Previous</span>
@@ -267,54 +249,21 @@ Accueil
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 
   </div>
 
 
-  <div class=\"container\" style=\"border:1px solid;\">
-    <a href=\"{{ path('jeremy_front_backoffice') }}\"><img src=\"{{ asset('../vendor/img/overwatch.jpg') }}\" width=\"80%\" height=\"80%\" style=\"margin-left: 10%;\"></a>
+  <div class=\"container mTop30\">
+    <a href=\"{{ path('jeremy_front_tops') }}\"><img src=\"https://picsum.photos/1600/900/?random\" width=\"80%\" height=\"80%\" style=\"margin-left: 10%;\"></a>
   </div>
 
-  <div class=\"container\" style=\"border:1px solid; margin-top:20px;\">
-    <img src=\"{{ asset('../vendor/img/zed.jpg') }}\" width=\"80%\" height=\"80%\" style=\"margin-left: 10%;\">
+  <div class=\"container mTop30\">
+    <a href=\"{{ path('jeremy_front_botte') }}\"><img src=\"{{ asset('../vendor/img/chat1.jpg') }}\" width=\"80%\" height=\"80%\" style=\"margin-left: 10%;\"></a>
+  </div>
+
+  <div class=\"container mTop30\">
+    <a href=\"{{ path('jeremy_front_accessoire') }}\"><img src=\"{{ asset('../vendor/img/chien1.jpg') }}\" width=\"80%\" height=\"80%\" style=\"margin-left: 10%;\"></a>
   </div>
 
 {% endblock %}

@@ -21,6 +21,7 @@ class ProduitType extends AbstractType
          'Top' => 'tops',
          'Robe' => 'robe',
          'Jupe' => 'jupe',
+         'Pantalon' => 'pantalon',
          'Veste/Manteau' => 'veste/manteau',
          'Botte' => 'botte',
          'Sandale' => 'sandale',

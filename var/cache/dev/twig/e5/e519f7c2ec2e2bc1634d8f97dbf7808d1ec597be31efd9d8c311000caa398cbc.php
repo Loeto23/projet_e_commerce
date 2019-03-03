@@ -86,7 +86,7 @@ class __TwigTemplate_b05c3ebc4f5eb6f496d7f734dce74ec2b98d908207b11aa5445e4cf60c1
             // line 20
             echo "            <li class=\"list-inline-item\"><a href=\"";
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_login");
-            echo "\" data-toggle=\"modal\" data-target=\"#login-modal\">Se connecter</a></li>
+            echo "\">Se connecter</a></li>
             <li class=\"list-inline-item\"><a href=\"";
             // line 21
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_registration_register");
@@ -103,31 +103,7 @@ class __TwigTemplate_b05c3ebc4f5eb6f496d7f734dce74ec2b98d908207b11aa5445e4cf60c1
       </div>
     </div>
   </div>
-  <div id=\"login-modal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"Login\" aria-hidden=\"true\" class=\"modal fade\">
-    <div class=\"modal-dialog modal-sm\">
-      <div class=\"modal-content\">
-        <div class=\"modal-header\">
-          <h5 class=\"modal-title\">Customer login</h5>
-          <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\"><span aria-hidden=\"true\">×</span></button>
-        </div>
-        <div class=\"modal-body\">
-          <form action=\"customer-orders.html\" method=\"post\">
-            <div class=\"form-group\">
-              <input id=\"email-modal\" type=\"text\" placeholder=\"email\" class=\"form-control\">
-            </div>
-            <div class=\"form-group\">
-              <input id=\"password-modal\" type=\"password\" placeholder=\"password\" class=\"form-control\">
-            </div>
-            <p class=\"text-center\">
-              <button class=\"btn btn-primary\"><i class=\"fa fa-sign-in\"></i> Log in</button>
-            </p>
-          </form>
-          <p class=\"text-center text-muted\">Not registered yet?</p>
-          <p class=\"text-center text-muted\"><a href=\"register.html\"><strong>Register now</strong></a>! It is easy and done in 1 minute and gives you access to special discounts and much more!</p>
-        </div>
-      </div>
-    </div>
-  </div>
+
 </div>
 
 ";
@@ -178,7 +154,7 @@ class __TwigTemplate_b05c3ebc4f5eb6f496d7f734dce74ec2b98d908207b11aa5445e4cf60c1
             <li class=\"list-inline-item\"><a href=\"{{ path('fos_user_profile_show') }}\">Profil</a></li>
             <li class=\"list-inline-item\"><a href=\"{{ path('fos_user_security_logout') }}\">Se déconnecter</a></li>
           {% else %}
-            <li class=\"list-inline-item\"><a href=\"{{ path('fos_user_security_login') }}\" data-toggle=\"modal\" data-target=\"#login-modal\">Se connecter</a></li>
+            <li class=\"list-inline-item\"><a href=\"{{ path('fos_user_security_login') }}\">Se connecter</a></li>
             <li class=\"list-inline-item\"><a href=\"{{ path('fos_user_registration_register') }}\">S'inscrire</a></li>
             <li class=\"list-inline-item\"><a href=\"{{ path('jeremy_front_contact') }}\">Nous contacter</a></li>
           {% endif %}
@@ -187,31 +163,7 @@ class __TwigTemplate_b05c3ebc4f5eb6f496d7f734dce74ec2b98d908207b11aa5445e4cf60c1
       </div>
     </div>
   </div>
-  <div id=\"login-modal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"Login\" aria-hidden=\"true\" class=\"modal fade\">
-    <div class=\"modal-dialog modal-sm\">
-      <div class=\"modal-content\">
-        <div class=\"modal-header\">
-          <h5 class=\"modal-title\">Customer login</h5>
-          <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\"><span aria-hidden=\"true\">×</span></button>
-        </div>
-        <div class=\"modal-body\">
-          <form action=\"customer-orders.html\" method=\"post\">
-            <div class=\"form-group\">
-              <input id=\"email-modal\" type=\"text\" placeholder=\"email\" class=\"form-control\">
-            </div>
-            <div class=\"form-group\">
-              <input id=\"password-modal\" type=\"password\" placeholder=\"password\" class=\"form-control\">
-            </div>
-            <p class=\"text-center\">
-              <button class=\"btn btn-primary\"><i class=\"fa fa-sign-in\"></i> Log in</button>
-            </p>
-          </form>
-          <p class=\"text-center text-muted\">Not registered yet?</p>
-          <p class=\"text-center text-muted\"><a href=\"register.html\"><strong>Register now</strong></a>! It is easy and done in 1 minute and gives you access to special discounts and much more!</p>
-        </div>
-      </div>
-    </div>
-  </div>
+
 </div>
 
 {% endblock %}

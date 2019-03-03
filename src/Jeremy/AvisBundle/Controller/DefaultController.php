@@ -46,8 +46,6 @@ class DefaultController extends Controller
           '
           ) ;
           $result = $query->execute();
-        
-
 
         return $this->render('@JeremyAvis/Default/index.html.twig',
        [

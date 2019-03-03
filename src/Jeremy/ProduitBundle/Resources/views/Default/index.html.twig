@@ -34,6 +34,7 @@ Backoffice Produit
     </tr>
 
     {% for produit in myResults %}
+
     <tr>
       <td>{{ produit.id }}</td>
       <td>{{ produit.reference }}</td>
@@ -49,8 +50,8 @@ Backoffice Produit
       </td>
       <td>{{ produit.prix }}</td>
       <td>{{ produit.stock }}</td>
-      <td><a href="action=modif{{ produit.id }}">Modifier</a></td>
-      <td><a href="action=suppr{{ produit.id }}">Supprimer</a></td>
+      <td><a href="backoffice=produit/action=modif{{ produit.id }}">Modifier</a></td>
+      <td><a href="backoffice=produit/action=suppr{{ produit.id }}">Supprimer</a></td>
     </tr>
     {% endfor %}
 

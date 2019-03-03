@@ -1,0 +1,141 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Chaussons
+{% endblock %}
+
+{% block vetement%}
+
+
+<div id="all">
+  <div id="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- breadcrumb-->
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{{ path('jeremy_front_chausson') }}">Accueil</a></li>
+              <li aria-current="page" class="breadcrumb-item active">Chaussons</li>
+            </ol>
+          </nav>
+        </div>
+        <div class="col-lg-3">
+          <!--
+          *** MENUS AND FILTERS ***
+          _________________________________________________________
+          -->
+          <div class="card sidebar-menu mb-4">
+            <div class="card-header">
+              <h3 class="h4 card-title">Catégories</h3>
+            </div>
+            <div class="card-body">
+              <ul class="nav nav-pills flex-column category-menu">
+                <li><a href="{{ path('jeremy_front_botte') }}" class="nav-link">Chaussure <span class="badge badge-secondary"></span></a>
+                <ul class="list-unstyled">
+                  <li><a href="{{ path('jeremy_front_botte') }}" class="nav-link">Bottes</a></li>
+                  <li><a href="{{ path('jeremy_front_sandale') }}" class="nav-link">Sandales</a></li>
+                  <li><a href="{{ path('jeremy_front_basket') }}" class="nav-link">Baskets</a></li>
+                  <li><a href="{{ path('jeremy_front_escarpin') }}" class="nav-link">Escarpins</a></li>
+                  <li><a href="{{ path('jeremy_front_chausson') }}" class="nav-link">Chaussons</a></li>
+                </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card sidebar-menu mb-4">
+            <div class="card-header">
+              <h3 class="h4 card-title">Couleurs <a href="#" class="btn btn-sm btn-danger pull-right"><i class="fa fa-times-circle"></i> Clear</a></h3>
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="form-group">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><span class="colour white"></span> Blanc (14)
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><span class="colour blue"></span> Bleu (10)
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><span class="colour green"></span>  Vert (20)
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><span class="colour yellow"></span>  Jaune (13)
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><span class="colour red"></span>  Rouge (10)
+                    </label>
+                  </div>
+                </div>
+                <button class="btn btn-default btn-sm btn-primary"><i class="fa fa-pencil"></i>Appliquer</button>
+              </form>
+            </div>
+          </div>
+          <!-- *** MENUS AND FILTERS END ***-->
+        </div>
+        <div class="col-lg-9">
+          <div class="box">
+            <h1>Chaussons</h1>
+            <p>Dans la partie Chaussons, nous proposons une large sélection des meilleurs produits que nous avons trouvés et sélectionnés avec soin pour vous.</p>
+          </div>
+
+          <div class="row products">
+
+          {% for produit in myResults %}
+
+            <div class="col-lg-4 col-md-6">
+
+            <div class="product">
+            <div class="flip-container">
+              <div class="flipper">
+                <div class="front"><a href="{{ produit.id }}"><img src="{{ asset('uploads/photos/' ~ produit.photo ) }}" alt="" class="img-fluid"></a></div>
+              </div>
+            </div><a href="{{ produit.id }}" class="invisible"><img src="{{ asset('uploads/photos/' ~ produit.photo ) }}" alt="" class="img-fluid"></a>
+            <div class="text">
+              <h3><a href="{{ produit.id }}">{{ produit.titre }}</a></h3>
+              <p class="price">{{ produit.prix }}€</p>
+              <p class="buttons"><a href="{{ produit.id }}" class="btn btn-outline-secondary">Voir détail</a><a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Ajouter au panier</a></p>
+            </div>
+              <!-- /.text-->
+            </div>
+            <!-- /.product-->
+            </div>
+
+          {% endfor %}
+
+
+          <!--
+          <div class="pages">
+            <nav aria-label="Page navigation example" class="d-flex justify-content-center">
+              <ul class="pagination">
+
+                <li class="page-item"><a href="#" aria-label="Previous" class="page-link"><span aria-hidden="true">«</span><span class="sr-only">Previous</span></a></li>
+                <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                <li class="page-item"><a href="#" class="page-link">2</a></li>
+                <li class="page-item"><a href="#" class="page-link">3</a></li>
+                <li class="page-item"><a href="#" class="page-link">4</a></li>
+                <li class="page-item"><a href="#" class="page-link">5</a></li>
+                <li class="page-item"><a href="#" aria-label="Next" class="page-link"><span aria-hidden="true">»</span><span class="sr-only">Next</span></a></li>
+              </ul>
+            </nav>
+          </div>
+        -->
+        </div>
+        <!-- /.col-lg-9-->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

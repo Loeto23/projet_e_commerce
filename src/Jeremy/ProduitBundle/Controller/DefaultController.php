@@ -113,7 +113,7 @@ class DefaultController extends Controller
 
         $theEntityManager->flush();
 
-        // return $this->redirectToRoute('jeremy_produit_homepage');
+        return $this->redirectToRoute('jeremy_produit_homepage');
 
       }
 
@@ -150,10 +150,6 @@ class DefaultController extends Controller
 
     public function selectionProduitAction($categorie_du_produit)
     {
-      $doctrine = $this->getDoctrine();
-
-      $theEntityRepository = $doctrine->getRepository(\Jeremy\ProduitBundle\Entity\Produit::class);
-
 
     }
 

@@ -325,22 +325,25 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
         not_jeremy_newsletter_homepage:
 
-        // jeremy_panier_homepage
-        if ('/panier' === $trimmedPathinfo) {
-            $ret = array (  '_controller' => 'Jeremy\\PanierBundle\\Controller\\DefaultController::indexAction',  '_route' => 'jeremy_panier_homepage',);
-            if ('/' === substr($pathinfo, -1)) {
-                // no-op
-            } elseif ('GET' !== $canonicalMethod) {
-                goto not_jeremy_panier_homepage;
-            } else {
-                return array_replace($ret, $this->redirect($rawPathinfo.'/', 'jeremy_panier_homepage'));
+        // jeremy_front_noussommes
+        if ('/nous' === $pathinfo) {
+            return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\DefaultController::nousSommesAction',  '_route' => 'jeremy_front_noussommes',);
+        }
+
+        if (0 === strpos($pathinfo, '/panier')) {
+            // jeremy_passage_commande
+            if ('/panier/commande' === $pathinfo) {
+                return array (  '_controller' => 'Jeremy\\CommandeBundle\\Controller\\CommandeController::commandeAction',  '_route' => 'jeremy_passage_commande',);
             }
 
-            return $ret;
-        }
-        not_jeremy_panier_homepage:
+            // jeremy_panier_homepage
+            if ('/panier' === $pathinfo) {
+                return array (  '_controller' => 'Jeremy\\PanierBundle\\Controller\\PanierController::panierAction',  '_route' => 'jeremy_panier_homepage',);
+            }
 
-        if (0 === strpos($pathinfo, '/profile')) {
+        }
+
+        elseif (0 === strpos($pathinfo, '/profile')) {
             // fos_user_profile_show
             if ('/profile' === $trimmedPathinfo) {
                 $ret = array (  '_controller' => 'fos_user.profile.controller:showAction',  '_route' => 'fos_user_profile_show',);
@@ -402,12 +405,134 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
         not_jeremy_front_homepage:
 
-        // jeremy_front_contact
-        if ('/contact' === $pathinfo) {
-            return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\DefaultController::contactAction',  '_route' => 'jeremy_front_contact',);
+        if (0 === strpos($pathinfo, '/c')) {
+            // jeremy_front_contact
+            if ('/contact' === $pathinfo) {
+                return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\DefaultController::contactAction',  '_route' => 'jeremy_front_contact',);
+            }
+
+            // jeremy_front_cgv
+            if ('/cgv' === $pathinfo) {
+                return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\DefaultController::cgvAction',  '_route' => 'jeremy_front_cgv',);
+            }
+
+            if (0 === strpos($pathinfo, '/chaussure')) {
+                // jeremy_front_botte
+                if ('/chaussure/botte' === $pathinfo) {
+                    return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\ChaussureController::bottesAction',  '_route' => 'jeremy_front_botte',);
+                }
+
+                // jeremy_front_basket
+                if ('/chaussure/basket' === $pathinfo) {
+                    return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\ChaussureController::basketsAction',  '_route' => 'jeremy_front_basket',);
+                }
+
+                // jeremy_front_sandale
+                if ('/chaussure/sandale' === $pathinfo) {
+                    return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\ChaussureController::sandalesAction',  '_route' => 'jeremy_front_sandale',);
+                }
+
+                // jeremy_front_escarpin
+                if ('/chaussure/escarpin' === $pathinfo) {
+                    return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\ChaussureController::escarpinsAction',  '_route' => 'jeremy_front_escarpin',);
+                }
+
+                // jeremy_front_chausson
+                if ('/chaussure/chausson' === $pathinfo) {
+                    return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\ChaussureController::chaussonsAction',  '_route' => 'jeremy_front_chausson',);
+                }
+
+                // jeremy_front_detail_chaussure
+                if (preg_match('#^/chaussure/(?P<id_du_produit>\\d+)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'jeremy_front_detail_chaussure')), array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\DefaultController::detailChaussureAction',));
+                }
+
+            }
+
         }
 
-        if (0 === strpos($pathinfo, '/login')) {
+        // jeremy_front_faq
+        if ('/faq' === $pathinfo) {
+            return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\DefaultController::faqAction',  '_route' => 'jeremy_front_faq',);
+        }
+
+        // jeremy_front_mention
+        if ('/mention' === $pathinfo) {
+            return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\DefaultController::mentionAction',  '_route' => 'jeremy_front_mention',);
+        }
+
+        if (0 === strpos($pathinfo, '/accessoire')) {
+            // jeremy_front_accessoire
+            if ('/accessoire' === $pathinfo) {
+                return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\AccessoireController::indexAction',  '_route' => 'jeremy_front_accessoire',);
+            }
+
+            // jeremy_front_sac
+            if ('/accessoire/sac' === $pathinfo) {
+                return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\AccessoireController::sacsAction',  '_route' => 'jeremy_front_sac',);
+            }
+
+            // jeremy_front_echarpe
+            if ('/accessoire/echarpe' === $pathinfo) {
+                return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\AccessoireController::echarpesAction',  '_route' => 'jeremy_front_echarpe',);
+            }
+
+            // jeremy_front_ceinture
+            if ('/accessoire/ceinture' === $pathinfo) {
+                return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\AccessoireController::ceinturesAction',  '_route' => 'jeremy_front_ceinture',);
+            }
+
+            // jeremy_front_chapeau
+            if ('/accessoire/chapeau' === $pathinfo) {
+                return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\AccessoireController::chapeauxAction',  '_route' => 'jeremy_front_chapeau',);
+            }
+
+            // jeremy_front_bijou
+            if ('/accessoire/bijou' === $pathinfo) {
+                return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\AccessoireController::bijouxAction',  '_route' => 'jeremy_front_bijou',);
+            }
+
+            // jeremy_front_detail_accessoire
+            if (preg_match('#^/accessoire/(?P<id_du_produit>\\d+)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'jeremy_front_detail_accessoire')), array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\DefaultController::detailAccessoireAction',));
+            }
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/vetement')) {
+            // jeremy_front_tops
+            if ('/vetement/tops' === $pathinfo) {
+                return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\VetementController::topsAction',  '_route' => 'jeremy_front_tops',);
+            }
+
+            // jeremy_front_robe
+            if ('/vetement/robes' === $pathinfo) {
+                return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\VetementController::robesAction',  '_route' => 'jeremy_front_robe',);
+            }
+
+            // jeremy_front_pantalon
+            if ('/vetement/pantalon' === $pathinfo) {
+                return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\VetementController::pantalonsAction',  '_route' => 'jeremy_front_pantalon',);
+            }
+
+            // jeremy_front_jupe
+            if ('/vetement/jupe' === $pathinfo) {
+                return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\VetementController::jupesAction',  '_route' => 'jeremy_front_jupe',);
+            }
+
+            // jeremy_front_veste
+            if ('/vetement/veste-manteau' === $pathinfo) {
+                return array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\VetementController::vestesAction',  '_route' => 'jeremy_front_veste',);
+            }
+
+            // jeremy_front_detail_vetement
+            if (preg_match('#^/vetement/(?P<id_du_produit>\\d+)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'jeremy_front_detail_vetement')), array (  '_controller' => 'Jeremy\\FrontBundle\\Controller\\DefaultController::detailVetementAction',));
+            }
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/login')) {
             // fos_user_security_login
             if ('/login' === $pathinfo) {
                 $ret = array (  '_controller' => 'fos_user.security.controller:loginAction',  '_route' => 'fos_user_security_login',);

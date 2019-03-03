@@ -11,34 +11,22 @@ class ContactType extends AbstractType
     {
       $builder->add('nom',\Symfony\Component\Form\Extension\Core\Type\TextType::class,
       [
-        'label' => false,
-        'attr' => array(
-          'placeholder' => 'Votre Nom',
-        )
+        'label' => 'nom'
       ]);
 
       $builder->add('email',\Symfony\Component\Form\Extension\Core\Type\EmailType::class,
       [
-        'label' => false,
-        'attr' => array(
-          'placeholder' => 'Votre Email',
-        )
+        'label' => 'email'
       ]);
 
       $builder->add('objet',\Symfony\Component\Form\Extension\Core\Type\TextType::class,
       [
-        'label' => false,
-        'attr' => array(
-          'placeholder' => 'L\'objet du message',
-        )
+        'label' => 'Sujet'
       ]);
 
       $builder->add('message',\Symfony\Component\Form\Extension\Core\Type\TextareaType::class,
       [
-        'label' => false,
-        'attr' => array(
-          'placeholder' => 'Ecrivez votre message',
-        )
+        'label' => 'Message'
       ]);
 
       $builder->add('save', \Symfony\Component\Form\Extension\Core\Type\SubmitType::class,

@@ -8,4 +8,113 @@ jeremy_front_contact:
 
 jeremy_front_backoffice:
   path: /backoffice
-  defaults: { _controller: JeremyFrontBundle:Default:backoffice }   
+  defaults: { _controller: JeremyFrontBundle:Default:backoffice }
+
+jeremy_front_noussommes:
+  path: /nous
+  defaults: { _controller: JeremyFrontBundle:Default:nousSommes }
+
+jeremy_front_faq:
+  path: /faq
+  defaults: { _controller: JeremyFrontBundle:Default:faq }
+
+jeremy_front_mention:
+  path: /mention
+  defaults: { _controller: JeremyFrontBundle:Default:mention }
+
+jeremy_front_cgv:
+  path: /cgv
+  defaults: { _controller: JeremyFrontBundle:Default:cgv }
+
+# jeremy_front_vetement:
+#   path: /vetement
+#   defaults: { _controller: JeremyFrontBundle:Vetement:index }
+
+# jeremy_front_chaussure:
+#   path: /chaussure
+#   defaults: { _controller: JeremyFrontBundle:Chaussure:index }
+
+jeremy_front_accessoire:
+  path: /accessoire
+  defaults: { _controller: JeremyFrontBundle:Accessoire:index }
+
+jeremy_front_tops:
+  path: /vetement/tops
+  defaults: { _controller: JeremyFrontBundle:Vetement:tops }
+
+jeremy_front_robe:
+  path: /vetement/robes
+  defaults: { _controller: JeremyFrontBundle:Vetement:robes }
+
+jeremy_front_pantalon:
+  path: /vetement/pantalon
+  defaults: { _controller: JeremyFrontBundle:Vetement:pantalons }
+
+jeremy_front_jupe:
+  path: /vetement/jupe
+  defaults: { _controller: JeremyFrontBundle:Vetement:jupes }
+
+jeremy_front_veste:
+  path: /vetement/veste-manteau
+  defaults: { _controller: JeremyFrontBundle:Vetement:vestes }
+
+jeremy_front_detail_vetement:
+  path: /vetement/{id_du_produit}
+  defaults:
+    _controller: JeremyFrontBundle:Default:detailVetement
+  requirements:
+    id_du_produit: '\d+' # d = 0-9 / d+ = 0 à l'infini
+
+jeremy_front_botte:
+  path: /chaussure/botte
+  defaults: { _controller: JeremyFrontBundle:Chaussure:bottes }
+
+jeremy_front_sandale:
+  path: /chaussure/sandale
+  defaults: { _controller: JeremyFrontBundle:Chaussure:sandales }
+
+jeremy_front_basket:
+  path: /chaussure/basket
+  defaults: { _controller: JeremyFrontBundle:Chaussure:baskets }
+
+jeremy_front_escarpin:
+  path: /chaussure/escarpin
+  defaults: { _controller: JeremyFrontBundle:Chaussure:escarpins }
+
+jeremy_front_chausson:
+  path: /chaussure/chausson
+  defaults: { _controller: JeremyFrontBundle:Chaussure:chaussons }
+
+jeremy_front_detail_chaussure:
+  path: /chaussure/{id_du_produit}
+  defaults:
+    _controller: JeremyFrontBundle:Default:detailChaussure
+  requirements:
+    id_du_produit: '\d+' # d = 0-9 / d+ = 0 à l'infini
+
+jeremy_front_sac:
+  path: /accessoire/sac
+  defaults: { _controller: JeremyFrontBundle:Accessoire:sacs }
+
+jeremy_front_echarpe:
+  path: /accessoire/echarpe
+  defaults: { _controller: JeremyFrontBundle:Accessoire:echarpes }
+
+jeremy_front_ceinture:
+  path: /accessoire/ceinture
+  defaults: { _controller: JeremyFrontBundle:Accessoire:ceintures }
+
+jeremy_front_chapeau:
+  path: /accessoire/chapeau
+  defaults: { _controller: JeremyFrontBundle:Accessoire:chapeaux }
+
+jeremy_front_bijou:
+  path: /accessoire/bijou
+  defaults: { _controller: JeremyFrontBundle:Accessoire:bijoux }
+
+jeremy_front_detail_accessoire:
+  path: /accessoire/{id_du_produit}
+  defaults:
+    _controller: JeremyFrontBundle:Default:detailAccessoire
+  requirements:
+    id_du_produit: '\d+' # d = 0-9 / d+ = 0 à l'infini
