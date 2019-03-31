@@ -1,3 +1,11 @@
 jeremy_panier_homepage:
     path:     /panier
     defaults: { _controller: JeremyPanierBundle:Panier:panier }
+
+jeremy_panier_ajouter:
+  path: /panier/ajouter/{id}
+  defaults: { _controller: JeremyPanierBundle:Panier:ajouter }
+
+jeremy_panier_supprimer:
+  path: /panier/supprimer{id}
+  defaults: { _controller: JeremyPanierBundle:Panier:supprimer }

@@ -71,12 +71,12 @@ class __TwigTemplate_801bfbff00d4fff77c0c26340cb915df79a499d2e33f85417b881e7dd95
 <div class=\"container\">
 
 <h1>Ajouter un produit</h1>
-
+<form>
 ";
         // line 13
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock(($context["view"] ?? $this->getContext($context, "view")), 'form');
         echo "
-
+</form>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -122,9 +122,9 @@ Backoffice Produit
 <div class=\"container\">
 
 <h1>Ajouter un produit</h1>
-
+<form>
 {{ form(view) }}
-
+</form>
 {% endblock %}
 ", "@JeremyProduit/Default/ajouterProduit.html.twig", "E:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\ProduitBundle\\Resources\\views\\Default\\ajouterProduit.html.twig");
     }

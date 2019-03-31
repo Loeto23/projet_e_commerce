@@ -91,7 +91,7 @@ class __TwigTemplate_175fd6d4a4d8622387434a4a8214d51b455fe30e2f3f8815d09ba84b323
             <ol class=\"breadcrumb\">
               <li class=\"breadcrumb-item\"><a href=\"";
         // line 21
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_front_tops");
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_front_botte");
         echo "\">Accueil</a></li>
               <li aria-current=\"page\" class=\"breadcrumb-item active\"><a href=\"";
         // line 22
@@ -183,7 +183,10 @@ class __TwigTemplate_175fd6d4a4d8622387434a4a8214d51b455fe30e2f3f8815d09ba84b323
             // line 64
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "prix", array()), "html", null, true);
             echo "€</p>
-                <p class=\"text-center buttons\"><a href=\"basket.html\" class=\"btn btn-primary\"><i class=\"fa fa-shopping-cart\"></i> Ajouter au panier</a></p>
+                <p class=\"text-center buttons\"><a href=\"";
+            // line 65
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_panier_ajouter", array("id" => $this->getAttribute($context["produit"], "id", array()))), "html", null, true);
+            echo "\" class=\"btn btn-primary\"><i class=\"fa fa-shopping-cart\"></i> Ajouter au panier</a></p>
               </div>
             </div>
           </div>
@@ -212,64 +215,103 @@ class __TwigTemplate_175fd6d4a4d8622387434a4a8214d51b455fe30e2f3f8815d09ba84b323
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 82
         echo "
+
+    <!--
+      <div>
+        <button onclick=\"myFunction()\">Voir les avis</button>
+
+
+        <table id=\"on-off\" style=\"display:none;\">
+
+        <tr>
+        <th>Nom</th>
+        <th>Commentaire</th>
+        <th>Note</th>
+        </tr>
+
+        ";
+        // line 97
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["myResultat"] ?? $this->getContext($context, "myResultat")));
+        foreach ($context['_seq'] as $context["_key"] => $context["avis"]) {
+            // line 98
+            echo "
+        <tr>
+        <td>";
+            // line 100
+            echo twig_escape_filter($this->env, $this->getAttribute($context["avis"], "username", array()), "html", null, true);
+            echo "</td>
+        <td>";
+            // line 101
+            echo twig_escape_filter($this->env, $this->getAttribute($context["avis"], "commentaire", array()), "html", null, true);
+            echo "</td>
+        <td>";
+            // line 102
+            echo twig_escape_filter($this->env, $this->getAttribute($context["avis"], "note", array()), "html", null, true);
+            echo "</td>
+        </tr>
+
+        </table>
+
+        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['avis'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 108
+        echo "
+        </div>
+        <br>
+        <br>
+
+        <button onclick=\"affichageFunction()\">Ajouter un commentaire</button>
+        <br>
+        <br>
+        <div id=\"commentaire\" style=\"display:none;\">
+          <textarea name=\"commentaire\" rows=\"5\" cols=\"60\" placeholder=\"Ajouter un commentaire à ce produit\"></textarea>
+          <br>
+          <label for=\"note\">Ajouter une note à ce produit</label>
+          <br>
+          <input type=\"number\" min=\"0\" max=\"5\">
+          <br>
+          <br>
+          <input type=\"submit\" value=\"Enregistrer\">
+        </div>
+      </div>
+    -->
+
       </div>
     </div>
   </div>
 
 
+  <script>
+
+  function myFunction() {
+    var x = document.getElementById(\"on-off\");
+    if (x.style.display === \"none\") {
+      x.style.display = \"block\";
+    } else {
+      x.style.display = \"none\";
+    }
+  }
+
+  function affichageFunction() {
+    var x = document.getElementById(\"commentaire\");
+    if (x.style.display === \"none\") {
+      x.style.display = \"block\";
+    } else {
+      x.style.display = \"none\";
+    }
+  }
+
+
+  </script>
 
 
 
 
-          <div class=\"row products\">
 
-          ";
-        // line 94
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(($context["myResults"] ?? $this->getContext($context, "myResults")));
-        foreach ($context['_seq'] as $context["_key"] => $context["produit"]) {
-            // line 95
-            echo "<!--
-            <div class=\"col-lg-4 col-md-6\">
-
-            <div class=\"product\">
-              <div class=\"flip-container\">
-                <div class=\"flipper\">
-                  <div class=\"front\"><a href=\"detail.html\"><img src=\"";
-            // line 101
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl(("uploads/photos/" . $this->getAttribute($context["produit"], "photo", array()))), "html", null, true);
-            echo "\" alt=\"\" class=\"img-fluid\"></a></div>
-                </div>
-              </div><a href=\"detail.html\" class=\"invisible\"><img src=\"";
-            // line 103
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl(("uploads/photos/" . $this->getAttribute($context["produit"], "photo", array()))), "html", null, true);
-            echo "\" alt=\"\" class=\"img-fluid\"></a>
-              <div class=\"text\">
-                <h3><a href=\"detail.html\">";
-            // line 105
-            echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "titre", array()), "html", null, true);
-            echo "</a></h3>
-                <p class=\"price\">";
-            // line 106
-            echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "prix", array()), "html", null, true);
-            echo "€</p>
-                <p class=\"buttons\"><a href=\"vetement/";
-            // line 107
-            echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "id", array()), "html", null, true);
-            echo "\" class=\"btn btn-outline-secondary\">Voir détail</a><a href=\"basket.html\" class=\"btn btn-primary\"><i class=\"fa fa-shopping-cart\"></i>Ajouter au panier</a></p>
-              </div>
-              <!-- /.text-->
-            </div>
-            <!-- /.product-->
-            </div>
-
-          ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 115
-        echo "
 
           <!--
           <div class=\"pages\">
@@ -315,7 +357,7 @@ class __TwigTemplate_175fd6d4a4d8622387434a4a8214d51b455fe30e2f3f8815d09ba84b323
 
     public function getDebugInfo()
     {
-        return array (  272 => 115,  258 => 107,  254 => 106,  250 => 105,  245 => 103,  240 => 101,  232 => 95,  228 => 94,  214 => 82,  200 => 74,  195 => 72,  184 => 64,  180 => 63,  173 => 59,  167 => 55,  163 => 54,  152 => 46,  148 => 45,  144 => 44,  140 => 43,  136 => 42,  131 => 40,  115 => 26,  106 => 24,  102 => 23,  98 => 22,  94 => 21,  83 => 12,  74 => 11,  57 => 6,  54 => 5,  50 => 4,  41 => 3,  11 => 1,);
+        return array (  262 => 108,  250 => 102,  246 => 101,  242 => 100,  238 => 98,  234 => 97,  217 => 82,  203 => 74,  198 => 72,  188 => 65,  184 => 64,  180 => 63,  173 => 59,  167 => 55,  163 => 54,  152 => 46,  148 => 45,  144 => 44,  140 => 43,  136 => 42,  131 => 40,  115 => 26,  106 => 24,  102 => 23,  98 => 22,  94 => 21,  83 => 12,  74 => 11,  57 => 6,  54 => 5,  50 => 4,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -348,7 +390,7 @@ class __TwigTemplate_175fd6d4a4d8622387434a4a8214d51b455fe30e2f3f8815d09ba84b323
           <!-- breadcrumb-->
           <nav aria-label=\"breadcrumb\">
             <ol class=\"breadcrumb\">
-              <li class=\"breadcrumb-item\"><a href=\"{{ path('jeremy_front_tops') }}\">Accueil</a></li>
+              <li class=\"breadcrumb-item\"><a href=\"{{ path('jeremy_front_botte') }}\">Accueil</a></li>
               <li aria-current=\"page\" class=\"breadcrumb-item active\"><a href=\"{{ path('jeremy_front_botte') }}\">Chaussure</a></li>
             {% for produit in myResults %}
               <li aria-current=\"page\" class=\"breadcrumb-item active\">{{ produit.titre }}</li>
@@ -392,7 +434,7 @@ class __TwigTemplate_175fd6d4a4d8622387434a4a8214d51b455fe30e2f3f8815d09ba84b323
               <div class=\"box\">
                 <h1 class=\"text-center\">{{ produit.titre }}</h1>
                 <p class=\"price\">{{ produit.prix }}€</p>
-                <p class=\"text-center buttons\"><a href=\"basket.html\" class=\"btn btn-primary\"><i class=\"fa fa-shopping-cart\"></i> Ajouter au panier</a></p>
+                <p class=\"text-center buttons\"><a href=\"{{ path('jeremy_panier_ajouter', {'id' : produit.id }) }}\" class=\"btn btn-primary\"><i class=\"fa fa-shopping-cart\"></i> Ajouter au panier</a></p>
               </div>
             </div>
           </div>
@@ -410,38 +452,83 @@ class __TwigTemplate_175fd6d4a4d8622387434a4a8214d51b455fe30e2f3f8815d09ba84b323
 
       {% endfor %}
 
+
+    <!--
+      <div>
+        <button onclick=\"myFunction()\">Voir les avis</button>
+
+
+        <table id=\"on-off\" style=\"display:none;\">
+
+        <tr>
+        <th>Nom</th>
+        <th>Commentaire</th>
+        <th>Note</th>
+        </tr>
+
+        {% for avis in myResultat %}
+
+        <tr>
+        <td>{{ avis.username }}</td>
+        <td>{{ avis.commentaire }}</td>
+        <td>{{ avis.note }}</td>
+        </tr>
+
+        </table>
+
+        {% endfor %}
+
+        </div>
+        <br>
+        <br>
+
+        <button onclick=\"affichageFunction()\">Ajouter un commentaire</button>
+        <br>
+        <br>
+        <div id=\"commentaire\" style=\"display:none;\">
+          <textarea name=\"commentaire\" rows=\"5\" cols=\"60\" placeholder=\"Ajouter un commentaire à ce produit\"></textarea>
+          <br>
+          <label for=\"note\">Ajouter une note à ce produit</label>
+          <br>
+          <input type=\"number\" min=\"0\" max=\"5\">
+          <br>
+          <br>
+          <input type=\"submit\" value=\"Enregistrer\">
+        </div>
+      </div>
+    -->
+
       </div>
     </div>
   </div>
 
 
+  <script>
+
+  function myFunction() {
+    var x = document.getElementById(\"on-off\");
+    if (x.style.display === \"none\") {
+      x.style.display = \"block\";
+    } else {
+      x.style.display = \"none\";
+    }
+  }
+
+  function affichageFunction() {
+    var x = document.getElementById(\"commentaire\");
+    if (x.style.display === \"none\") {
+      x.style.display = \"block\";
+    } else {
+      x.style.display = \"none\";
+    }
+  }
+
+
+  </script>
 
 
 
 
-          <div class=\"row products\">
-
-          {% for produit in myResults %}
-<!--
-            <div class=\"col-lg-4 col-md-6\">
-
-            <div class=\"product\">
-              <div class=\"flip-container\">
-                <div class=\"flipper\">
-                  <div class=\"front\"><a href=\"detail.html\"><img src=\"{{ asset('uploads/photos/' ~ produit.photo ) }}\" alt=\"\" class=\"img-fluid\"></a></div>
-                </div>
-              </div><a href=\"detail.html\" class=\"invisible\"><img src=\"{{ asset('uploads/photos/' ~ produit.photo ) }}\" alt=\"\" class=\"img-fluid\"></a>
-              <div class=\"text\">
-                <h3><a href=\"detail.html\">{{ produit.titre }}</a></h3>
-                <p class=\"price\">{{ produit.prix }}€</p>
-                <p class=\"buttons\"><a href=\"vetement/{{ produit.id }}\" class=\"btn btn-outline-secondary\">Voir détail</a><a href=\"basket.html\" class=\"btn btn-primary\"><i class=\"fa fa-shopping-cart\"></i>Ajouter au panier</a></p>
-              </div>
-              <!-- /.text-->
-            </div>
-            <!-- /.product-->
-            </div>
-
-          {% endfor %}
 
 
           <!--

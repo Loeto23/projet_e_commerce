@@ -89,112 +89,114 @@ class __TwigTemplate_b4383e54e6f99d1a9ee59578e2bd4b067e233fc45e270b5c3b524d8979d
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_avis_homepage");
         echo "\" class=\"tdecoNone blue\">Voir la liste des avis</a>
 
+  <br>
 <br>
 
 
 
-<table>
-  <tr>
-    <th>ID</th>
-    <th>Nom d'utilisateur</th>
-    <th>Email</th>
-    <th>Status</th>
-    <th>Nom</th>
-    <th>Prénom</th>
-    <th>Dernière connexion</th>
-    <th>Modification</th>
-    <th>Suppression</th>
-
-  </tr>
-
-  ";
-        // line 36
+<table class=\"table\">
+  <thead>
+    <tr>
+      <th scope=\"col\">ID</th>
+      <th scope=\"col\">Nom d'utilisateur</th>
+      <th scope=\"col\">Email</th>
+      <th scope=\"col\">Status</th>
+      <th scope=\"col\">Nom</th>
+      <th scope=\"col\">Prénom</th>
+      <th scope=\"col\">Dernière connexion</th>
+      <th scope=\"col\">Modification</th>
+      <th scope=\"col\">Suppression</th>
+    </tr>
+  </thead>
+  <tbody>
+    ";
+        // line 38
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["myResults"] ?? $this->getContext($context, "myResults")));
         foreach ($context['_seq'] as $context["_key"] => $context["membre"]) {
-            // line 37
-            echo "  <tr>
-    <td>";
-            // line 38
+            // line 39
+            echo "    <tr>
+      <td class=\"delBord\" scope=\"row\">";
+            // line 40
             echo twig_escape_filter($this->env, $this->getAttribute($context["membre"], "id", array()), "html", null, true);
             echo "</td>
-    <td>";
-            // line 39
+      <td class=\"delBord\">";
+            // line 41
             echo twig_escape_filter($this->env, $this->getAttribute($context["membre"], "username", array()), "html", null, true);
             echo "</td>
-    <td>";
-            // line 40
+      <td class=\"delBord\">";
+            // line 42
             echo twig_escape_filter($this->env, $this->getAttribute($context["membre"], "email", array()), "html", null, true);
             echo "</td>
 
-    <td>
+      <td class=\"delBord\">
 
-    ";
-            // line 44
+      ";
+            // line 46
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["membre"], "roles", array()));
             foreach ($context['_seq'] as $context["_key"] => $context["status"]) {
-                // line 45
+                // line 47
                 echo "
-      ";
-                // line 46
+        ";
+                // line 48
                 if (($context["status"] == "ROLE_SUPER_ADMIN")) {
-                    // line 47
-                    echo "      SUPER_ADMIN
+                    // line 49
+                    echo "        SUPER_ADMIN
 
-      ";
-                } elseif ((                // line 49
+        ";
+                } elseif ((                // line 51
 $context["status"] == "ROLE_ADMIN")) {
-                    // line 50
-                    echo "      ADMIN
+                    // line 52
+                    echo "        ADMIN
 
-      ";
-                } elseif ((                // line 52
+        ";
+                } elseif ((                // line 54
 $context["status"] == "ROLE_USER")) {
-                    // line 53
-                    echo "      MEMBRE
+                    // line 55
+                    echo "        MEMBRE
 
-      ";
+        ";
                 }
-                // line 56
+                // line 58
                 echo "
-    ";
+      ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['status'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 58
+            // line 60
             echo "
-    </td>
+      </td class=\"delBord\">
 
-    <td>";
-            // line 61
+      <td class=\"delBord\">";
+            // line 63
             echo twig_escape_filter($this->env, $this->getAttribute($context["membre"], "nom", array()), "html", null, true);
             echo "</td>
-    <td>";
-            // line 62
+      <td class=\"delBord\">";
+            // line 64
             echo twig_escape_filter($this->env, $this->getAttribute($context["membre"], "prenom", array()), "html", null, true);
             echo "</td>
-    <td>";
-            // line 63
+      <td class=\"delBord\">";
+            // line 65
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["membre"], "lastLogin", array()), "Y-m-d"), "html", null, true);
             echo "</td>
-    <td><a href=\"backoffice=membre/action=modif";
-            // line 64
+      <td class=\"delBord\"><a href=\"backoffice=membre/action=modif";
+            // line 66
             echo twig_escape_filter($this->env, $this->getAttribute($context["membre"], "id", array()), "html", null, true);
             echo "\">Modifier</a></td>
-    <td><a href=\"backoffice=membre/action=suppr";
-            // line 65
+      <td class=\"delBord\"><a href=\"backoffice=membre/action=suppr";
+            // line 67
             echo twig_escape_filter($this->env, $this->getAttribute($context["membre"], "id", array()), "html", null, true);
             echo "\">Supprimer</a></td>
-  </tr>
-  ";
+    </tr>
+    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['membre'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 68
-        echo "
+        // line 70
+        echo "  </tbody>
 </table>
 
 
@@ -221,7 +223,7 @@ $context["status"] == "ROLE_USER")) {
 
     public function getDebugInfo()
     {
-        return array (  197 => 68,  188 => 65,  184 => 64,  180 => 63,  176 => 62,  172 => 61,  167 => 58,  160 => 56,  155 => 53,  153 => 52,  149 => 50,  147 => 49,  143 => 47,  141 => 46,  138 => 45,  134 => 44,  127 => 40,  123 => 39,  119 => 38,  116 => 37,  112 => 36,  89 => 16,  85 => 15,  81 => 14,  77 => 13,  70 => 8,  61 => 7,  50 => 4,  41 => 3,  11 => 1,);
+        return array (  199 => 70,  190 => 67,  186 => 66,  182 => 65,  178 => 64,  174 => 63,  169 => 60,  162 => 58,  157 => 55,  155 => 54,  151 => 52,  149 => 51,  145 => 49,  143 => 48,  140 => 47,  136 => 46,  129 => 42,  125 => 41,  121 => 40,  118 => 39,  114 => 38,  89 => 16,  85 => 15,  81 => 14,  77 => 13,  70 => 8,  61 => 7,  50 => 4,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -251,57 +253,59 @@ Backoffice Membre
   <a href=\"{{ path('jeremy_commande_homepage') }}\" class=\"tdecoNone blue\">Voir la liste des commandes |</a>
   <a href=\"{{ path('jeremy_avis_homepage') }}\" class=\"tdecoNone blue\">Voir la liste des avis</a>
 
+  <br>
 <br>
 
 
 
-<table>
-  <tr>
-    <th>ID</th>
-    <th>Nom d'utilisateur</th>
-    <th>Email</th>
-    <th>Status</th>
-    <th>Nom</th>
-    <th>Prénom</th>
-    <th>Dernière connexion</th>
-    <th>Modification</th>
-    <th>Suppression</th>
+<table class=\"table\">
+  <thead>
+    <tr>
+      <th scope=\"col\">ID</th>
+      <th scope=\"col\">Nom d'utilisateur</th>
+      <th scope=\"col\">Email</th>
+      <th scope=\"col\">Status</th>
+      <th scope=\"col\">Nom</th>
+      <th scope=\"col\">Prénom</th>
+      <th scope=\"col\">Dernière connexion</th>
+      <th scope=\"col\">Modification</th>
+      <th scope=\"col\">Suppression</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for membre in myResults %}
+    <tr>
+      <td class=\"delBord\" scope=\"row\">{{ membre.id }}</td>
+      <td class=\"delBord\">{{ membre.username }}</td>
+      <td class=\"delBord\">{{ membre.email }}</td>
 
-  </tr>
+      <td class=\"delBord\">
 
-  {% for membre in myResults %}
-  <tr>
-    <td>{{ membre.id }}</td>
-    <td>{{ membre.username }}</td>
-    <td>{{ membre.email }}</td>
+      {% for status in membre.roles %}
 
-    <td>
+        {% if status == 'ROLE_SUPER_ADMIN' %}
+        SUPER_ADMIN
 
-    {% for status in membre.roles %}
+        {% elseif status == 'ROLE_ADMIN' %}
+        ADMIN
 
-      {% if status == 'ROLE_SUPER_ADMIN' %}
-      SUPER_ADMIN
+        {% elseif status == 'ROLE_USER' %}
+        MEMBRE
 
-      {% elseif status == 'ROLE_ADMIN' %}
-      ADMIN
+        {% endif %}
 
-      {% elseif status == 'ROLE_USER' %}
-      MEMBRE
+      {% endfor %}
 
-      {% endif %}
+      </td class=\"delBord\">
 
+      <td class=\"delBord\">{{ membre.nom }}</td>
+      <td class=\"delBord\">{{ membre.prenom }}</td>
+      <td class=\"delBord\">{{ membre.lastLogin|date('Y-m-d') }}</td>
+      <td class=\"delBord\"><a href=\"backoffice=membre/action=modif{{ membre.id }}\">Modifier</a></td>
+      <td class=\"delBord\"><a href=\"backoffice=membre/action=suppr{{ membre.id }}\">Supprimer</a></td>
+    </tr>
     {% endfor %}
-
-    </td>
-
-    <td>{{ membre.nom }}</td>
-    <td>{{ membre.prenom }}</td>
-    <td>{{ membre.lastLogin|date('Y-m-d') }}</td>
-    <td><a href=\"backoffice=membre/action=modif{{ membre.id }}\">Modifier</a></td>
-    <td><a href=\"backoffice=membre/action=suppr{{ membre.id }}\">Supprimer</a></td>
-  </tr>
-  {% endfor %}
-
+  </tbody>
 </table>
 
 

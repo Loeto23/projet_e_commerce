@@ -12,13 +12,13 @@ Suppression Commande
 
 {% for commande in myResults %}
 
-La commande n°{{ commande.id }} de l'utilisateur {{ commande.username }} a bien été supprimé.
+<div class="alert alert-success">La commande n°{{ commande.id }} de l'utilisateur {{ commande.username }} a bien été supprimé.</div>
 
 {% endfor %}
 
 <br>
 
-<a href="">Revenir à la liste des commandes</a>
+<a href="{{ path('jeremy_commande_homepage') }}">Revenir à la liste des commandes</a>
 
 </div>
 

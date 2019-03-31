@@ -331,14 +331,32 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         if (0 === strpos($pathinfo, '/panier')) {
-            // jeremy_passage_commande
-            if ('/panier/commande' === $pathinfo) {
-                return array (  '_controller' => 'Jeremy\\CommandeBundle\\Controller\\CommandeController::commandeAction',  '_route' => 'jeremy_passage_commande',);
+            if (0 === strpos($pathinfo, '/panier/commande')) {
+                // jeremy_passage_commande
+                if ('/panier/commande' === $pathinfo) {
+                    return array (  '_controller' => 'Jeremy\\CommandeBundle\\Controller\\CommandeController::commandeAction',  '_route' => 'jeremy_passage_commande',);
+                }
+
+                // jeremy_commande_paiement
+                if ('/panier/commande/paiement' === $pathinfo) {
+                    return array (  '_controller' => 'Jeremy\\CommandeBundle\\Controller\\CommandeController::paiementAction',  '_route' => 'jeremy_commande_paiement',);
+                }
+
             }
 
             // jeremy_panier_homepage
             if ('/panier' === $pathinfo) {
                 return array (  '_controller' => 'Jeremy\\PanierBundle\\Controller\\PanierController::panierAction',  '_route' => 'jeremy_panier_homepage',);
+            }
+
+            // jeremy_panier_ajouter
+            if (0 === strpos($pathinfo, '/panier/ajouter') && preg_match('#^/panier/ajouter/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'jeremy_panier_ajouter')), array (  '_controller' => 'Jeremy\\PanierBundle\\Controller\\PanierController::ajouterAction',));
+            }
+
+            // jeremy_panier_supprimer
+            if (0 === strpos($pathinfo, '/panier/supprimer') && preg_match('#^/panier/supprimer(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'jeremy_panier_supprimer')), array (  '_controller' => 'Jeremy\\PanierBundle\\Controller\\PanierController::supprimerAction',));
             }
 
         }

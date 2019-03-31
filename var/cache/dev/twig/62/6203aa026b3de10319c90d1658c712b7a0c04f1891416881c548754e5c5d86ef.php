@@ -91,67 +91,69 @@ class __TwigTemplate_61ff0c1acd6851d6c68f13525b61c89a7bb8bb3129e90b23d98b7b28a3e
 
 <br><br>
 
-<table border=\"1\">
+<table class=\"table\">
+  <thead>
+    <tr>
+      <th scope=\"col\">Numéro de commande</th>
+      <th scope=\"col\">Utilisateur</th>
+      <th scope=\"col\">Produit</th>
+      <th scope=\"col\">Photo</th>
+      <th scope=\"col\">Prix total</th>
+      <th scope=\"col\">Date de commande</th>
+      <th scope=\"col\">Modification</th>
+      <th scope=\"col\">Suppression</th>
+    </tr>
 
-  <tr>
-    <th>Numéro de commande</th>
-    <th>Utilisateur</th>
-    <th>Produit</th>
-    <th>Photo</th>
-    <th>Prix total</th>
-    <th>Date de commande</th>
-    <th>Modification</th>
-    <th>Suppression</th>
-  </tr>
-
-  ";
-        // line 33
+  </thead>
+  <tbody>
+    ";
+        // line 35
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["myResults"] ?? $this->getContext($context, "myResults")));
         foreach ($context['_seq'] as $context["_key"] => $context["commande"]) {
-            // line 34
-            echo "
-    <tr>
-      <td>";
             // line 36
+            echo "
+      <tr>
+        <td class=\"delBord\" scope=\"row\">";
+            // line 38
             echo twig_escape_filter($this->env, $this->getAttribute($context["commande"], "id", array()), "html", null, true);
             echo "</td>
-      <td>";
-            // line 37
+        <td class=\"delBord\">";
+            // line 39
             echo twig_escape_filter($this->env, $this->getAttribute($context["commande"], "username", array()), "html", null, true);
             echo "</td>
-      <td>";
-            // line 38
+        <td class=\"delBord\">";
+            // line 40
             echo twig_escape_filter($this->env, $this->getAttribute($context["commande"], "titre", array()), "html", null, true);
             echo "</td>
-      <td><img src=\"";
-            // line 39
+        <td class=\"delBord\"><img src=\"";
+            // line 41
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl(("uploads/photos/" . $this->getAttribute($context["commande"], "photo", array()))), "html", null, true);
             echo "\" width=\"100\" height=\"100\"></td>
-      <td>";
-            // line 40
+        <td class=\"delBord\">";
+            // line 42
             echo twig_escape_filter($this->env, $this->getAttribute($context["commande"], "prixTotal", array()), "html", null, true);
             echo "</td>
-      <td>";
-            // line 41
+        <td class=\"delBord\">";
+            // line 43
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["commande"], "dateEnregistrement", array()), "Y-m-d"), "html", null, true);
             echo "</td>
-      <td><a href=\"backoffice=commande/action=modif";
-            // line 42
+        <td class=\"delBord\"><a href=\"backoffice=commande/action=modif";
+            // line 44
             echo twig_escape_filter($this->env, $this->getAttribute($context["commande"], "id", array()), "html", null, true);
             echo "\">Modifier</a></td>
-      <td><a href=\"backoffice=commande/action=suppr";
-            // line 43
+        <td class=\"delBord\"><a href=\"backoffice=commande/action=suppr";
+            // line 45
             echo twig_escape_filter($this->env, $this->getAttribute($context["commande"], "id", array()), "html", null, true);
             echo "\">Supprimer</a></td>
-    </tr>
+      </tr>
 
-  ";
+    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['commande'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 47
+        // line 49
         echo "
 </table>
 
@@ -183,7 +185,7 @@ class __TwigTemplate_61ff0c1acd6851d6c68f13525b61c89a7bb8bb3129e90b23d98b7b28a3e
 
     public function getDebugInfo()
     {
-        return array (  155 => 47,  145 => 43,  141 => 42,  137 => 41,  133 => 40,  129 => 39,  125 => 38,  121 => 37,  117 => 36,  113 => 34,  109 => 33,  89 => 16,  85 => 15,  81 => 14,  77 => 13,  70 => 8,  61 => 7,  50 => 4,  41 => 3,  11 => 1,);
+        return array (  157 => 49,  147 => 45,  143 => 44,  139 => 43,  135 => 42,  131 => 41,  127 => 40,  123 => 39,  119 => 38,  115 => 36,  111 => 35,  89 => 16,  85 => 15,  81 => 14,  77 => 13,  70 => 8,  61 => 7,  50 => 4,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -215,33 +217,35 @@ Backoffice Commande
 
 <br><br>
 
-<table border=\"1\">
-
-  <tr>
-    <th>Numéro de commande</th>
-    <th>Utilisateur</th>
-    <th>Produit</th>
-    <th>Photo</th>
-    <th>Prix total</th>
-    <th>Date de commande</th>
-    <th>Modification</th>
-    <th>Suppression</th>
-  </tr>
-
-  {% for commande in myResults %}
-
+<table class=\"table\">
+  <thead>
     <tr>
-      <td>{{ commande.id }}</td>
-      <td>{{ commande.username }}</td>
-      <td>{{ commande.titre }}</td>
-      <td><img src=\"{{ asset('uploads/photos/' ~ commande.photo ) }}\" width=\"100\" height=\"100\"></td>
-      <td>{{ commande.prixTotal }}</td>
-      <td>{{ commande.dateEnregistrement|date('Y-m-d') }}</td>
-      <td><a href=\"backoffice=commande/action=modif{{ commande.id }}\">Modifier</a></td>
-      <td><a href=\"backoffice=commande/action=suppr{{ commande.id }}\">Supprimer</a></td>
+      <th scope=\"col\">Numéro de commande</th>
+      <th scope=\"col\">Utilisateur</th>
+      <th scope=\"col\">Produit</th>
+      <th scope=\"col\">Photo</th>
+      <th scope=\"col\">Prix total</th>
+      <th scope=\"col\">Date de commande</th>
+      <th scope=\"col\">Modification</th>
+      <th scope=\"col\">Suppression</th>
     </tr>
 
-  {% endfor %}
+  </thead>
+  <tbody>
+    {% for commande in myResults %}
+
+      <tr>
+        <td class=\"delBord\" scope=\"row\">{{ commande.id }}</td>
+        <td class=\"delBord\">{{ commande.username }}</td>
+        <td class=\"delBord\">{{ commande.titre }}</td>
+        <td class=\"delBord\"><img src=\"{{ asset('uploads/photos/' ~ commande.photo ) }}\" width=\"100\" height=\"100\"></td>
+        <td class=\"delBord\">{{ commande.prixTotal }}</td>
+        <td class=\"delBord\">{{ commande.dateEnregistrement|date('Y-m-d') }}</td>
+        <td class=\"delBord\"><a href=\"backoffice=commande/action=modif{{ commande.id }}\">Modifier</a></td>
+        <td class=\"delBord\"><a href=\"backoffice=commande/action=suppr{{ commande.id }}\">Supprimer</a></td>
+      </tr>
+
+    {% endfor %}
 
 </table>
 

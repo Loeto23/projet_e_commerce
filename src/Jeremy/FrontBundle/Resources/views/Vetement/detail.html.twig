@@ -18,7 +18,7 @@
           <!-- breadcrumb-->
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="{{ path('jeremy_front_tops') }}">Accueil</a></li>
+              <li class="breadcrumb-item"><a href="{{ path('jeremy_front_homepage') }}">Accueil</a></li>
               <li aria-current="page" class="breadcrumb-item active"><a href="{{ path('jeremy_front_tops') }}">Vêtement</a></li>
             {% for produit in myResults %}
               <li aria-current="page" class="breadcrumb-item active">{{ produit.titre }}</li>
@@ -62,7 +62,7 @@
               <div class="box">
                 <h1 class="text-center">{{ produit.titre }}</h1>
                 <p class="price">{{ produit.prix }}€</p>
-                <p class="text-center buttons"><a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Ajouter au panier</a></p>
+                <p class="text-center buttons"><a href="{{ path('jeremy_panier_ajouter', {'id' : produit.id }) }}" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Ajouter au panier</a></p>
               </div>
             </div>
           </div>
@@ -89,29 +89,7 @@
 
 
 
-          <div class="row products">
 
-          {% for produit in myResults %}
-<!--
-            <div class="col-lg-4 col-md-6">
-
-            <div class="product">
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front"><a href="detail.html"><img src="{{ asset('uploads/photos/' ~ produit.photo ) }}" alt="" class="img-fluid"></a></div>
-                </div>
-              </div><a href="detail.html" class="invisible"><img src="{{ asset('uploads/photos/' ~ produit.photo ) }}" alt="" class="img-fluid"></a>
-              <div class="text">
-                <h3><a href="detail.html">{{ produit.titre }}</a></h3>
-                <p class="price">{{ produit.prix }}€</p>
-                <p class="buttons"><a href="vetement/{{ produit.id }}" class="btn btn-outline-secondary">Voir détail</a><a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Ajouter au panier</a></p>
-              </div>
-              <!-- /.text-->
-            </div>
-            <!-- /.product-->
-            </div>
-
-          {% endfor %}
 
 
           <!--

@@ -14,7 +14,7 @@ Jupes
           <!-- breadcrumb-->
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="{{ path('jeremy_front_jupe') }}">Accueil</a></li>
+              <li class="breadcrumb-item"><a href="{{ path('jeremy_front_homepage') }}">Accueil</a></li>
               <li aria-current="page" class="breadcrumb-item active">Jupes</li>
             </ol>
           </nav>
@@ -42,44 +42,6 @@ Jupes
               </ul>
             </div>
           </div>
-
-          <div class="card sidebar-menu mb-4">
-            <div class="card-header">
-              <h3 class="h4 card-title">Couleurs <a href="#" class="btn btn-sm btn-danger pull-right"><i class="fa fa-times-circle"></i> Clear</a></h3>
-            </div>
-            <div class="card-body">
-              <form>
-                <div class="form-group">
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox"><span class="colour white"></span> Blanc (14)
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox"><span class="colour blue"></span> Bleu (10)
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox"><span class="colour green"></span>  Vert (20)
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox"><span class="colour yellow"></span>  Jaune (13)
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox"><span class="colour red"></span>  Rouge (10)
-                    </label>
-                  </div>
-                </div>
-                <button class="btn btn-default btn-sm btn-primary"><i class="fa fa-pencil"></i>Appliquer</button>
-              </form>
-            </div>
-          </div>
           <!-- *** MENUS AND FILTERS END ***-->
         </div>
         <div class="col-lg-9">
@@ -105,7 +67,12 @@ Jupes
             <div class="text">
               <h3><a href="{{ produit.id }}">{{ produit.titre }}</a></h3>
               <p class="price">{{ produit.prix }}€</p>
-              <p class="buttons"><a href="{{ produit.id }}" class="btn btn-outline-secondary">Voir détail</a><a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Ajouter au panier</a></p>
+              <p class="buttons"><a href="{{ produit.id }}" class="btn btn-outline-secondary">Voir détail</a>
+
+              <form style="text-align:center;" action={{ path('jeremy_panier_ajouter', { 'id' : produit.id }) }} method="get">
+                <button style="margin-bottom:10px;"class="btn btn-primary">
+                <i class="fa fa-shopping-cart"></i>Ajouter au panier</button</p>
+              </form>
             </div>
               <!-- /.text-->
             </div>

@@ -83,9 +83,27 @@ class DefaultController extends Controller
         return $this->redirectToRoute('jeremy_front_tops');
       }
 
+      $queryAvis = $em->createQuery(
+        '
+        SELECT
+          u.username,
+          a.commentaire,
+          a.note
+        FROM
+          Jeremy\AvisBundle\Entity\Avis a
+        LEFT JOIN
+          Jeremy\UserBundle\Entity\User u WITH a.user = u.id
+        LEFT JOIN
+          Jeremy\ProduitBundle\Entity\Produit p WITH a.produit = p.id
+        WHERE p.id = ' . $id_du_produit . '
+        '
+        ) ;
+        $resultat = $queryAvis->execute();
+
       return $this->render('@JeremyFront/Vetement/detail.html.twig',
     [
-     'myResults' => $result
+     'myResults' => $result,
+     'myResultat' => $resultat
     ]);
 
     }
@@ -117,9 +135,27 @@ class DefaultController extends Controller
         return $this->redirectToRoute('jeremy_front_botte');
       }
 
+      $queryAvis = $em->createQuery(
+        '
+        SELECT
+          u.username,
+          a.commentaire,
+          a.note
+        FROM
+          Jeremy\AvisBundle\Entity\Avis a
+        LEFT JOIN
+          Jeremy\UserBundle\Entity\User u WITH a.user = u.id
+        LEFT JOIN
+          Jeremy\ProduitBundle\Entity\Produit p WITH a.produit = p.id
+        WHERE p.id = ' . $id_du_produit . '
+        '
+        ) ;
+        $resultat = $queryAvis->execute();
+
       return $this->render('@JeremyFront/Chaussure/detail.html.twig',
     [
-     'myResults' => $result
+     'myResults' => $result,
+     'myResultat' => $resultat
     ]);
 
     }
@@ -151,10 +187,33 @@ class DefaultController extends Controller
         return $this->redirectToRoute('jeremy_front_sac');
       }
 
+      $queryAvis = $em->createQuery(
+        '
+        SELECT
+          u.username,
+          a.commentaire,
+          a.note
+        FROM
+          Jeremy\AvisBundle\Entity\Avis a
+        LEFT JOIN
+          Jeremy\UserBundle\Entity\User u WITH a.user = u.id
+        LEFT JOIN
+          Jeremy\ProduitBundle\Entity\Produit p WITH a.produit = p.id
+        WHERE p.id = ' . $id_du_produit . '
+        '
+        ) ;
+        $resultat = $queryAvis->execute();
+
+
       return $this->render('@JeremyFront/Accessoire/detail.html.twig',
     [
-     'myResults' => $result
+     'myResults' => $result,
+     'myResultat' => $resultat
     ]);
+
+
+
+
 
     }
 

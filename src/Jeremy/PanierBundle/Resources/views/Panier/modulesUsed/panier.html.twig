@@ -1,0 +1,18 @@
+{% block panier %}
+
+<div class="panier">
+  <div id="basket-overview" class="navbar-collapse collapse d-none d-lg-block">
+  <a href="{{ path('jeremy_panier_homepage') }}" class="btn btn-primary navbar-btn">
+  <i class="fa fa-shopping-cart"></i>
+  {% if article == 0 %}
+    Panier vide
+  {% elseif article == 1 %}
+    Panier (1)
+  {% else %}
+    Panier ({{ article }})
+  {% endif %}
+  <span>Panier vide</span></a>
+  </div>
+</div>
+
+{% endblock %}

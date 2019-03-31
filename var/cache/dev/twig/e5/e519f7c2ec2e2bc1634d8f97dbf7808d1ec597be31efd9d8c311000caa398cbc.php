@@ -50,9 +50,9 @@ class __TwigTemplate_b05c3ebc4f5eb6f496d7f734dce74ec2b98d908207b11aa5445e4cf60c1
       <div class=\"col-lg-6 offer mb-3 mb-lg-0 \"><a href=\"";
         // line 8
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_front_homepage");
-        echo "\" class=\"btn btn-success btn-sm\">Offre du jour</a><a href=\"";
+        echo "\" class=\"btn beige btn-sm\"><i>Restez élégante en toutes circonstances</i></a><a href=\"";
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_front_homepage");
-        echo "\" class=\"ml-1\">10% de réduction dés 50€ d'achat</a></div>
+        echo "\" class=\"ml-1\"></a></div>
       <div class=\"col-lg-6 text-center text-lg-right\">
         <ul class=\"menu list-inline mb-0\">
 
@@ -142,7 +142,7 @@ class __TwigTemplate_b05c3ebc4f5eb6f496d7f734dce74ec2b98d908207b11aa5445e4cf60c1
 <div id=\"top\">
   <div class=\"container\">
     <div class=\"row\">
-      <div class=\"col-lg-6 offer mb-3 mb-lg-0 \"><a href=\"{{ path('jeremy_front_homepage') }}\" class=\"btn btn-success btn-sm\">Offre du jour</a><a href=\"{{ path('jeremy_front_homepage') }}\" class=\"ml-1\">10% de réduction dés 50€ d'achat</a></div>
+      <div class=\"col-lg-6 offer mb-3 mb-lg-0 \"><a href=\"{{ path('jeremy_front_homepage') }}\" class=\"btn beige btn-sm\"><i>Restez élégante en toutes circonstances</i></a><a href=\"{{ path('jeremy_front_homepage') }}\" class=\"ml-1\"></a></div>
       <div class=\"col-lg-6 text-center text-lg-right\">
         <ul class=\"menu list-inline mb-0\">
 

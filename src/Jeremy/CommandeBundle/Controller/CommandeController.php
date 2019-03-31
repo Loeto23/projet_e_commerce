@@ -3,6 +3,7 @@
 namespace Jeremy\CommandeBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 class CommandeController extends Controller
 {
@@ -121,4 +122,11 @@ class CommandeController extends Controller
     {
       return $this->render('@JeremyCommande/Commande/commande.html.twig');
     }
+
+    public function paiementAction()
+    {
+      return $this->render('@JeremyCommande/Paiement/paiement.html.twig');
+    }
+
+
 }

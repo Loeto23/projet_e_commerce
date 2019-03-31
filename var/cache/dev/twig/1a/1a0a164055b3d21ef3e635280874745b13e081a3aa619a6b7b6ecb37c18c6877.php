@@ -143,10 +143,6 @@ Contact
                   <p class=\"text-muted\">N'hésitez pas à nous envoyer un courrier électronique ou à utiliser notre formulaire de contact.</p>
                   <ul>
                     <li><strong><a href=\"mailto:\">jeremy.batilliot23@gmail.com</a></strong></li>
-                    <li><strong><a href=\"";
-        // line 66
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_front_contact");
-        echo "\">Ticket</a></strong> - pour ouvrir un ticket</li>
                   </ul>
                 </div>
 
@@ -228,7 +224,7 @@ Contact
 
     public function getDebugInfo()
     {
-        return array (  148 => 66,  118 => 39,  114 => 38,  110 => 37,  106 => 36,  102 => 35,  83 => 19,  72 => 10,  63 => 9,  50 => 4,  41 => 3,  11 => 1,);
+        return array (  118 => 39,  114 => 38,  110 => 37,  106 => 36,  102 => 35,  83 => 19,  72 => 10,  63 => 9,  50 => 4,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -306,7 +302,6 @@ Contact
                   <p class=\"text-muted\">N'hésitez pas à nous envoyer un courrier électronique ou à utiliser notre formulaire de contact.</p>
                   <ul>
                     <li><strong><a href=\"mailto:\">jeremy.batilliot23@gmail.com</a></strong></li>
-                    <li><strong><a href=\"{{ path('jeremy_front_contact') }}\">Ticket</a></strong> - pour ouvrir un ticket</li>
                   </ul>
                 </div>
 

@@ -80,36 +80,26 @@ class __TwigTemplate_8bc93b096a4758782b954486df7741c6be0348192a80c3a72a379236f7f
 
     <div class=\"carousel-inner\">
       <div class=\"carousel-item active\">
-        <a href=\"#\"><img class=\"d-block w-100\" src=\"";
+        <a href=\"\"><img class=\"d-block w-100\" src=\"";
         // line 21
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendor/img/soleil1.jpg"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendor/img/carroussel1.jpg"), "html", null, true);
         echo "\" alt=\"First slide\"></a>
-        <div class=\"carousel-caption d-none d-md-block\">
-      <h5>Paradisiaque</h5>
-      <p>Je veux me baigner !</p>
-        </div>
       </div>
 
       <div class=\"carousel-item\">
-        <a href=\"#\"><img class=\"d-block w-100\" src=\"";
-        // line 29
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendor/img/chat1.jpg"), "html", null, true);
+        <a href=\"\"><img class=\"d-block w-100\" src=\"";
+        // line 25
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendor/img/carroussel2.jpg"), "html", null, true);
         echo "\" alt=\"Second slide\"></a>
-        <div class=\"carousel-caption d-none d-md-block\">
-          <h5>C'est un chat</h5>
-          <p>Un très beau chat</p>
-        </div>
+
       </div>
 
       <div class=\"carousel-item\">
-        <a href=\"#\"><img class=\"d-block w-100\" src=\"";
-        // line 37
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendor/img/chien1.jpg"), "html", null, true);
+        <a href=\"\"><img class=\"d-block w-100\" src=\"";
+        // line 30
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendor/img/carroussel3.jpg"), "html", null, true);
         echo "\" alt=\"Third slide\"></a>
-        <div class=\"carousel-caption d-none d-md-block\">
-          <h5>C'est un chien</h5>
-          <p>Un très beau chien</p>
-        </div>
+
       </div>
 
     </div>
@@ -134,26 +124,28 @@ class __TwigTemplate_8bc93b096a4758782b954486df7741c6be0348192a80c3a72a379236f7f
 
   <div class=\"container mTop30\">
     <a href=\"";
-        // line 65
+        // line 55
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_front_tops");
-        echo "\"><img src=\"https://picsum.photos/1600/900/?random\" width=\"80%\" height=\"80%\" style=\"margin-left: 10%;\"></a>
-  </div>
-
-  <div class=\"container mTop30\">
-    <a href=\"";
-        // line 69
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_front_botte");
         echo "\"><img src=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendor/img/chat1.jpg"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendor/img/3femmes.jpg"), "html", null, true);
         echo "\" width=\"80%\" height=\"80%\" style=\"margin-left: 10%;\"></a>
   </div>
 
   <div class=\"container mTop30\">
     <a href=\"";
-        // line 73
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_front_accessoire");
+        // line 59
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_front_botte");
         echo "\"><img src=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendor/img/chien1.jpg"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendor/img/chaussuresolo.png"), "html", null, true);
+        echo "\" width=\"80%\" height=\"80%\" style=\"margin-left: 10%;\"></a>
+  </div>
+
+  <div class=\"container mTop30\">
+    <a href=\"";
+        // line 63
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_front_sac");
+        echo "\"><img src=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendor/img/chapeau.jpg"), "html", null, true);
         echo "\" width=\"80%\" height=\"80%\" style=\"margin-left: 10%;\"></a>
   </div>
 
@@ -178,7 +170,7 @@ class __TwigTemplate_8bc93b096a4758782b954486df7741c6be0348192a80c3a72a379236f7f
 
     public function getDebugInfo()
     {
-        return array (  154 => 73,  145 => 69,  138 => 65,  107 => 37,  96 => 29,  85 => 21,  70 => 8,  61 => 7,  50 => 4,  41 => 3,  11 => 1,);
+        return array (  146 => 63,  137 => 59,  128 => 55,  100 => 30,  92 => 25,  85 => 21,  70 => 8,  61 => 7,  50 => 4,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -211,27 +203,17 @@ Accueil
 
     <div class=\"carousel-inner\">
       <div class=\"carousel-item active\">
-        <a href=\"#\"><img class=\"d-block w-100\" src=\"{{ asset('../vendor/img/soleil1.jpg') }}\" alt=\"First slide\"></a>
-        <div class=\"carousel-caption d-none d-md-block\">
-      <h5>Paradisiaque</h5>
-      <p>Je veux me baigner !</p>
-        </div>
+        <a href=\"\"><img class=\"d-block w-100\" src=\"{{ asset('../vendor/img/carroussel1.jpg') }}\" alt=\"First slide\"></a>
       </div>
 
       <div class=\"carousel-item\">
-        <a href=\"#\"><img class=\"d-block w-100\" src=\"{{ asset('../vendor/img/chat1.jpg') }}\" alt=\"Second slide\"></a>
-        <div class=\"carousel-caption d-none d-md-block\">
-          <h5>C'est un chat</h5>
-          <p>Un très beau chat</p>
-        </div>
+        <a href=\"\"><img class=\"d-block w-100\" src=\"{{ asset('../vendor/img/carroussel2.jpg') }}\" alt=\"Second slide\"></a>
+
       </div>
 
       <div class=\"carousel-item\">
-        <a href=\"#\"><img class=\"d-block w-100\" src=\"{{ asset('../vendor/img/chien1.jpg') }}\" alt=\"Third slide\"></a>
-        <div class=\"carousel-caption d-none d-md-block\">
-          <h5>C'est un chien</h5>
-          <p>Un très beau chien</p>
-        </div>
+        <a href=\"\"><img class=\"d-block w-100\" src=\"{{ asset('../vendor/img/carroussel3.jpg') }}\" alt=\"Third slide\"></a>
+
       </div>
 
     </div>
@@ -255,15 +237,15 @@ Accueil
 
 
   <div class=\"container mTop30\">
-    <a href=\"{{ path('jeremy_front_tops') }}\"><img src=\"https://picsum.photos/1600/900/?random\" width=\"80%\" height=\"80%\" style=\"margin-left: 10%;\"></a>
+    <a href=\"{{ path('jeremy_front_tops') }}\"><img src=\"{{ asset('../vendor/img/3femmes.jpg') }}\" width=\"80%\" height=\"80%\" style=\"margin-left: 10%;\"></a>
   </div>
 
   <div class=\"container mTop30\">
-    <a href=\"{{ path('jeremy_front_botte') }}\"><img src=\"{{ asset('../vendor/img/chat1.jpg') }}\" width=\"80%\" height=\"80%\" style=\"margin-left: 10%;\"></a>
+    <a href=\"{{ path('jeremy_front_botte') }}\"><img src=\"{{ asset('../vendor/img/chaussuresolo.png') }}\" width=\"80%\" height=\"80%\" style=\"margin-left: 10%;\"></a>
   </div>
 
   <div class=\"container mTop30\">
-    <a href=\"{{ path('jeremy_front_accessoire') }}\"><img src=\"{{ asset('../vendor/img/chien1.jpg') }}\" width=\"80%\" height=\"80%\" style=\"margin-left: 10%;\"></a>
+    <a href=\"{{ path('jeremy_front_sac') }}\"><img src=\"{{ asset('../vendor/img/chapeau.jpg') }}\" width=\"80%\" height=\"80%\" style=\"margin-left: 10%;\"></a>
   </div>
 
 {% endblock %}

@@ -15,57 +15,59 @@ Backoffice Membre
   <a href="{{ path('jeremy_commande_homepage') }}" class="tdecoNone blue">Voir la liste des commandes |</a>
   <a href="{{ path('jeremy_avis_homepage') }}" class="tdecoNone blue">Voir la liste des avis</a>
 
+  <br>
 <br>
 
 
 
-<table>
-  <tr>
-    <th>ID</th>
-    <th>Nom d'utilisateur</th>
-    <th>Email</th>
-    <th>Status</th>
-    <th>Nom</th>
-    <th>Prénom</th>
-    <th>Dernière connexion</th>
-    <th>Modification</th>
-    <th>Suppression</th>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nom d'utilisateur</th>
+      <th scope="col">Email</th>
+      <th scope="col">Status</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Prénom</th>
+      <th scope="col">Dernière connexion</th>
+      <th scope="col">Modification</th>
+      <th scope="col">Suppression</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for membre in myResults %}
+    <tr>
+      <td class="delBord" scope="row">{{ membre.id }}</td>
+      <td class="delBord">{{ membre.username }}</td>
+      <td class="delBord">{{ membre.email }}</td>
 
-  </tr>
+      <td class="delBord">
 
-  {% for membre in myResults %}
-  <tr>
-    <td>{{ membre.id }}</td>
-    <td>{{ membre.username }}</td>
-    <td>{{ membre.email }}</td>
+      {% for status in membre.roles %}
 
-    <td>
+        {% if status == 'ROLE_SUPER_ADMIN' %}
+        SUPER_ADMIN
 
-    {% for status in membre.roles %}
+        {% elseif status == 'ROLE_ADMIN' %}
+        ADMIN
 
-      {% if status == 'ROLE_SUPER_ADMIN' %}
-      SUPER_ADMIN
+        {% elseif status == 'ROLE_USER' %}
+        MEMBRE
 
-      {% elseif status == 'ROLE_ADMIN' %}
-      ADMIN
+        {% endif %}
 
-      {% elseif status == 'ROLE_USER' %}
-      MEMBRE
+      {% endfor %}
 
-      {% endif %}
+      </td class="delBord">
 
+      <td class="delBord">{{ membre.nom }}</td>
+      <td class="delBord">{{ membre.prenom }}</td>
+      <td class="delBord">{{ membre.lastLogin|date('Y-m-d') }}</td>
+      <td class="delBord"><a href="backoffice=membre/action=modif{{ membre.id }}">Modifier</a></td>
+      <td class="delBord"><a href="backoffice=membre/action=suppr{{ membre.id }}">Supprimer</a></td>
+    </tr>
     {% endfor %}
-
-    </td>
-
-    <td>{{ membre.nom }}</td>
-    <td>{{ membre.prenom }}</td>
-    <td>{{ membre.lastLogin|date('Y-m-d') }}</td>
-    <td><a href="backoffice=membre/action=modif{{ membre.id }}">Modifier</a></td>
-    <td><a href="backoffice=membre/action=suppr{{ membre.id }}">Supprimer</a></td>
-  </tr>
-  {% endfor %}
-
+  </tbody>
 </table>
 
 

@@ -79,12 +79,12 @@ class __TwigTemplate_1fcd7da5668a24e6b8ba676126c09b07f768a99aca3b5542bcd2d9ba6d9
         foreach ($context['_seq'] as $context["_key"] => $context["commande"]) {
             // line 14
             echo "
-La commande n°";
+<div class=\"alert alert-success\">La commande n°";
             // line 15
             echo twig_escape_filter($this->env, $this->getAttribute($context["commande"], "id", array()), "html", null, true);
             echo " de l'utilisateur ";
             echo twig_escape_filter($this->env, $this->getAttribute($context["commande"], "username", array()), "html", null, true);
-            echo " a bien été supprimé.
+            echo " a bien été supprimé.</div>
 
 ";
         }
@@ -95,7 +95,10 @@ La commande n°";
         echo "
 <br>
 
-<a href=\"\">Revenir à la liste des commandes</a>
+<a href=\"";
+        // line 21
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_commande_homepage");
+        echo "\">Revenir à la liste des commandes</a>
 
 </div>
 
@@ -120,7 +123,7 @@ La commande n°";
 
     public function getDebugInfo()
     {
-        return array (  95 => 18,  84 => 15,  81 => 14,  77 => 13,  70 => 8,  61 => 7,  50 => 4,  41 => 3,  11 => 1,);
+        return array (  100 => 21,  95 => 18,  84 => 15,  81 => 14,  77 => 13,  70 => 8,  61 => 7,  50 => 4,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -147,13 +150,13 @@ Suppression Commande
 
 {% for commande in myResults %}
 
-La commande n°{{ commande.id }} de l'utilisateur {{ commande.username }} a bien été supprimé.
+<div class=\"alert alert-success\">La commande n°{{ commande.id }} de l'utilisateur {{ commande.username }} a bien été supprimé.</div>
 
 {% endfor %}
 
 <br>
 
-<a href=\"\">Revenir à la liste des commandes</a>
+<a href=\"{{ path('jeremy_commande_homepage') }}\">Revenir à la liste des commandes</a>
 
 </div>
 

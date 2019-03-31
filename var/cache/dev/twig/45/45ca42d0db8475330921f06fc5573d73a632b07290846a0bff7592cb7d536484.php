@@ -74,20 +74,20 @@ class __TwigTemplate_46e703fb88057c296bb836a59d6577aa8d8a7602e233e75029b53034d84
 
 <a href=\"";
         // line 13
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php/backoffice=produit"), "html", null, true);
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_produit_homepage");
         echo "\" class=\"tdecoNone blue\">Voir la liste des produits |</a>
 <a href=\"";
         // line 14
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php/backoffice=membre"), "html", null, true);
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_user_homepage");
         echo "\" class=\"tdecoNone blue\">Voir la liste des membres |</a>
 <a href=\"";
         // line 15
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php/produit"), "html", null, true);
-        echo "\" class=\"tdecoNone blue\">Voir la liste des produits |</a>
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_commande_homepage");
+        echo "\" class=\"tdecoNone blue\">Voir la liste des commandes |</a>
 <a href=\"";
         // line 16
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php/produit"), "html", null, true);
-        echo "\" class=\"tdecoNone blue\">Voir la liste des produits |</a>
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_avis_homepage");
+        echo "\" class=\"tdecoNone blue\">Voir la liste des avis</a>
 
 <br><br>
 
@@ -113,57 +113,58 @@ class __TwigTemplate_46e703fb88057c296bb836a59d6577aa8d8a7602e233e75029b53034d84
         $context['_seq'] = twig_ensure_traversable(($context["myResults"] ?? $this->getContext($context, "myResults")));
         foreach ($context['_seq'] as $context["_key"] => $context["produit"]) {
             // line 37
-            echo "    <tr>
+            echo "
+    <tr>
       <td>";
-            // line 38
+            // line 39
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "id", array()), "html", null, true);
             echo "</td>
       <td>";
-            // line 39
+            // line 40
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "reference", array()), "html", null, true);
             echo "</td>
       <td>";
-            // line 40
+            // line 41
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "categorie", array()), "html", null, true);
             echo "</td>
       <td>";
-            // line 41
+            // line 42
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "titre", array()), "html", null, true);
             echo "</td>
       <td>";
-            // line 42
+            // line 43
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "description", array()), "html", null, true);
             echo "</td>
       <td>";
-            // line 43
+            // line 44
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "couleur", array()), "html", null, true);
             echo "</td>
       <td>";
-            // line 44
+            // line 45
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "taille", array()), "html", null, true);
             echo "</td>
       <td>
 
       <img src=\"";
-            // line 47
+            // line 48
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl(("uploads/photos/" . $this->getAttribute($context["produit"], "photo", array()))), "html", null, true);
             echo "\" width=\"100\" height=\"100\">
 
       </td>
       <td>";
-            // line 50
+            // line 51
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "prix", array()), "html", null, true);
             echo "</td>
       <td>";
-            // line 51
+            // line 52
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "stock", array()), "html", null, true);
             echo "</td>
-      <td><a href=\"action=modif";
-            // line 52
+      <td><a href=\"backoffice=produit/action=modif";
+            // line 53
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "id", array()), "html", null, true);
             echo "\">Modifier</a></td>
-      <td><a href=\"action=suppr";
-            // line 53
+      <td><a href=\"backoffice=produit/action=suppr";
+            // line 54
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "id", array()), "html", null, true);
             echo "\">Supprimer</a></td>
     </tr>
@@ -172,7 +173,7 @@ class __TwigTemplate_46e703fb88057c296bb836a59d6577aa8d8a7602e233e75029b53034d84
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 56
+        // line 57
         echo "
   </table>
 
@@ -199,7 +200,7 @@ class __TwigTemplate_46e703fb88057c296bb836a59d6577aa8d8a7602e233e75029b53034d84
 
     public function getDebugInfo()
     {
-        return array (  176 => 56,  167 => 53,  163 => 52,  159 => 51,  155 => 50,  149 => 47,  143 => 44,  139 => 43,  135 => 42,  131 => 41,  127 => 40,  123 => 39,  119 => 38,  116 => 37,  112 => 36,  89 => 16,  85 => 15,  81 => 14,  77 => 13,  70 => 8,  61 => 7,  50 => 4,  41 => 3,  11 => 1,);
+        return array (  177 => 57,  168 => 54,  164 => 53,  160 => 52,  156 => 51,  150 => 48,  144 => 45,  140 => 44,  136 => 43,  132 => 42,  128 => 41,  124 => 40,  120 => 39,  116 => 37,  112 => 36,  89 => 16,  85 => 15,  81 => 14,  77 => 13,  70 => 8,  61 => 7,  50 => 4,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -224,10 +225,10 @@ Backoffice Produit
 
 <h1>Bienvenue dans le Back Office Produit</h1>
 
-<a href=\"{{ asset('app_dev.php/backoffice=produit') }}\" class=\"tdecoNone blue\">Voir la liste des produits |</a>
-<a href=\"{{ asset('app_dev.php/backoffice=membre') }}\" class=\"tdecoNone blue\">Voir la liste des membres |</a>
-<a href=\"{{ asset('app_dev.php/produit') }}\" class=\"tdecoNone blue\">Voir la liste des produits |</a>
-<a href=\"{{ asset('app_dev.php/produit') }}\" class=\"tdecoNone blue\">Voir la liste des produits |</a>
+<a href=\"{{ path('jeremy_produit_homepage') }}\" class=\"tdecoNone blue\">Voir la liste des produits |</a>
+<a href=\"{{ path('jeremy_user_homepage') }}\" class=\"tdecoNone blue\">Voir la liste des membres |</a>
+<a href=\"{{ path('jeremy_commande_homepage') }}\" class=\"tdecoNone blue\">Voir la liste des commandes |</a>
+<a href=\"{{ path('jeremy_avis_homepage') }}\" class=\"tdecoNone blue\">Voir la liste des avis</a>
 
 <br><br>
 
@@ -248,6 +249,7 @@ Backoffice Produit
     </tr>
 
     {% for produit in myResults %}
+
     <tr>
       <td>{{ produit.id }}</td>
       <td>{{ produit.reference }}</td>
@@ -263,8 +265,8 @@ Backoffice Produit
       </td>
       <td>{{ produit.prix }}</td>
       <td>{{ produit.stock }}</td>
-      <td><a href=\"action=modif{{ produit.id }}\">Modifier</a></td>
-      <td><a href=\"action=suppr{{ produit.id }}\">Supprimer</a></td>
+      <td><a href=\"backoffice=produit/action=modif{{ produit.id }}\">Modifier</a></td>
+      <td><a href=\"backoffice=produit/action=suppr{{ produit.id }}\">Supprimer</a></td>
     </tr>
     {% endfor %}
 

@@ -17,33 +17,35 @@ Backoffice Commande
 
 <br><br>
 
-<table border="1">
-
-  <tr>
-    <th>Numéro de commande</th>
-    <th>Utilisateur</th>
-    <th>Produit</th>
-    <th>Photo</th>
-    <th>Prix total</th>
-    <th>Date de commande</th>
-    <th>Modification</th>
-    <th>Suppression</th>
-  </tr>
-
-  {% for commande in myResults %}
-
+<table class="table">
+  <thead>
     <tr>
-      <td>{{ commande.id }}</td>
-      <td>{{ commande.username }}</td>
-      <td>{{ commande.titre }}</td>
-      <td><img src="{{ asset('uploads/photos/' ~ commande.photo ) }}" width="100" height="100"></td>
-      <td>{{ commande.prixTotal }}</td>
-      <td>{{ commande.dateEnregistrement|date('Y-m-d') }}</td>
-      <td><a href="backoffice=commande/action=modif{{ commande.id }}">Modifier</a></td>
-      <td><a href="backoffice=commande/action=suppr{{ commande.id }}">Supprimer</a></td>
+      <th scope="col">Numéro de commande</th>
+      <th scope="col">Utilisateur</th>
+      <th scope="col">Produit</th>
+      <th scope="col">Photo</th>
+      <th scope="col">Prix total</th>
+      <th scope="col">Date de commande</th>
+      <th scope="col">Modification</th>
+      <th scope="col">Suppression</th>
     </tr>
 
-  {% endfor %}
+  </thead>
+  <tbody>
+    {% for commande in myResults %}
+
+      <tr>
+        <td class="delBord" scope="row">{{ commande.id }}</td>
+        <td class="delBord">{{ commande.username }}</td>
+        <td class="delBord">{{ commande.titre }}</td>
+        <td class="delBord"><img src="{{ asset('uploads/photos/' ~ commande.photo ) }}" width="100" height="100"></td>
+        <td class="delBord">{{ commande.prixTotal }}</td>
+        <td class="delBord">{{ commande.dateEnregistrement|date('Y-m-d') }}</td>
+        <td class="delBord"><a href="backoffice=commande/action=modif{{ commande.id }}">Modifier</a></td>
+        <td class="delBord"><a href="backoffice=commande/action=suppr{{ commande.id }}">Supprimer</a></td>
+      </tr>
+
+    {% endfor %}
 
 </table>
 

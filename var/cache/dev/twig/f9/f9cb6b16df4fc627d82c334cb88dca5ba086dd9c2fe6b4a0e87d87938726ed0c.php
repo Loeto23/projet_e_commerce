@@ -128,9 +128,7 @@ N° de téléphone +33678336050 ; Adresse du courrier électronique jeremy.batil
 RCS (ou Répertoire des métiers) de 73 Avenue Gambetta Saint-Maur des fossés n°123456789 987654321;
 TVA Intra-communautaire n°654321;
 Le responsable de la publication personne physique est BATILLIOT Jérémy;
-
-Les présentes CGV ont été générées gratuitement par la société de communication <a href=\"http://kinic.fr\" target=\"_blank\">Kinic</a>
-
+<br>
 
 <h1>Conditions générales de vente des produits vendus sur Ela</h1>
 
@@ -158,7 +156,7 @@ Attention : dès que vous prenez possession physiquement des produits commandés
 
 <b>Vous pouvez passer commande : </b>
 
-Sur Internet : <a href=\"www.loeto-webproject.fr/ela\">www.loeto-webproject.fr/ela</a>
+Sur Internet : <a href=\"www.loeto-webproject.fr/projet_e_commerce/web/app.php/\">www.loeto-webproject.fr/projet_e_commerce/web/app.php/</a>
 
 Les informations contractuelles sont présentées en langue française et feront l'objet d'une confirmation au plus tard au moment de la validation de votre commande.
 
@@ -166,7 +164,7 @@ La société <b>Français</b> se réserve le droit de ne pas enregistrer un paie
 
 <h2>Article 4 - Validation de votre commande</h2>
 
-Toute commande figurant sur le site Internet <a href=\"www.loeto-webproject.fr/ela\">www.loeto-webproject.fr/ela</a> suppose l'adhésion aux présentes Conditions Générales. Toute confirmation de commande entraîne votre adhésion pleine et entière aux présentes conditions générales de vente, sans exception ni réserve.
+Toute commande figurant sur le site Internet <a href=\"www.loeto-webproject.fr/projet_e_commerce/web/app.php/\">www.loeto-webproject.fr/projet_e_commerce/web/app.php/</a> suppose l'adhésion aux présentes Conditions Générales. Toute confirmation de commande entraîne votre adhésion pleine et entière aux présentes conditions générales de vente, sans exception ni réserve.
 
 L'ensemble des données fournies et la confirmation enregistrée vaudront preuve de la transaction.
 
@@ -211,10 +209,10 @@ Les transactions conclues lors d'une enchère publique.
 La fourniture d'un contenu numérique non fourni sur un support matériel dont l'exécution a commencé après accord préalable exprès du consommateur et renoncement exprès à son droit de rétractation.
 Article 7- Disponibilité
 
-Nos produits sont proposés tant qu'ils sont visibles sur le site <a href=\"www.loeto-webproject.fr/ela\">www.loeto-webproject.fr/ela</a> et dans la limite des stocks disponibles. Pour les produits non stockés, nos offres sont valables sous réserve de disponibilité chez nos fournisseurs.
+Nos produits sont proposés tant qu'ils sont visibles sur le site <a href=\"www.loeto-webproject.fr/projet_e_commerce/web/app.php/\">www.loeto-webproject.fr/projet_e_commerce/web/app.php/</a> et dans la limite des stocks disponibles. Pour les produits non stockés, nos offres sont valables sous réserve de disponibilité chez nos fournisseurs.
 En cas d'indisponibilité de produit après passation de votre commande, nous vous en informerons par mail. Votre commande sera automatiquement annulée et aucun débit bancaire ne sera effectué.
 
-En outre, le site Internet <a href=\"www.loeto-webproject.fr/ela\">www.loeto-webproject.fr/ela</a> n'a pas vocation à vendre ses produits en quantités importantes. Par conséquent la société <b>Français</b> se réserve le droit de refuser les commandes de 10 articles identiques.
+En outre, le site Internet <a href=\"www.loeto-webproject.fr/projet_e_commerce/web/app.php/\">www.loeto-webproject.fr/projet_e_commerce/web/app.php/</a> n'a pas vocation à vendre ses produits en quantités importantes. Par conséquent la société <b>Français</b> se réserve le droit de refuser les commandes de 10 articles identiques.
 
 <h2>Article 8 - Livraison</h2>
 
@@ -250,7 +248,7 @@ La langue du présent contrat est la langue française. Les présentes condition
 
 <h2>Article 12 - Propriété intellectuelle</h2>
 
-Tous les éléments du site <a href=\"www.loeto-webproject.fr/ela\">www.loeto-webproject.fr/ela</a> sont et restent la propriété intellectuelle et exclusive de la société <b>Français</b>. Nul n'est autorisé à reproduire, exploiter, rediffuser, ou utiliser à quelque titre que ce soit, même partiellement, des éléments du site qu'ils soient logiciels, visuels ou sonores. Tout lien simple ou par hypertexte est strictement interdit sans un accord écrit exprès de la société <b>Français</b>.
+Tous les éléments du site <a href=\"www.loeto-webproject.fr/projet_e_commerce/web/app.php/\">www.loeto-webproject.fr/projet_e_commerce/web/app.php/</a> sont et restent la propriété intellectuelle et exclusive de la société <b>Français</b>. Nul n'est autorisé à reproduire, exploiter, rediffuser, ou utiliser à quelque titre que ce soit, même partiellement, des éléments du site qu'ils soient logiciels, visuels ou sonores. Tout lien simple ou par hypertexte est strictement interdit sans un accord écrit exprès de la société <b>Français</b>.
 
 Article 13 - Données personnelles
 
@@ -373,9 +371,7 @@ N° de téléphone +33678336050 ; Adresse du courrier électronique jeremy.batil
 RCS (ou Répertoire des métiers) de 73 Avenue Gambetta Saint-Maur des fossés n°123456789 987654321;
 TVA Intra-communautaire n°654321;
 Le responsable de la publication personne physique est BATILLIOT Jérémy;
-
-Les présentes CGV ont été générées gratuitement par la société de communication <a href=\"http://kinic.fr\" target=\"_blank\">Kinic</a>
-
+<br>
 
 <h1>Conditions générales de vente des produits vendus sur Ela</h1>
 
@@ -403,7 +399,7 @@ Attention : dès que vous prenez possession physiquement des produits commandés
 
 <b>Vous pouvez passer commande : </b>
 
-Sur Internet : <a href=\"www.loeto-webproject.fr/ela\">www.loeto-webproject.fr/ela</a>
+Sur Internet : <a href=\"www.loeto-webproject.fr/projet_e_commerce/web/app.php/\">www.loeto-webproject.fr/projet_e_commerce/web/app.php/</a>
 
 Les informations contractuelles sont présentées en langue française et feront l'objet d'une confirmation au plus tard au moment de la validation de votre commande.
 
@@ -411,7 +407,7 @@ La société <b>Français</b> se réserve le droit de ne pas enregistrer un paie
 
 <h2>Article 4 - Validation de votre commande</h2>
 
-Toute commande figurant sur le site Internet <a href=\"www.loeto-webproject.fr/ela\">www.loeto-webproject.fr/ela</a> suppose l'adhésion aux présentes Conditions Générales. Toute confirmation de commande entraîne votre adhésion pleine et entière aux présentes conditions générales de vente, sans exception ni réserve.
+Toute commande figurant sur le site Internet <a href=\"www.loeto-webproject.fr/projet_e_commerce/web/app.php/\">www.loeto-webproject.fr/projet_e_commerce/web/app.php/</a> suppose l'adhésion aux présentes Conditions Générales. Toute confirmation de commande entraîne votre adhésion pleine et entière aux présentes conditions générales de vente, sans exception ni réserve.
 
 L'ensemble des données fournies et la confirmation enregistrée vaudront preuve de la transaction.
 
@@ -456,10 +452,10 @@ Les transactions conclues lors d'une enchère publique.
 La fourniture d'un contenu numérique non fourni sur un support matériel dont l'exécution a commencé après accord préalable exprès du consommateur et renoncement exprès à son droit de rétractation.
 Article 7- Disponibilité
 
-Nos produits sont proposés tant qu'ils sont visibles sur le site <a href=\"www.loeto-webproject.fr/ela\">www.loeto-webproject.fr/ela</a> et dans la limite des stocks disponibles. Pour les produits non stockés, nos offres sont valables sous réserve de disponibilité chez nos fournisseurs.
+Nos produits sont proposés tant qu'ils sont visibles sur le site <a href=\"www.loeto-webproject.fr/projet_e_commerce/web/app.php/\">www.loeto-webproject.fr/projet_e_commerce/web/app.php/</a> et dans la limite des stocks disponibles. Pour les produits non stockés, nos offres sont valables sous réserve de disponibilité chez nos fournisseurs.
 En cas d'indisponibilité de produit après passation de votre commande, nous vous en informerons par mail. Votre commande sera automatiquement annulée et aucun débit bancaire ne sera effectué.
 
-En outre, le site Internet <a href=\"www.loeto-webproject.fr/ela\">www.loeto-webproject.fr/ela</a> n'a pas vocation à vendre ses produits en quantités importantes. Par conséquent la société <b>Français</b> se réserve le droit de refuser les commandes de 10 articles identiques.
+En outre, le site Internet <a href=\"www.loeto-webproject.fr/projet_e_commerce/web/app.php/\">www.loeto-webproject.fr/projet_e_commerce/web/app.php/</a> n'a pas vocation à vendre ses produits en quantités importantes. Par conséquent la société <b>Français</b> se réserve le droit de refuser les commandes de 10 articles identiques.
 
 <h2>Article 8 - Livraison</h2>
 
@@ -495,7 +491,7 @@ La langue du présent contrat est la langue française. Les présentes condition
 
 <h2>Article 12 - Propriété intellectuelle</h2>
 
-Tous les éléments du site <a href=\"www.loeto-webproject.fr/ela\">www.loeto-webproject.fr/ela</a> sont et restent la propriété intellectuelle et exclusive de la société <b>Français</b>. Nul n'est autorisé à reproduire, exploiter, rediffuser, ou utiliser à quelque titre que ce soit, même partiellement, des éléments du site qu'ils soient logiciels, visuels ou sonores. Tout lien simple ou par hypertexte est strictement interdit sans un accord écrit exprès de la société <b>Français</b>.
+Tous les éléments du site <a href=\"www.loeto-webproject.fr/projet_e_commerce/web/app.php/\">www.loeto-webproject.fr/projet_e_commerce/web/app.php/</a> sont et restent la propriété intellectuelle et exclusive de la société <b>Français</b>. Nul n'est autorisé à reproduire, exploiter, rediffuser, ou utiliser à quelque titre que ce soit, même partiellement, des éléments du site qu'ils soient logiciels, visuels ou sonores. Tout lien simple ou par hypertexte est strictement interdit sans un accord écrit exprès de la société <b>Français</b>.
 
 Article 13 - Données personnelles
 

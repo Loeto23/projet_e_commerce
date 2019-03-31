@@ -19,3 +19,7 @@ jeremy_commande_modifier:
 jeremy_passage_commande:
     path: /panier/commande
     defaults: { _controller: JeremyCommandeBundle:Commande:commande }
+
+jeremy_commande_paiement:
+    path: /panier/commande/paiement
+    defaults: { _controller: JeremyCommandeBundle:Commande:paiement }

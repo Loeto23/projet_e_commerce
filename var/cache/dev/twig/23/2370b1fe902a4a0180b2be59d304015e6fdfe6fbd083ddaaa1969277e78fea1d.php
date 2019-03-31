@@ -118,34 +118,34 @@ class __TwigTemplate_ec2513e2330a20bfcd9f5e4db9da543e56b9b3f8a476af7384a91965fcf
         <div class=\"col-lg-9\">
           <div id=\"text-page\" class=\"box\">
             <h1>Qui Sommes-Nous ?</h1>
-            <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. In turpis pulvinar facilisis. Ut felis.</p>
-            <h2>Lorem Ipsum</h2>
-            <ol>
-              <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-              <li>Aliquam tincidunt mauris eu risus.</li>
-            </ol>
+            <p>La société <strong>ELA</strong> a été créée le 23 Novembre 2018 par l'actuel Président Directeur Général Jérémy BATILLIOT.</p>
+            <h2>Que faisons-nous ?</h2>
+            <p><strong>ELA</strong> est spécialisé dans la vente de vêtements, chaussures et accessoires féminins.</p>
             <blockquote class=\"blockquote\">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
+              <p>Ce site de vêtement est destiné aux femmes aux alentours de 25 à 35ans qui recherchent un style classique.
+              Les vêtements proposés mêlent le chic et le décontracté que ce soit au travail ou dans la vie quotidienne.
+              Restez une femme élégante en toutes circonstances.</p>
             </blockquote>
-            <h3>Header Level 3</h3>
-            <ul>
-              <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-              <li>Aliquam tincidunt mauris eu risus.</li>
-            </ul>
             <hr>
             <h2>Images</h2>
             <div class=\"row\">
               <div class=\"col-md-4\">
-                <p class=\"text-center\"><img src=\"img/detailsquare.jpg\" alt=\"\" class=\"img-circle img-fluid\"></p>
-                <p class=\"text-center\">circle</p>
+                <p class=\"text-center\"><img src=\"";
+        // line 53
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendor/img/accessoire.jpg"), "html", null, true);
+        echo "\" alt=\"\" class=\"img-circle img-fluid\"></p>
               </div>
               <div class=\"col-md-4\">
-                <p class=\"text-center\"><img src=\"img/detailsquare.jpg\" alt=\"\" class=\"img-thumbnail img-fluid\"></p>
-                <p class=\"text-center\">thumbnail</p>
+                <p class=\"text-center\"><img src=\"";
+        // line 56
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendor/img/vetement.jpg"), "html", null, true);
+        echo "\" alt=\"\" class=\"img-thumbnail img-fluid\"></p>
               </div>
               <div class=\"col-md-4\">
-                <p class=\"text-center\"><img src=\"img/detailsquare.jpg\" alt=\"\" class=\"rounded-circle img-fluid\"></p>
-                <p class=\"text-center\">rounded</p>
+                <p class=\"text-center\"><img src=\"";
+        // line 59
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendor/img/chaussuresolo2.jpg"), "html", null, true);
+        echo "\" alt=\"\" class=\"rounded-circle img-fluid\"></p>
               </div>
             </div>
 
@@ -179,7 +179,7 @@ class __TwigTemplate_ec2513e2330a20bfcd9f5e4db9da543e56b9b3f8a476af7384a91965fcf
 
     public function getDebugInfo()
     {
-        return array (  112 => 33,  108 => 32,  104 => 31,  100 => 30,  96 => 29,  80 => 16,  70 => 8,  61 => 7,  50 => 4,  41 => 3,  11 => 1,);
+        return array (  147 => 59,  141 => 56,  135 => 53,  112 => 33,  108 => 32,  104 => 31,  100 => 30,  96 => 29,  80 => 16,  70 => 8,  61 => 7,  50 => 4,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -232,34 +232,25 @@ Qui sommes-nous ?
         <div class=\"col-lg-9\">
           <div id=\"text-page\" class=\"box\">
             <h1>Qui Sommes-Nous ?</h1>
-            <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. In turpis pulvinar facilisis. Ut felis.</p>
-            <h2>Lorem Ipsum</h2>
-            <ol>
-              <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-              <li>Aliquam tincidunt mauris eu risus.</li>
-            </ol>
+            <p>La société <strong>ELA</strong> a été créée le 23 Novembre 2018 par l'actuel Président Directeur Général Jérémy BATILLIOT.</p>
+            <h2>Que faisons-nous ?</h2>
+            <p><strong>ELA</strong> est spécialisé dans la vente de vêtements, chaussures et accessoires féminins.</p>
             <blockquote class=\"blockquote\">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
+              <p>Ce site de vêtement est destiné aux femmes aux alentours de 25 à 35ans qui recherchent un style classique.
+              Les vêtements proposés mêlent le chic et le décontracté que ce soit au travail ou dans la vie quotidienne.
+              Restez une femme élégante en toutes circonstances.</p>
             </blockquote>
-            <h3>Header Level 3</h3>
-            <ul>
-              <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-              <li>Aliquam tincidunt mauris eu risus.</li>
-            </ul>
             <hr>
             <h2>Images</h2>
             <div class=\"row\">
               <div class=\"col-md-4\">
-                <p class=\"text-center\"><img src=\"img/detailsquare.jpg\" alt=\"\" class=\"img-circle img-fluid\"></p>
-                <p class=\"text-center\">circle</p>
+                <p class=\"text-center\"><img src=\"{{ asset('../vendor/img/accessoire.jpg') }}\" alt=\"\" class=\"img-circle img-fluid\"></p>
               </div>
               <div class=\"col-md-4\">
-                <p class=\"text-center\"><img src=\"img/detailsquare.jpg\" alt=\"\" class=\"img-thumbnail img-fluid\"></p>
-                <p class=\"text-center\">thumbnail</p>
+                <p class=\"text-center\"><img src=\"{{ asset('../vendor/img/vetement.jpg') }}\" alt=\"\" class=\"img-thumbnail img-fluid\"></p>
               </div>
               <div class=\"col-md-4\">
-                <p class=\"text-center\"><img src=\"img/detailsquare.jpg\" alt=\"\" class=\"rounded-circle img-fluid\"></p>
-                <p class=\"text-center\">rounded</p>
+                <p class=\"text-center\"><img src=\"{{ asset('../vendor/img/chaussuresolo2.jpg') }}\" alt=\"\" class=\"rounded-circle img-fluid\"></p>
               </div>
             </div>
 

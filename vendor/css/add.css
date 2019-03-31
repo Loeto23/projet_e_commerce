@@ -17,6 +17,17 @@ table {
   text-align: center;
 }
 
+.panel-title {
+  display: inline;font-weight: bold;
+}
+
+.checkbox.pull-right {
+  margin: 0;
+}
+.pl-ziro {
+  padding-left: 0px;
+}
+
 .delBord {
   border:0;
 }
@@ -83,6 +94,14 @@ table {
   padding-right: 20%;
 }
 
+.mL40 {
+  margin-left: 40%;
+}
+
+.pL15 {
+  padding-left: 15px;
+}
+
 .input-group {
   width: 140% !important;
 }
@@ -93,14 +112,20 @@ table {
   margin: auto;
 }
 
-
+@media (min-width: 1200px)
+{
+  .mL12 {margin-left: 12%;}
+}
 
 @media (max-width:1200px)
 {
   #map {display:none;}
 }
 
-
+.beige {
+  background: #DFCBCB;
+  color: white !important;
+}
 
 
 

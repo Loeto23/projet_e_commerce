@@ -88,54 +88,62 @@ class __TwigTemplate_3deddf4a5f6d682c4333cf242f282c164f15634f5cff2586475de97ad8e
         // line 16
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_avis_homepage");
         echo "\" class=\"tdecoNone blue\">Voir la liste des avis</a>
-  
+
+<br>
 <br>
 
-<table>
-
-  <tr>
-    <th>Utilisateur</th>
-    <th>Produit</th>
-    <th>Photo</th>
-    <th>Commentaire</th>
-    <th>Note</th>
-  </tr>
-
-  ";
-        // line 30
+<table class=\"table\">
+  <thead>
+    <tr>
+      <th scope=\"col\">#</th>
+      <th scope=\"col\">Utilisateur</th>
+      <th scope=\"col\">Produit</th>
+      <th scope=\"col\">Photo</th>
+      <th scope=\"col\">Commentaire</th>
+      <th scope=\"col\">Note</th>
+    </tr>
+  </thead>
+  <tbody>
+    ";
+        // line 33
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["myResults"] ?? $this->getContext($context, "myResults")));
         foreach ($context['_seq'] as $context["_key"] => $context["avis"]) {
-            // line 31
-            echo "  <tr>
-    <td>";
-            // line 32
+            // line 34
+            echo "    <tr>
+      <th scope=\"row\">";
+            // line 35
+            echo twig_escape_filter($this->env, $this->getAttribute($context["avis"], "id", array()), "html", null, true);
+            echo "</th>
+      <td class=\"delBord\">";
+            // line 36
             echo twig_escape_filter($this->env, $this->getAttribute($context["avis"], "username", array()), "html", null, true);
             echo "</td>
-    <td>";
-            // line 33
+      <td class=\"delBord\">";
+            // line 37
             echo twig_escape_filter($this->env, $this->getAttribute($context["avis"], "titre", array()), "html", null, true);
             echo "</td>
-    <td><img src=\"";
-            // line 34
+      <td class=\"delBord\"><img src=\"";
+            // line 38
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl(("uploads/photos/" . $this->getAttribute($context["avis"], "photo", array()))), "html", null, true);
             echo "\" width=\"100\" height=\"100\"></td>
-    <td>";
-            // line 35
+      <td class=\"delBord\">";
+            // line 39
             echo twig_escape_filter($this->env, $this->getAttribute($context["avis"], "commentaire", array()), "html", null, true);
             echo "</td>
-    <td>";
-            // line 36
+      <td class=\"delBord\">";
+            // line 40
             echo twig_escape_filter($this->env, $this->getAttribute($context["avis"], "note", array()), "html", null, true);
-            echo "</td>
-  </tr>
-  ";
+            echo "/5</td>
+    </tr>
+    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['avis'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 39
-        echo "
+        // line 43
+        echo "  </tbody>
+
 
 </table>
 
@@ -162,7 +170,7 @@ class __TwigTemplate_3deddf4a5f6d682c4333cf242f282c164f15634f5cff2586475de97ad8e
 
     public function getDebugInfo()
     {
-        return array (  138 => 39,  129 => 36,  125 => 35,  121 => 34,  117 => 33,  113 => 32,  110 => 31,  106 => 30,  89 => 16,  85 => 15,  81 => 14,  77 => 13,  70 => 8,  61 => 7,  50 => 4,  41 => 3,  11 => 1,);
+        return array (  145 => 43,  136 => 40,  132 => 39,  128 => 38,  124 => 37,  120 => 36,  116 => 35,  113 => 34,  109 => 33,  89 => 16,  85 => 15,  81 => 14,  77 => 13,  70 => 8,  61 => 7,  50 => 4,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -191,28 +199,33 @@ Backoffice Avis
   <a href=\"{{ path('jeremy_user_homepage') }}\" class=\"tdecoNone blue\">Voir la liste des membres |</a>
   <a href=\"{{ path('jeremy_commande_homepage') }}\" class=\"tdecoNone blue\">Voir la liste des commandes |</a>
   <a href=\"{{ path('jeremy_avis_homepage') }}\" class=\"tdecoNone blue\">Voir la liste des avis</a>
-  
+
+<br>
 <br>
 
-<table>
-
-  <tr>
-    <th>Utilisateur</th>
-    <th>Produit</th>
-    <th>Photo</th>
-    <th>Commentaire</th>
-    <th>Note</th>
-  </tr>
-
-  {% for avis in myResults %}
-  <tr>
-    <td>{{ avis.username }}</td>
-    <td>{{ avis.titre }}</td>
-    <td><img src=\"{{ asset('uploads/photos/' ~ avis.photo ) }}\" width=\"100\" height=\"100\"></td>
-    <td>{{ avis.commentaire }}</td>
-    <td>{{ avis.note }}</td>
-  </tr>
-  {% endfor %}
+<table class=\"table\">
+  <thead>
+    <tr>
+      <th scope=\"col\">#</th>
+      <th scope=\"col\">Utilisateur</th>
+      <th scope=\"col\">Produit</th>
+      <th scope=\"col\">Photo</th>
+      <th scope=\"col\">Commentaire</th>
+      <th scope=\"col\">Note</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for avis in myResults %}
+    <tr>
+      <th scope=\"row\">{{ avis.id }}</th>
+      <td class=\"delBord\">{{ avis.username }}</td>
+      <td class=\"delBord\">{{ avis.titre }}</td>
+      <td class=\"delBord\"><img src=\"{{ asset('uploads/photos/' ~ avis.photo ) }}\" width=\"100\" height=\"100\"></td>
+      <td class=\"delBord\">{{ avis.commentaire }}</td>
+      <td class=\"delBord\">{{ avis.note }}/5</td>
+    </tr>
+    {% endfor %}
+  </tbody>
 
 
 </table>

@@ -72,8 +72,8 @@ class __TwigTemplate_c903c8adccdfb09d7d62544ef9a316038c855e658386412d6244df7dd02
 
 <h1>Supprimer un produit</h1>
 
-Le produit a bien été supprimé.
-
+<div class=\"alert alert-success\">Le produit a bien été supprimé.</div>
+<br>
 <a href=\"";
         // line 15
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_produit_homepage");
@@ -125,8 +125,8 @@ Backoffice Produit
 
 <h1>Supprimer un produit</h1>
 
-Le produit a bien été supprimé.
-
+<div class=\"alert alert-success\">Le produit a bien été supprimé.</div>
+<br>
 <a href=\"{{ path('jeremy_produit_homepage') }}\">Revenir à la liste des produits</a>
 
 {% endblock %}

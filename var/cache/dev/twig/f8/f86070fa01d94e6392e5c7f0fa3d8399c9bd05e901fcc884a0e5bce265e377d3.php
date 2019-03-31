@@ -91,7 +91,7 @@ class __TwigTemplate_41e7cf043ad6604c0d431e0b7d63a5d0d8547a6f0355e3b925697264751
             <ol class=\"breadcrumb\">
               <li class=\"breadcrumb-item\"><a href=\"";
         // line 21
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_front_tops");
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_front_homepage");
         echo "\">Accueil</a></li>
               <li aria-current=\"page\" class=\"breadcrumb-item active\"><a href=\"";
         // line 22
@@ -183,7 +183,10 @@ class __TwigTemplate_41e7cf043ad6604c0d431e0b7d63a5d0d8547a6f0355e3b925697264751
             // line 64
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "prix", array()), "html", null, true);
             echo "€</p>
-                <p class=\"text-center buttons\"><a href=\"basket.html\" class=\"btn btn-primary\"><i class=\"fa fa-shopping-cart\"></i> Ajouter au panier</a></p>
+                <p class=\"text-center buttons\"><a href=\"";
+            // line 65
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_panier_ajouter", array("id" => $this->getAttribute($context["produit"], "id", array()))), "html", null, true);
+            echo "\" class=\"btn btn-primary\"><i class=\"fa fa-shopping-cart\"></i> Ajouter au panier</a></p>
               </div>
             </div>
           </div>
@@ -224,55 +227,8 @@ class __TwigTemplate_41e7cf043ad6604c0d431e0b7d63a5d0d8547a6f0355e3b925697264751
 
 
 
-          <div class=\"row products\">
 
-          ";
-        // line 94
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(($context["myResults"] ?? $this->getContext($context, "myResults")));
-        foreach ($context['_seq'] as $context["_key"] => $context["produit"]) {
-            // line 95
-            echo "<!--
-            <div class=\"col-lg-4 col-md-6\">
 
-            <div class=\"product\">
-              <div class=\"flip-container\">
-                <div class=\"flipper\">
-                  <div class=\"front\"><a href=\"detail.html\"><img src=\"";
-            // line 101
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl(("uploads/photos/" . $this->getAttribute($context["produit"], "photo", array()))), "html", null, true);
-            echo "\" alt=\"\" class=\"img-fluid\"></a></div>
-                </div>
-              </div><a href=\"detail.html\" class=\"invisible\"><img src=\"";
-            // line 103
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl(("uploads/photos/" . $this->getAttribute($context["produit"], "photo", array()))), "html", null, true);
-            echo "\" alt=\"\" class=\"img-fluid\"></a>
-              <div class=\"text\">
-                <h3><a href=\"detail.html\">";
-            // line 105
-            echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "titre", array()), "html", null, true);
-            echo "</a></h3>
-                <p class=\"price\">";
-            // line 106
-            echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "prix", array()), "html", null, true);
-            echo "€</p>
-                <p class=\"buttons\"><a href=\"vetement/";
-            // line 107
-            echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "id", array()), "html", null, true);
-            echo "\" class=\"btn btn-outline-secondary\">Voir détail</a><a href=\"basket.html\" class=\"btn btn-primary\"><i class=\"fa fa-shopping-cart\"></i>Ajouter au panier</a></p>
-              </div>
-              <!-- /.text-->
-            </div>
-            <!-- /.product-->
-            </div>
-
-          ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 115
-        echo "
 
           <!--
           <div class=\"pages\">
@@ -318,7 +274,7 @@ class __TwigTemplate_41e7cf043ad6604c0d431e0b7d63a5d0d8547a6f0355e3b925697264751
 
     public function getDebugInfo()
     {
-        return array (  275 => 115,  261 => 107,  257 => 106,  253 => 105,  248 => 103,  243 => 101,  235 => 95,  231 => 94,  217 => 82,  205 => 76,  200 => 74,  195 => 72,  184 => 64,  180 => 63,  173 => 59,  167 => 55,  163 => 54,  152 => 46,  148 => 45,  144 => 44,  140 => 43,  136 => 42,  131 => 40,  115 => 26,  106 => 24,  102 => 23,  98 => 22,  94 => 21,  83 => 12,  74 => 11,  57 => 6,  54 => 5,  50 => 4,  41 => 3,  11 => 1,);
+        return array (  220 => 82,  208 => 76,  203 => 74,  198 => 72,  188 => 65,  184 => 64,  180 => 63,  173 => 59,  167 => 55,  163 => 54,  152 => 46,  148 => 45,  144 => 44,  140 => 43,  136 => 42,  131 => 40,  115 => 26,  106 => 24,  102 => 23,  98 => 22,  94 => 21,  83 => 12,  74 => 11,  57 => 6,  54 => 5,  50 => 4,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -351,7 +307,7 @@ class __TwigTemplate_41e7cf043ad6604c0d431e0b7d63a5d0d8547a6f0355e3b925697264751
           <!-- breadcrumb-->
           <nav aria-label=\"breadcrumb\">
             <ol class=\"breadcrumb\">
-              <li class=\"breadcrumb-item\"><a href=\"{{ path('jeremy_front_tops') }}\">Accueil</a></li>
+              <li class=\"breadcrumb-item\"><a href=\"{{ path('jeremy_front_homepage') }}\">Accueil</a></li>
               <li aria-current=\"page\" class=\"breadcrumb-item active\"><a href=\"{{ path('jeremy_front_tops') }}\">Vêtement</a></li>
             {% for produit in myResults %}
               <li aria-current=\"page\" class=\"breadcrumb-item active\">{{ produit.titre }}</li>
@@ -395,7 +351,7 @@ class __TwigTemplate_41e7cf043ad6604c0d431e0b7d63a5d0d8547a6f0355e3b925697264751
               <div class=\"box\">
                 <h1 class=\"text-center\">{{ produit.titre }}</h1>
                 <p class=\"price\">{{ produit.prix }}€</p>
-                <p class=\"text-center buttons\"><a href=\"basket.html\" class=\"btn btn-primary\"><i class=\"fa fa-shopping-cart\"></i> Ajouter au panier</a></p>
+                <p class=\"text-center buttons\"><a href=\"{{ path('jeremy_panier_ajouter', {'id' : produit.id }) }}\" class=\"btn btn-primary\"><i class=\"fa fa-shopping-cart\"></i> Ajouter au panier</a></p>
               </div>
             </div>
           </div>
@@ -422,29 +378,7 @@ class __TwigTemplate_41e7cf043ad6604c0d431e0b7d63a5d0d8547a6f0355e3b925697264751
 
 
 
-          <div class=\"row products\">
 
-          {% for produit in myResults %}
-<!--
-            <div class=\"col-lg-4 col-md-6\">
-
-            <div class=\"product\">
-              <div class=\"flip-container\">
-                <div class=\"flipper\">
-                  <div class=\"front\"><a href=\"detail.html\"><img src=\"{{ asset('uploads/photos/' ~ produit.photo ) }}\" alt=\"\" class=\"img-fluid\"></a></div>
-                </div>
-              </div><a href=\"detail.html\" class=\"invisible\"><img src=\"{{ asset('uploads/photos/' ~ produit.photo ) }}\" alt=\"\" class=\"img-fluid\"></a>
-              <div class=\"text\">
-                <h3><a href=\"detail.html\">{{ produit.titre }}</a></h3>
-                <p class=\"price\">{{ produit.prix }}€</p>
-                <p class=\"buttons\"><a href=\"vetement/{{ produit.id }}\" class=\"btn btn-outline-secondary\">Voir détail</a><a href=\"basket.html\" class=\"btn btn-primary\"><i class=\"fa fa-shopping-cart\"></i>Ajouter au panier</a></p>
-              </div>
-              <!-- /.text-->
-            </div>
-            <!-- /.product-->
-            </div>
-
-          {% endfor %}
 
 
           <!--

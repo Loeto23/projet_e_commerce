@@ -74,7 +74,7 @@ class __TwigTemplate_e38b1aacebae1623eaa0148a6a6bd16d841f037fd01afe1a7f192a63721
 
 <a href=\"";
         // line 13
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php/backoffice=membre"), "html", null, true);
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_user_homepage");
         echo "\">Revenir à la liste des membres</a>
 
 ";
@@ -128,7 +128,7 @@ Backoffice Membre
 
 <h1>Modifier un membre</h1>
 
-<a href=\"{{ asset('app_dev.php/backoffice=membre') }}\">Revenir à la liste des membres</a>
+<a href=\"{{ path('jeremy_user_homepage') }}\">Revenir à la liste des membres</a>
 
 {{ form(view) }}
 

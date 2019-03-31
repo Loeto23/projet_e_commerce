@@ -18,27 +18,17 @@ Accueil
 
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <a href="#"><img class="d-block w-100" src="{{ asset('../vendor/img/soleil1.jpg') }}" alt="First slide"></a>
-        <div class="carousel-caption d-none d-md-block">
-      <h5>Paradisiaque</h5>
-      <p>Je veux me baigner !</p>
-        </div>
+        <a href=""><img class="d-block w-100" src="{{ asset('../vendor/img/carroussel1.jpg') }}" alt="First slide"></a>
       </div>
 
       <div class="carousel-item">
-        <a href="#"><img class="d-block w-100" src="{{ asset('../vendor/img/chat1.jpg') }}" alt="Second slide"></a>
-        <div class="carousel-caption d-none d-md-block">
-          <h5>C'est un chat</h5>
-          <p>Un très beau chat</p>
-        </div>
+        <a href=""><img class="d-block w-100" src="{{ asset('../vendor/img/carroussel2.jpg') }}" alt="Second slide"></a>
+
       </div>
 
       <div class="carousel-item">
-        <a href="#"><img class="d-block w-100" src="{{ asset('../vendor/img/chien1.jpg') }}" alt="Third slide"></a>
-        <div class="carousel-caption d-none d-md-block">
-          <h5>C'est un chien</h5>
-          <p>Un très beau chien</p>
-        </div>
+        <a href=""><img class="d-block w-100" src="{{ asset('../vendor/img/carroussel3.jpg') }}" alt="Third slide"></a>
+
       </div>
 
     </div>
@@ -62,15 +52,15 @@ Accueil
 
 
   <div class="container mTop30">
-    <a href="{{ path('jeremy_front_tops') }}"><img src="https://picsum.photos/1600/900/?random" width="80%" height="80%" style="margin-left: 10%;"></a>
+    <a href="{{ path('jeremy_front_tops') }}"><img src="{{ asset('../vendor/img/3femmes.jpg') }}" width="80%" height="80%" style="margin-left: 10%;"></a>
   </div>
 
   <div class="container mTop30">
-    <a href="{{ path('jeremy_front_botte') }}"><img src="{{ asset('../vendor/img/chat1.jpg') }}" width="80%" height="80%" style="margin-left: 10%;"></a>
+    <a href="{{ path('jeremy_front_botte') }}"><img src="{{ asset('../vendor/img/chaussuresolo.png') }}" width="80%" height="80%" style="margin-left: 10%;"></a>
   </div>
 
   <div class="container mTop30">
-    <a href="{{ path('jeremy_front_accessoire') }}"><img src="{{ asset('../vendor/img/chien1.jpg') }}" width="80%" height="80%" style="margin-left: 10%;"></a>
+    <a href="{{ path('jeremy_front_sac') }}"><img src="{{ asset('../vendor/img/chapeau.jpg') }}" width="80%" height="80%" style="margin-left: 10%;"></a>
   </div>
 
 {% endblock %}

@@ -74,20 +74,20 @@ class __TwigTemplate_c9ce3fb9aea9580710da58aef8d527c21f40810dcd41fabfb5e3f5d0358
 
 <a href=\"";
         // line 13
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php/backoffice=produit"), "html", null, true);
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_produit_homepage");
         echo "\" class=\"tdecoNone blue\">Voir la liste des produits |</a>
 <a href=\"";
         // line 14
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php/backoffice=membre"), "html", null, true);
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_user_homepage");
         echo "\" class=\"tdecoNone blue\">Voir la liste des membres |</a>
 <a href=\"";
         // line 15
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php/backoffice=username"), "html", null, true);
-        echo "\" class=\"tdecoNone blue\">Voir la liste des utilisateurs |</a>
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_commande_homepage");
+        echo "\" class=\"tdecoNone blue\">Voir la liste des commandes |</a>
 <a href=\"";
         // line 16
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php/produit"), "html", null, true);
-        echo "\" class=\"tdecoNone blue\">Voir la liste des produits |</a>
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_avis_homepage");
+        echo "\" class=\"tdecoNone blue\">Voir la liste des avis</a>
 
 
 ";
@@ -136,10 +136,10 @@ Backoffice
 
 <h1>Bienvenue dans le Back Office</h1>
 
-<a href=\"{{ asset('app_dev.php/backoffice=produit') }}\" class=\"tdecoNone blue\">Voir la liste des produits |</a>
-<a href=\"{{ asset('app_dev.php/backoffice=membre') }}\" class=\"tdecoNone blue\">Voir la liste des membres |</a>
-<a href=\"{{ asset('app_dev.php/backoffice=username') }}\" class=\"tdecoNone blue\">Voir la liste des utilisateurs |</a>
-<a href=\"{{ asset('app_dev.php/produit') }}\" class=\"tdecoNone blue\">Voir la liste des produits |</a>
+<a href=\"{{ path('jeremy_produit_homepage') }}\" class=\"tdecoNone blue\">Voir la liste des produits |</a>
+<a href=\"{{ path('jeremy_user_homepage') }}\" class=\"tdecoNone blue\">Voir la liste des membres |</a>
+<a href=\"{{ path('jeremy_commande_homepage') }}\" class=\"tdecoNone blue\">Voir la liste des commandes |</a>
+<a href=\"{{ path('jeremy_avis_homepage') }}\" class=\"tdecoNone blue\">Voir la liste des avis</a>
 
 
 {% endblock %}

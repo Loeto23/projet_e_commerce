@@ -36,7 +36,8 @@ class DefaultController extends Controller
             p.titre,
             p.photo,
             a.commentaire,
-            a.note
+            a.note,
+            a.id
           FROM
             Jeremy\AvisBundle\Entity\Avis a
           LEFT JOIN

@@ -121,9 +121,6 @@ class __TwigTemplate_8b6732eda93167f90a42c982e8124e13b2f2083ce68f63f64e3049db337
         <div class=\"col-lg-9\">
         <div id=\"contact\" class=\"box\">
 
-        <p style=\"text-align:center\"><span style=\"color:#FF0000\"><span style=\"background-color:#D3D3D3\">Si vous utilisez nos Mentions Légales, vous vous engagez à laisser les liens </span><strong><span style=\"background-color:#D3D3D3\">Crédit sans en modifier ni les liens ni les ancres.</span></strong><span style=\"background-color:#D3D3D3\"> </span></span><br />
-        <span style=\"color:#FF0000\"><span style=\"background-color:#D3D3D3\">Par avance merci pour votre compréhension et le respect du travail effectué par toute l'équipe</span></span></p>
-
         <p style=\"text-align:center\">MENTIONS LEGALES :</p>
 
         <p style=\"text-align:justify\">Conformément aux dispositions des articles 6-III et 19 de la Loi n° 2004-575 du 21 juin 2004 pour la Confiance dans l'économie numérique, dite L.C.E.N., nous portons à la connaissance des utilisateurs et visiteurs du site : <a href=\"http://www.loeto-webproject.fr/ela\" target=\"_blank\">www.loeto-webproject.fr/ela</a> les informations suivantes :</p>
@@ -142,8 +139,7 @@ class __TwigTemplate_8b6732eda93167f90a42c982e8124e13b2f2083ce68f63f64e3049db337
         Le Webmaster est  : <strong>BATILLIOT Jérémy</strong><br />
         Contacter le Webmaster :  <strong><a href=\"mailto:jeremy.batilliot23@gmail.com?subject=Contact a partir des mentions lÃ©gales via le site www.loeto-webproject.fr/ela\">jeremy.batilliot23@gmail.com</a></strong><br />
         L’hebergeur du site est : <strong>BATILLIOT Jérémy 73 avenue Gambetta 94100 ST MAUR DES FOSSES</strong><br />
-        <strong><u>CREDIT :</u> </strong> Les mentions légales ont étés générées par<strong> <a href=\"https://www.generer-mentions-legales.com/generateur-mentions-legales.html\" target=\"_blank\">générateur de mentions legales</a></strong><br />
-        Une eau toujours potable avec les <strong><a href=\"https://www.chamarrel.com/perles-de-ceramique-em-pxl-29_37.html\">perles de céramique</a></strong></p>
+        </p>
 
         <p style=\"text-align:justify\"> </p>
 
@@ -163,7 +159,7 @@ class __TwigTemplate_8b6732eda93167f90a42c982e8124e13b2f2083ce68f63f64e3049db337
 
         <p style=\"text-align:justify\"><strong>4. Propriété intellectuelle :</strong></p>
 
-        <p style=\"text-align:justify\"><br />
+        <p style=\"text-align:justify\">
         Jérémy BATILLIOT est propriétaire exclusif de tous les droits de propriété intellectuelle ou détient les droits d’usage sur tous les éléments accessibles sur le site, tant sur la structure que sur les textes, images, graphismes, logo, icônes, sons, logiciels…<br />
         Toute reproduction totale ou partielle du site www.loeto-webproject.fr/ela, représentation, modification, publication, adaptation totale ou partielle de l'un quelconque de ces éléments, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de Jérémy BATILLIOT, propriétaire du site à l'email : jeremy.batilliot23@gmail.com, à défaut elle sera considérée comme constitutive d’une contrefaçon et passible de poursuite conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.</p>
 
@@ -276,9 +272,6 @@ Mentions légales
         <div class=\"col-lg-9\">
         <div id=\"contact\" class=\"box\">
 
-        <p style=\"text-align:center\"><span style=\"color:#FF0000\"><span style=\"background-color:#D3D3D3\">Si vous utilisez nos Mentions Légales, vous vous engagez à laisser les liens </span><strong><span style=\"background-color:#D3D3D3\">Crédit sans en modifier ni les liens ni les ancres.</span></strong><span style=\"background-color:#D3D3D3\"> </span></span><br />
-        <span style=\"color:#FF0000\"><span style=\"background-color:#D3D3D3\">Par avance merci pour votre compréhension et le respect du travail effectué par toute l'équipe</span></span></p>
-
         <p style=\"text-align:center\">MENTIONS LEGALES :</p>
 
         <p style=\"text-align:justify\">Conformément aux dispositions des articles 6-III et 19 de la Loi n° 2004-575 du 21 juin 2004 pour la Confiance dans l'économie numérique, dite L.C.E.N., nous portons à la connaissance des utilisateurs et visiteurs du site : <a href=\"http://www.loeto-webproject.fr/ela\" target=\"_blank\">www.loeto-webproject.fr/ela</a> les informations suivantes :</p>
@@ -297,8 +290,7 @@ Mentions légales
         Le Webmaster est  : <strong>BATILLIOT Jérémy</strong><br />
         Contacter le Webmaster :  <strong><a href=\"mailto:jeremy.batilliot23@gmail.com?subject=Contact a partir des mentions lÃ©gales via le site www.loeto-webproject.fr/ela\">jeremy.batilliot23@gmail.com</a></strong><br />
         L’hebergeur du site est : <strong>BATILLIOT Jérémy 73 avenue Gambetta 94100 ST MAUR DES FOSSES</strong><br />
-        <strong><u>CREDIT :</u> </strong> Les mentions légales ont étés générées par<strong> <a href=\"https://www.generer-mentions-legales.com/generateur-mentions-legales.html\" target=\"_blank\">générateur de mentions legales</a></strong><br />
-        Une eau toujours potable avec les <strong><a href=\"https://www.chamarrel.com/perles-de-ceramique-em-pxl-29_37.html\">perles de céramique</a></strong></p>
+        </p>
 
         <p style=\"text-align:justify\"> </p>
 
@@ -318,7 +310,7 @@ Mentions légales
 
         <p style=\"text-align:justify\"><strong>4. Propriété intellectuelle :</strong></p>
 
-        <p style=\"text-align:justify\"><br />
+        <p style=\"text-align:justify\">
         Jérémy BATILLIOT est propriétaire exclusif de tous les droits de propriété intellectuelle ou détient les droits d’usage sur tous les éléments accessibles sur le site, tant sur la structure que sur les textes, images, graphismes, logo, icônes, sons, logiciels…<br />
         Toute reproduction totale ou partielle du site www.loeto-webproject.fr/ela, représentation, modification, publication, adaptation totale ou partielle de l'un quelconque de ces éléments, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de Jérémy BATILLIOT, propriétaire du site à l'email : jeremy.batilliot23@gmail.com, à défaut elle sera considérée comme constitutive d’une contrefaçon et passible de poursuite conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.</p>
 

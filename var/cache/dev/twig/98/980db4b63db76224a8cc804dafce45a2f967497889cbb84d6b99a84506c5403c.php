@@ -10,6 +10,7 @@ class __TwigTemplate_8b16cbefc16120cbf7678611667b077277b0e661fc6f8451a9001d10dbd
         // line 1
         $this->parent = $this->loadTemplate("base.html.twig", "JeremyProduitBundle:Default:supprimerProduit.html.twig", 1);
         $this->blocks = array(
+            'title' => array($this, 'block_title'),
             'section' => array($this, 'block_section'),
         );
     }
@@ -37,6 +38,26 @@ class __TwigTemplate_8b16cbefc16120cbf7678611667b077277b0e661fc6f8451a9001d10dbd
     }
 
     // line 3
+    public function block_title($context, array $blocks = array())
+    {
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+
+        // line 4
+        echo "Backoffice Produit
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 7
     public function block_section($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -45,7 +66,7 @@ class __TwigTemplate_8b16cbefc16120cbf7678611667b077277b0e661fc6f8451a9001d10dbd
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "section"));
 
-        // line 4
+        // line 8
         echo "
 <div class=\"container\">
 
@@ -53,7 +74,10 @@ class __TwigTemplate_8b16cbefc16120cbf7678611667b077277b0e661fc6f8451a9001d10dbd
 
 Le produit a bien été supprimé.
 
-<a href=\"\">Revenir à la liste des produits</a>
+<a href=\"";
+        // line 15
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_produit_homepage");
+        echo "\">Revenir à la liste des produits</a>
 
 ";
         
@@ -76,7 +100,7 @@ Le produit a bien été supprimé.
 
     public function getDebugInfo()
     {
-        return array (  49 => 4,  40 => 3,  11 => 1,);
+        return array (  79 => 15,  70 => 8,  61 => 7,  50 => 4,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -91,6 +115,10 @@ Le produit a bien été supprimé.
     {
         return new Twig_Source("{% extends 'base.html.twig' %}
 
+{% block title %}
+Backoffice Produit
+{% endblock %}
+
 {% block section %}
 
 <div class=\"container\">
@@ -99,7 +127,7 @@ Le produit a bien été supprimé.
 
 Le produit a bien été supprimé.
 
-<a href=\"\">Revenir à la liste des produits</a>
+<a href=\"{{ path('jeremy_produit_homepage') }}\">Revenir à la liste des produits</a>
 
 {% endblock %}
 ", "JeremyProduitBundle:Default:supprimerProduit.html.twig", "E:\\wamp64\\www\\projet_e_commerce\\src\\Jeremy\\ProduitBundle/Resources/views/Default/supprimerProduit.html.twig");

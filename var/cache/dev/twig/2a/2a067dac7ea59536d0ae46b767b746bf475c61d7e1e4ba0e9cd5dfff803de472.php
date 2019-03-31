@@ -45,7 +45,7 @@ class __TwigTemplate_7a58133daf21d7930e984c413642eb3694b80ec08d7676fcef15501c317
 <nav class=\"navbar navbar-expand-lg\">
   <div class=\"container\"><a href=\"";
         // line 4
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php"), "html", null, true);
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_front_homepage");
         echo "\" class=\"navbar-brand home\"><img src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendor/img/ela.png"), "html", null, true);
         echo "\" alt=\"Ela logo\" class=\"d-none d-md-inline-block\"><img src=\"";
@@ -53,7 +53,10 @@ class __TwigTemplate_7a58133daf21d7930e984c413642eb3694b80ec08d7676fcef15501c317
         echo "\" alt=\"Ela logo\" class=\"d-inline-block d-md-none\"><span class=\"sr-only\">Ela - go to homepage</span></a>
     <div class=\"navbar-buttons\">
       <button type=\"button\" data-toggle=\"collapse\" data-target=\"#navigation\" class=\"btn btn-outline-secondary navbar-toggler\"><span class=\"sr-only\">Toggle navigation</span><i class=\"fa fa-align-justify\"></i></button>
-      <button type=\"button\" data-toggle=\"collapse\" data-target=\"#search\" class=\"btn btn-outline-secondary navbar-toggler\"><span class=\"sr-only\">Toggle search</span><i class=\"fa fa-search\"></i></button><a href=\"basket.html\" class=\"btn btn-outline-secondary navbar-toggler\"><i class=\"fa fa-shopping-cart\"></i></a>
+      <a href=\"";
+        // line 7
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_panier_homepage");
+        echo "\" class=\"btn btn-outline-secondary navbar-toggler\"><i class=\"fa fa-shopping-cart\"></i></a>
     </div>
     <div id=\"navigation\" class=\"collapse navbar-collapse\" style=\"color:blue;\">
       <ul class=\"navbar-nav mr-auto\">
@@ -166,7 +169,10 @@ class __TwigTemplate_7a58133daf21d7930e984c413642eb3694b80ec08d7676fcef15501c317
       </div>
 
       <div class=\"panier\">
-        <div id=\"basket-overview\" class=\"navbar-collapse collapse d-none d-lg-block\"><a href=\"\" class=\"btn btn-primary navbar-btn\"><i class=\"fa fa-shopping-cart\"></i><span>Panier vide</span></a></div>
+        <div id=\"basket-overview\" class=\"navbar-collapse collapse d-none d-lg-block\"><a href=\"";
+        // line 75
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_panier_homepage");
+        echo "\" class=\"btn btn-primary navbar-btn\"><i class=\"fa fa-shopping-cart\"></i><span>Panier</span></a></div>
       </div>
     </div>
   </div>
@@ -195,7 +201,7 @@ class __TwigTemplate_7a58133daf21d7930e984c413642eb3694b80ec08d7676fcef15501c317
 
     public function getDebugInfo()
     {
-        return array (  147 => 54,  143 => 53,  139 => 52,  135 => 51,  131 => 50,  116 => 38,  112 => 37,  108 => 36,  104 => 35,  100 => 34,  84 => 21,  80 => 20,  76 => 19,  72 => 18,  68 => 17,  48 => 4,  44 => 2,  26 => 1,);
+        return array (  174 => 75,  150 => 54,  146 => 53,  142 => 52,  138 => 51,  134 => 50,  119 => 38,  115 => 37,  111 => 36,  107 => 35,  103 => 34,  87 => 21,  83 => 20,  79 => 19,  75 => 18,  71 => 17,  58 => 7,  48 => 4,  44 => 2,  26 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -211,10 +217,10 @@ class __TwigTemplate_7a58133daf21d7930e984c413642eb3694b80ec08d7676fcef15501c317
         return new Twig_Source("{% block nav %}
 
 <nav class=\"navbar navbar-expand-lg\">
-  <div class=\"container\"><a href=\"{{ asset('app_dev.php')}}\" class=\"navbar-brand home\"><img src=\"{{ asset('../vendor/img/ela.png') }}\" alt=\"Ela logo\" class=\"d-none d-md-inline-block\"><img src=\"{{ asset('../vendor/img/ela-small.png') }}\" alt=\"Ela logo\" class=\"d-inline-block d-md-none\"><span class=\"sr-only\">Ela - go to homepage</span></a>
+  <div class=\"container\"><a href=\"{{ path('jeremy_front_homepage') }}\" class=\"navbar-brand home\"><img src=\"{{ asset('../vendor/img/ela.png') }}\" alt=\"Ela logo\" class=\"d-none d-md-inline-block\"><img src=\"{{ asset('../vendor/img/ela-small.png') }}\" alt=\"Ela logo\" class=\"d-inline-block d-md-none\"><span class=\"sr-only\">Ela - go to homepage</span></a>
     <div class=\"navbar-buttons\">
       <button type=\"button\" data-toggle=\"collapse\" data-target=\"#navigation\" class=\"btn btn-outline-secondary navbar-toggler\"><span class=\"sr-only\">Toggle navigation</span><i class=\"fa fa-align-justify\"></i></button>
-      <button type=\"button\" data-toggle=\"collapse\" data-target=\"#search\" class=\"btn btn-outline-secondary navbar-toggler\"><span class=\"sr-only\">Toggle search</span><i class=\"fa fa-search\"></i></button><a href=\"basket.html\" class=\"btn btn-outline-secondary navbar-toggler\"><i class=\"fa fa-shopping-cart\"></i></a>
+      <a href=\"{{ path('jeremy_panier_homepage') }}\" class=\"btn btn-outline-secondary navbar-toggler\"><i class=\"fa fa-shopping-cart\"></i></a>
     </div>
     <div id=\"navigation\" class=\"collapse navbar-collapse\" style=\"color:blue;\">
       <ul class=\"navbar-nav mr-auto\">
@@ -282,7 +288,7 @@ class __TwigTemplate_7a58133daf21d7930e984c413642eb3694b80ec08d7676fcef15501c317
       </div>
 
       <div class=\"panier\">
-        <div id=\"basket-overview\" class=\"navbar-collapse collapse d-none d-lg-block\"><a href=\"\" class=\"btn btn-primary navbar-btn\"><i class=\"fa fa-shopping-cart\"></i><span>Panier vide</span></a></div>
+        <div id=\"basket-overview\" class=\"navbar-collapse collapse d-none d-lg-block\"><a href=\"{{ path('jeremy_panier_homepage') }}\" class=\"btn btn-primary navbar-btn\"><i class=\"fa fa-shopping-cart\"></i><span>Panier</span></a></div>
       </div>
     </div>
   </div>

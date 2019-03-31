@@ -74,20 +74,20 @@ class __TwigTemplate_45913e09462f6ba2114bfc3c6813e8e608422157245c5b3ece1053668b2
 
   <a href=\"";
         // line 13
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php/backoffice=produit"), "html", null, true);
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_produit_homepage");
         echo "\" class=\"tdecoNone blue\">Voir la liste des produits |</a>
   <a href=\"";
         // line 14
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php/backoffice=membre"), "html", null, true);
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_user_homepage");
         echo "\" class=\"tdecoNone blue\">Voir la liste des membres |</a>
   <a href=\"";
         // line 15
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php/produit"), "html", null, true);
-        echo "\" class=\"tdecoNone blue\">Voir la liste des produits |</a>
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_commande_homepage");
+        echo "\" class=\"tdecoNone blue\">Voir la liste des commandes |</a>
   <a href=\"";
         // line 16
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php/backoffice=avis"), "html", null, true);
-        echo "\" class=\"tdecoNone blue\">Voir la liste des avis |</a>
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_avis_homepage");
+        echo "\" class=\"tdecoNone blue\">Voir la liste des avis</a>
 
 <br>
 
@@ -102,96 +102,98 @@ class __TwigTemplate_45913e09462f6ba2114bfc3c6813e8e608422157245c5b3ece1053668b2
     <th>Nom</th>
     <th>Prénom</th>
     <th>Dernière connexion</th>
+    <th>Modification</th>
+    <th>Suppression</th>
 
   </tr>
 
   ";
-        // line 34
+        // line 36
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["myResults"] ?? $this->getContext($context, "myResults")));
         foreach ($context['_seq'] as $context["_key"] => $context["membre"]) {
-            // line 35
+            // line 37
             echo "  <tr>
     <td>";
-            // line 36
+            // line 38
             echo twig_escape_filter($this->env, $this->getAttribute($context["membre"], "id", array()), "html", null, true);
             echo "</td>
     <td>";
-            // line 37
+            // line 39
             echo twig_escape_filter($this->env, $this->getAttribute($context["membre"], "username", array()), "html", null, true);
             echo "</td>
     <td>";
-            // line 38
+            // line 40
             echo twig_escape_filter($this->env, $this->getAttribute($context["membre"], "email", array()), "html", null, true);
             echo "</td>
 
     <td>
 
     ";
-            // line 42
+            // line 44
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["membre"], "roles", array()));
             foreach ($context['_seq'] as $context["_key"] => $context["status"]) {
-                // line 43
+                // line 45
                 echo "
       ";
-                // line 44
+                // line 46
                 if (($context["status"] == "ROLE_SUPER_ADMIN")) {
-                    // line 45
-                    echo "      | SUPER ADMIN |
+                    // line 47
+                    echo "      SUPER_ADMIN
 
       ";
-                } elseif ((                // line 47
+                } elseif ((                // line 49
 $context["status"] == "ROLE_ADMIN")) {
-                    // line 48
-                    echo "      | ADMIN |
+                    // line 50
+                    echo "      ADMIN
 
       ";
-                } elseif ((                // line 50
+                } elseif ((                // line 52
 $context["status"] == "ROLE_USER")) {
-                    // line 51
-                    echo "      | MEMBRE |
+                    // line 53
+                    echo "      MEMBRE
 
       ";
                 }
-                // line 54
+                // line 56
                 echo "
     ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['status'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 56
+            // line 58
             echo "
     </td>
 
     <td>";
-            // line 59
+            // line 61
             echo twig_escape_filter($this->env, $this->getAttribute($context["membre"], "nom", array()), "html", null, true);
             echo "</td>
     <td>";
-            // line 60
+            // line 62
             echo twig_escape_filter($this->env, $this->getAttribute($context["membre"], "prenom", array()), "html", null, true);
             echo "</td>
     <td>";
-            // line 61
+            // line 63
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["membre"], "lastLogin", array()), "Y-m-d"), "html", null, true);
             echo "</td>
-    <td><a href=\"backoffice=membre/action=suppr";
-            // line 62
-            echo twig_escape_filter($this->env, $this->getAttribute($context["membre"], "id", array()), "html", null, true);
-            echo "\">Supprimer</a></td>
     <td><a href=\"backoffice=membre/action=modif";
-            // line 63
+            // line 64
             echo twig_escape_filter($this->env, $this->getAttribute($context["membre"], "id", array()), "html", null, true);
             echo "\">Modifier</a></td>
+    <td><a href=\"backoffice=membre/action=suppr";
+            // line 65
+            echo twig_escape_filter($this->env, $this->getAttribute($context["membre"], "id", array()), "html", null, true);
+            echo "\">Supprimer</a></td>
   </tr>
   ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['membre'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 66
+        // line 68
         echo "
 </table>
 
@@ -219,7 +221,7 @@ $context["status"] == "ROLE_USER")) {
 
     public function getDebugInfo()
     {
-        return array (  195 => 66,  186 => 63,  182 => 62,  178 => 61,  174 => 60,  170 => 59,  165 => 56,  158 => 54,  153 => 51,  151 => 50,  147 => 48,  145 => 47,  141 => 45,  139 => 44,  136 => 43,  132 => 42,  125 => 38,  121 => 37,  117 => 36,  114 => 35,  110 => 34,  89 => 16,  85 => 15,  81 => 14,  77 => 13,  70 => 8,  61 => 7,  50 => 4,  41 => 3,  11 => 1,);
+        return array (  197 => 68,  188 => 65,  184 => 64,  180 => 63,  176 => 62,  172 => 61,  167 => 58,  160 => 56,  155 => 53,  153 => 52,  149 => 50,  147 => 49,  143 => 47,  141 => 46,  138 => 45,  134 => 44,  127 => 40,  123 => 39,  119 => 38,  116 => 37,  112 => 36,  89 => 16,  85 => 15,  81 => 14,  77 => 13,  70 => 8,  61 => 7,  50 => 4,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -244,10 +246,10 @@ Backoffice Membre
 
   <h1>Bienvenue dans le Back Office Membre</h1>
 
-  <a href=\"{{ asset('app_dev.php/backoffice=produit') }}\" class=\"tdecoNone blue\">Voir la liste des produits |</a>
-  <a href=\"{{ asset('app_dev.php/backoffice=membre') }}\" class=\"tdecoNone blue\">Voir la liste des membres |</a>
-  <a href=\"{{ asset('app_dev.php/produit') }}\" class=\"tdecoNone blue\">Voir la liste des produits |</a>
-  <a href=\"{{ asset('app_dev.php/backoffice=avis') }}\" class=\"tdecoNone blue\">Voir la liste des avis |</a>
+  <a href=\"{{ path('jeremy_produit_homepage') }}\" class=\"tdecoNone blue\">Voir la liste des produits |</a>
+  <a href=\"{{ path('jeremy_user_homepage') }}\" class=\"tdecoNone blue\">Voir la liste des membres |</a>
+  <a href=\"{{ path('jeremy_commande_homepage') }}\" class=\"tdecoNone blue\">Voir la liste des commandes |</a>
+  <a href=\"{{ path('jeremy_avis_homepage') }}\" class=\"tdecoNone blue\">Voir la liste des avis</a>
 
 <br>
 
@@ -262,6 +264,8 @@ Backoffice Membre
     <th>Nom</th>
     <th>Prénom</th>
     <th>Dernière connexion</th>
+    <th>Modification</th>
+    <th>Suppression</th>
 
   </tr>
 
@@ -276,13 +280,13 @@ Backoffice Membre
     {% for status in membre.roles %}
 
       {% if status == 'ROLE_SUPER_ADMIN' %}
-      | SUPER ADMIN |
+      SUPER_ADMIN
 
       {% elseif status == 'ROLE_ADMIN' %}
-      | ADMIN |
+      ADMIN
 
       {% elseif status == 'ROLE_USER' %}
-      | MEMBRE |
+      MEMBRE
 
       {% endif %}
 
@@ -293,8 +297,8 @@ Backoffice Membre
     <td>{{ membre.nom }}</td>
     <td>{{ membre.prenom }}</td>
     <td>{{ membre.lastLogin|date('Y-m-d') }}</td>
-    <td><a href=\"backoffice=membre/action=suppr{{ membre.id }}\">Supprimer</a></td>
     <td><a href=\"backoffice=membre/action=modif{{ membre.id }}\">Modifier</a></td>
+    <td><a href=\"backoffice=membre/action=suppr{{ membre.id }}\">Supprimer</a></td>
   </tr>
   {% endfor %}
 

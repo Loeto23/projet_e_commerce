@@ -121,8 +121,7 @@ class __TwigTemplate_e3d9612a7cabd9014fac6b6d5f69f697b2ddbc1a47e2e88a5a659a01f58
         <div class=\"col-lg-9\">
           <div id=\"contact\" class=\"box\">
             <h1>Foire aux questions</h1>
-            <p class=\"lead\">Lorem ipsum dolor sit amet, consectetur adipisicing elit Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            <p class=\"lead\">La foire aux questions répondra aux questions génériques les plus posées afin des réponses qui nous l'espérons répondent à un maximum de vos interrogations.</p>
             <hr>
             <div id=\"accordion\">
               <div class=\"card border-primary mb-3\">
@@ -131,12 +130,17 @@ class __TwigTemplate_e3d9612a7cabd9014fac6b6d5f69f697b2ddbc1a47e2e88a5a659a01f58
                 </div>
                 <div id=\"collapseOne\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\" class=\"collapse show\">
                   <div class=\"card-body\">
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                    <p>Si vous souhaitez nous retourner un produit pour une quelconque raison.</p>
                     <ul>
-                      <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                      <li>Aliquam tincidunt mauris eu risus.</li>
-                      <li>Vestibulum auctor dapibus neque.</li>
+                      <li>Article abimé.</li>
+                      <li>Article ne correspondant pas à votre commande.</li>
+                      <li>Mauvaise couleur.</li>
+                      <li>Problème de taille.</li>
                     </ul>
+                    <p>Contactez nous via le <a href=\"";
+        // line 60
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_front_contact");
+        echo "\">formulaire de contact</a>.</p>
                   </div>
                 </div>
               </div>
@@ -145,7 +149,11 @@ class __TwigTemplate_e3d9612a7cabd9014fac6b6d5f69f697b2ddbc1a47e2e88a5a659a01f58
                   <h4 class=\"mb-0\"><a href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"false\" aria-controls=\"collapseTwo\" class=\"btn btn-primary d-block text-left rounded-0\">2. J'ai oublié mon mot de passe</a></h4>
                 </div>
                 <div id=\"collapseTwo\" aria-labelledby=\"headingTwo\" data-parent=\"#accordion\" class=\"collapse\">
-                  <div class=\"card-body\">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+
+                  <div class=\"card-body\">Veuillez cliquer sur <a href=\"";
+        // line 70
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_resetting_request");
+        echo "\">mot de passe oublié</a> et inscrivez votre adresse email, ainsi un mot de passe provisoire vous sera attribué.</div>
                 </div>
               </div>
               <div class=\"card border-primary\">
@@ -153,7 +161,10 @@ class __TwigTemplate_e3d9612a7cabd9014fac6b6d5f69f697b2ddbc1a47e2e88a5a659a01f58
                   <h4 class=\"mb-0\"><a href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseThree\" aria-expanded=\"false\" aria-controls=\"collapseThree\" class=\"btn btn-primary d-block text-left rounded-0\">3. Besoin d'aide supplémentaire</a></h4>
                 </div>
                 <div id=\"collapseThree\" aria-labelledby=\"headingThree\" data-parent=\"#accordion\" class=\"collapse\">
-                  <div class=\"card-body\">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+                  <div class=\"card-body\">Si vous avez besoin d'aide supplémentaire ou d'information quelconque, n'hésitez pas à nous contacter via notre <a href=\"";
+        // line 78
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_front_contact");
+        echo "\">formulaire de contact</a> , nous vous répondrons dans les meilleurs délais.</div>
                 </div>
               </div>
             </div>
@@ -189,7 +200,7 @@ class __TwigTemplate_e3d9612a7cabd9014fac6b6d5f69f697b2ddbc1a47e2e88a5a659a01f58
 
     public function getDebugInfo()
     {
-        return array (  115 => 36,  111 => 35,  107 => 34,  103 => 33,  99 => 32,  80 => 16,  70 => 8,  61 => 7,  50 => 4,  41 => 3,  11 => 1,);
+        return array (  166 => 78,  155 => 70,  142 => 60,  115 => 36,  111 => 35,  107 => 34,  103 => 33,  99 => 32,  80 => 16,  70 => 8,  61 => 7,  50 => 4,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -245,8 +256,7 @@ FAQ
         <div class=\"col-lg-9\">
           <div id=\"contact\" class=\"box\">
             <h1>Foire aux questions</h1>
-            <p class=\"lead\">Lorem ipsum dolor sit amet, consectetur adipisicing elit Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            <p class=\"lead\">La foire aux questions répondra aux questions génériques les plus posées afin des réponses qui nous l'espérons répondent à un maximum de vos interrogations.</p>
             <hr>
             <div id=\"accordion\">
               <div class=\"card border-primary mb-3\">
@@ -255,12 +265,14 @@ FAQ
                 </div>
                 <div id=\"collapseOne\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\" class=\"collapse show\">
                   <div class=\"card-body\">
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                    <p>Si vous souhaitez nous retourner un produit pour une quelconque raison.</p>
                     <ul>
-                      <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                      <li>Aliquam tincidunt mauris eu risus.</li>
-                      <li>Vestibulum auctor dapibus neque.</li>
+                      <li>Article abimé.</li>
+                      <li>Article ne correspondant pas à votre commande.</li>
+                      <li>Mauvaise couleur.</li>
+                      <li>Problème de taille.</li>
                     </ul>
+                    <p>Contactez nous via le <a href=\"{{ path('jeremy_front_contact') }}\">formulaire de contact</a>.</p>
                   </div>
                 </div>
               </div>
@@ -269,7 +281,8 @@ FAQ
                   <h4 class=\"mb-0\"><a href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"false\" aria-controls=\"collapseTwo\" class=\"btn btn-primary d-block text-left rounded-0\">2. J'ai oublié mon mot de passe</a></h4>
                 </div>
                 <div id=\"collapseTwo\" aria-labelledby=\"headingTwo\" data-parent=\"#accordion\" class=\"collapse\">
-                  <div class=\"card-body\">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+
+                  <div class=\"card-body\">Veuillez cliquer sur <a href=\"{{ path('fos_user_resetting_request') }}\">mot de passe oublié</a> et inscrivez votre adresse email, ainsi un mot de passe provisoire vous sera attribué.</div>
                 </div>
               </div>
               <div class=\"card border-primary\">
@@ -277,7 +290,7 @@ FAQ
                   <h4 class=\"mb-0\"><a href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseThree\" aria-expanded=\"false\" aria-controls=\"collapseThree\" class=\"btn btn-primary d-block text-left rounded-0\">3. Besoin d'aide supplémentaire</a></h4>
                 </div>
                 <div id=\"collapseThree\" aria-labelledby=\"headingThree\" data-parent=\"#accordion\" class=\"collapse\">
-                  <div class=\"card-body\">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+                  <div class=\"card-body\">Si vous avez besoin d'aide supplémentaire ou d'information quelconque, n'hésitez pas à nous contacter via notre <a href=\"{{ path('jeremy_front_contact') }}\">formulaire de contact</a> , nous vous répondrons dans les meilleurs délais.</div>
                 </div>
               </div>
             </div>

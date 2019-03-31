@@ -12,13 +12,13 @@ Backoffice Membre
 
 {% for membre in myResults %}
 
-Le membre {{ membre.username }} a bien été supprimé.
+<div class="alert alert-success">Le membre {{ membre.username }} a bien été supprimé.</div>
 
 {% endfor %}
 
 <br>
 
-<a href="">Revenir à la liste des membres</a>
+<a href="{{ path('jeremy_user_homepage') }}">Revenir à la liste des membres</a>
 
 </div>
 

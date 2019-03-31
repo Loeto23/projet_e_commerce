@@ -78,7 +78,7 @@ class __TwigTemplate_99d49e3e6237031d658c4b89c4837df5a681b91a2131848091fcec6a022
             <ol class=\"breadcrumb\">
               <li class=\"breadcrumb-item\"><a href=\"";
         // line 17
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_front_pantalon");
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_front_homepage");
         echo "\">Accueil</a></li>
               <li aria-current=\"page\" class=\"breadcrumb-item active\">Pantalons</li>
             </ol>
@@ -126,43 +126,7 @@ class __TwigTemplate_99d49e3e6237031d658c4b89c4837df5a681b91a2131848091fcec6a022
             </div>
           </div>
 
-          <div class=\"card sidebar-menu mb-4\">
-            <div class=\"card-header\">
-              <h3 class=\"h4 card-title\">Couleurs <a href=\"#\" class=\"btn btn-sm btn-danger pull-right\"><i class=\"fa fa-times-circle\"></i> Clear</a></h3>
-            </div>
-            <div class=\"card-body\">
-              <form>
-                <div class=\"form-group\">
-                  <div class=\"checkbox\">
-                    <label>
-                      <input type=\"checkbox\"><span class=\"colour white\"></span> Blanc (14)
-                    </label>
-                  </div>
-                  <div class=\"checkbox\">
-                    <label>
-                      <input type=\"checkbox\"><span class=\"colour blue\"></span> Bleu (10)
-                    </label>
-                  </div>
-                  <div class=\"checkbox\">
-                    <label>
-                      <input type=\"checkbox\"><span class=\"colour green\"></span>  Vert (20)
-                    </label>
-                  </div>
-                  <div class=\"checkbox\">
-                    <label>
-                      <input type=\"checkbox\"><span class=\"colour yellow\"></span>  Jaune (13)
-                    </label>
-                  </div>
-                  <div class=\"checkbox\">
-                    <label>
-                      <input type=\"checkbox\"><span class=\"colour red\"></span>  Rouge (10)
-                    </label>
-                  </div>
-                </div>
-                <button class=\"btn btn-default btn-sm btn-primary\"><i class=\"fa fa-pencil\"></i>Appliquer</button>
-              </form>
-            </div>
-          </div>
+
           <!-- *** MENUS AND FILTERS END ***-->
         </div>
         <div class=\"col-lg-9\">
@@ -176,11 +140,11 @@ class __TwigTemplate_99d49e3e6237031d658c4b89c4837df5a681b91a2131848091fcec6a022
           <div class=\"row products\">
 
           ";
-        // line 95
+        // line 59
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["myResults"] ?? $this->getContext($context, "myResults")));
         foreach ($context['_seq'] as $context["_key"] => $context["produit"]) {
-            // line 96
+            // line 60
             echo "
             <div class=\"col-lg-4 col-md-6\">
 
@@ -188,33 +152,41 @@ class __TwigTemplate_99d49e3e6237031d658c4b89c4837df5a681b91a2131848091fcec6a022
             <div class=\"flip-container\">
               <div class=\"flipper\">
                 <div class=\"front\"><a href=\"";
-            // line 102
+            // line 66
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "id", array()), "html", null, true);
             echo "\"><img src=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl(("uploads/photos/" . $this->getAttribute($context["produit"], "photo", array()))), "html", null, true);
             echo "\" alt=\"\" class=\"img-fluid\"></a></div>
               </div>
             </div><a href=\"";
-            // line 104
+            // line 68
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "id", array()), "html", null, true);
             echo "\" class=\"invisible\"><img src=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl(("uploads/photos/" . $this->getAttribute($context["produit"], "photo", array()))), "html", null, true);
             echo "\" alt=\"\" class=\"img-fluid\"></a>
             <div class=\"text\">
               <h3><a href=\"";
-            // line 106
+            // line 70
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "id", array()), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "titre", array()), "html", null, true);
             echo "</a></h3>
               <p class=\"price\">";
-            // line 107
+            // line 71
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "prix", array()), "html", null, true);
             echo "€</p>
               <p class=\"buttons\"><a href=\"";
-            // line 108
+            // line 72
             echo twig_escape_filter($this->env, $this->getAttribute($context["produit"], "id", array()), "html", null, true);
-            echo "\" class=\"btn btn-outline-secondary\">Voir détail</a><a href=\"basket.html\" class=\"btn btn-primary\"><i class=\"fa fa-shopping-cart\"></i>Ajouter au panier</a></p>
+            echo "\" class=\"btn btn-outline-secondary\">Voir détail</a>
+
+              <form style=\"text-align:center;\" action=";
+            // line 74
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_panier_ajouter", array("id" => $this->getAttribute($context["produit"], "id", array()))), "html", null, true);
+            echo " method=\"get\">
+                <button style=\"margin-bottom:10px;\"class=\"btn btn-primary\">
+                <i class=\"fa fa-shopping-cart\"></i>Ajouter au panier</button</p>
+              </form>
             </div>
               <!-- /.text-->
             </div>
@@ -226,7 +198,7 @@ class __TwigTemplate_99d49e3e6237031d658c4b89c4837df5a681b91a2131848091fcec6a022
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 116
+        // line 85
         echo "
 
 
@@ -276,7 +248,7 @@ class __TwigTemplate_99d49e3e6237031d658c4b89c4837df5a681b91a2131848091fcec6a022
 
     public function getDebugInfo()
     {
-        return array (  230 => 116,  216 => 108,  212 => 107,  206 => 106,  199 => 104,  192 => 102,  184 => 96,  180 => 95,  121 => 39,  117 => 38,  113 => 37,  109 => 36,  105 => 35,  100 => 33,  81 => 17,  70 => 8,  61 => 7,  50 => 4,  41 => 3,  11 => 1,);
+        return array (  202 => 85,  185 => 74,  180 => 72,  176 => 71,  170 => 70,  163 => 68,  156 => 66,  148 => 60,  144 => 59,  121 => 39,  117 => 38,  113 => 37,  109 => 36,  105 => 35,  100 => 33,  81 => 17,  70 => 8,  61 => 7,  50 => 4,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -305,7 +277,7 @@ Pantalons
           <!-- breadcrumb-->
           <nav aria-label=\"breadcrumb\">
             <ol class=\"breadcrumb\">
-              <li class=\"breadcrumb-item\"><a href=\"{{ path('jeremy_front_pantalon') }}\">Accueil</a></li>
+              <li class=\"breadcrumb-item\"><a href=\"{{ path('jeremy_front_homepage') }}\">Accueil</a></li>
               <li aria-current=\"page\" class=\"breadcrumb-item active\">Pantalons</li>
             </ol>
           </nav>
@@ -334,43 +306,7 @@ Pantalons
             </div>
           </div>
 
-          <div class=\"card sidebar-menu mb-4\">
-            <div class=\"card-header\">
-              <h3 class=\"h4 card-title\">Couleurs <a href=\"#\" class=\"btn btn-sm btn-danger pull-right\"><i class=\"fa fa-times-circle\"></i> Clear</a></h3>
-            </div>
-            <div class=\"card-body\">
-              <form>
-                <div class=\"form-group\">
-                  <div class=\"checkbox\">
-                    <label>
-                      <input type=\"checkbox\"><span class=\"colour white\"></span> Blanc (14)
-                    </label>
-                  </div>
-                  <div class=\"checkbox\">
-                    <label>
-                      <input type=\"checkbox\"><span class=\"colour blue\"></span> Bleu (10)
-                    </label>
-                  </div>
-                  <div class=\"checkbox\">
-                    <label>
-                      <input type=\"checkbox\"><span class=\"colour green\"></span>  Vert (20)
-                    </label>
-                  </div>
-                  <div class=\"checkbox\">
-                    <label>
-                      <input type=\"checkbox\"><span class=\"colour yellow\"></span>  Jaune (13)
-                    </label>
-                  </div>
-                  <div class=\"checkbox\">
-                    <label>
-                      <input type=\"checkbox\"><span class=\"colour red\"></span>  Rouge (10)
-                    </label>
-                  </div>
-                </div>
-                <button class=\"btn btn-default btn-sm btn-primary\"><i class=\"fa fa-pencil\"></i>Appliquer</button>
-              </form>
-            </div>
-          </div>
+
           <!-- *** MENUS AND FILTERS END ***-->
         </div>
         <div class=\"col-lg-9\">
@@ -396,7 +332,12 @@ Pantalons
             <div class=\"text\">
               <h3><a href=\"{{ produit.id }}\">{{ produit.titre }}</a></h3>
               <p class=\"price\">{{ produit.prix }}€</p>
-              <p class=\"buttons\"><a href=\"{{ produit.id }}\" class=\"btn btn-outline-secondary\">Voir détail</a><a href=\"basket.html\" class=\"btn btn-primary\"><i class=\"fa fa-shopping-cart\"></i>Ajouter au panier</a></p>
+              <p class=\"buttons\"><a href=\"{{ produit.id }}\" class=\"btn btn-outline-secondary\">Voir détail</a>
+
+              <form style=\"text-align:center;\" action={{ path('jeremy_panier_ajouter', { 'id' : produit.id }) }} method=\"get\">
+                <button style=\"margin-bottom:10px;\"class=\"btn btn-primary\">
+                <i class=\"fa fa-shopping-cart\"></i>Ajouter au panier</button</p>
+              </form>
             </div>
               <!-- /.text-->
             </div>

@@ -183,7 +183,7 @@ class __TwigTemplate_aadfd72ee0ef883634c7ae0c2c0acbc4afab3c4cbfb26d990ec57cf7164
   <div class=\"container\">
     <div class=\"row textAlign\">
       <div class=\"col-lg-12 mb-2 mb-lg-0\">
-        ©2019 Jérémy BATILLIOT
+        ©2019 Jérémy BATILLIOT - Site (Exercice) Fin de formation
       </div>
     </div>
   </div>
@@ -297,7 +297,7 @@ class __TwigTemplate_aadfd72ee0ef883634c7ae0c2c0acbc4afab3c4cbfb26d990ec57cf7164
   <div class=\"container\">
     <div class=\"row textAlign\">
       <div class=\"col-lg-12 mb-2 mb-lg-0\">
-        ©2019 Jérémy BATILLIOT
+        ©2019 Jérémy BATILLIOT - Site (Exercice) Fin de formation
       </div>
     </div>
   </div>

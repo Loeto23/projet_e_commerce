@@ -74,7 +74,7 @@ class __TwigTemplate_ea50cc2af8ae7ca9632136cc5092ca6269db71f460a1efa0b0791e5e140
 
 <a href=\"";
         // line 13
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("app_dev.php/backoffice=commande"), "html", null, true);
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("jeremy_commande_homepage");
         echo "\">Revenir à la liste des commandes</a>
 
 ";
@@ -128,7 +128,7 @@ Backoffice Commande
 
 <h1>Modifier une commande</h1>
 
-<a href=\"{{ asset('app_dev.php/backoffice=commande') }}\">Revenir à la liste des commandes</a>
+<a href=\"{{ path('jeremy_commande_homepage') }}\">Revenir à la liste des commandes</a>
 
 {{ form(view) }}
 

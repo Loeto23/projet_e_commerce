@@ -19,42 +19,46 @@ Backoffice Produit
 
 <a href="backoffice=produit/action=ajouter">Ajouter un produit</a>
 
-  <table>
-    <tr>
-      <th>ID</th>
-      <th>Référence</th>
-      <th>Catégorie</th>
-      <th>Titre</th>
-      <th>Description</th>
-      <th>Couleur</th>
-      <th>Taille</th>
-      <th>Photo</th>
-      <th>Prix</th>
-      <th>Stock</th>
-    </tr>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Référence</th>
+        <th scope="col">Catégorie</th>
+        <th scope="col">Titre</th>
+        <th scope="col">Description</th>
+        <th scope="col">Couleur</th>
+        <th scope="col">Taille</th>
+        <th scope="col">Photo</th>
+        <th scope="col">Prix</th>
+        <th scope="col">Stock</th>
+      </tr>
+    </thead>
+    <tbody>
 
-    {% for produit in myResults %}
+      {% for produit in myResults %}
 
-    <tr>
-      <td>{{ produit.id }}</td>
-      <td>{{ produit.reference }}</td>
-      <td>{{ produit.categorie }}</td>
-      <td>{{ produit.titre }}</td>
-      <td>{{ produit.description }}</td>
-      <td>{{ produit.couleur }}</td>
-      <td>{{ produit.taille }}</td>
-      <td>
+      <tr>
+        <td class="delBord" scope="row">{{ produit.id }}</td>
+        <td class="delBord">{{ produit.reference }}</td>
+        <td class="delBord">{{ produit.categorie }}</td>
+        <td class="delBord">{{ produit.titre }}</td>
+        <td class="delBord">{{ produit.description }}</td>
+        <td class="delBord">{{ produit.couleur }}</td>
+        <td class="delBord">{{ produit.taille }}</td>
+        <td class="delBord">
 
-      <img src="{{ asset('uploads/photos/' ~ produit.photo ) }}" width="100" height="100">
+        <img src="{{ asset('uploads/photos/' ~ produit.photo ) }}" width="100" height="100">
 
-      </td>
-      <td>{{ produit.prix }}</td>
-      <td>{{ produit.stock }}</td>
-      <td><a href="backoffice=produit/action=modif{{ produit.id }}">Modifier</a></td>
-      <td><a href="backoffice=produit/action=suppr{{ produit.id }}">Supprimer</a></td>
-    </tr>
-    {% endfor %}
+        </td>
+        <td class="delBord">{{ produit.prix }}</td>
+        <td class="delBord">{{ produit.stock }}</td>
+        <td class="delBord"><a href="backoffice=produit/action=modif{{ produit.id }}">Modifier</a></td>
+        <td class="delBord"><a href="backoffice=produit/action=suppr{{ produit.id }}">Supprimer</a></td>
+      </tr>
+      {% endfor %}
 
+    </tbody>
   </table>
 
 </div>
